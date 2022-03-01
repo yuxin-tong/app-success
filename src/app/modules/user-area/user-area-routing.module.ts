@@ -12,6 +12,14 @@ const routes: Routes = [
         (m) => m.DashboardModule
       ),
   },
+  {
+    path: 'application',
+    component: UserAreaPageComponent,
+    loadChildren: () =>
+      import('./modules/application/application.module').then(
+        (m) => m.ApplicationModule
+      ),
+  },
 ];
 
 @NgModule({
