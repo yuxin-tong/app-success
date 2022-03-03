@@ -6,7 +6,11 @@
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat.core();
+$satac-typography: mat.define-typography-config(
+  $font-family: "'museo-sans', Helvetica, sans-serif",
+);
+
+@include mat.core($satac-typography);
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
@@ -42,7 +46,7 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: black;
 }
 
 $dark-text-color: #a3a3a3;
