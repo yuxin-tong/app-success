@@ -1,0 +1,18 @@
+<div
+  fxLayout="column"
+  fxFlexFill
+  fxLayoutAlign="space-between left"
+  class="mobile-public-drawer"
+>
+  <button
+    fxFlexAlign="end"
+    mat-icon-button
+    color="primary"
+    aria-label="Close menu"
+    (click)="close($event)"
+    class="close-button"
+  >
+    <mat-icon>cancel</mat-icon>
+  </button>
+  <app-need-help></app-need-help>
+</div>
