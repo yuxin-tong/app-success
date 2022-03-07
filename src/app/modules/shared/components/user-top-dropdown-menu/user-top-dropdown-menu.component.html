@@ -1,0 +1,26 @@
+<button
+  mat-button
+  [matMenuTriggerFor]="menu"
+  #menuTrigger="matMenuTrigger"
+  (mouseenter)="menuTrigger.openMenu()"
+>
+  John Smith
+  <mat-icon color="accent">circle</mat-icon>
+</button>
+<mat-menu
+  #menu="matMenu"
+  [overlapTrigger]="false"
+  [hasBackdrop]="false"
+  class="user-top-dropdown-menu mat-elevation-z0"
+>
+  <span (mouseleave)="menuTrigger.closeMenu()">
+    <button mat-menu-item>
+      <mat-icon>person_outline</mat-icon>
+      <span>Update Profile</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>exit_to_app</mat-icon>
+      <span>Logout</span>
+    </button>
+  </span>
+</mat-menu>

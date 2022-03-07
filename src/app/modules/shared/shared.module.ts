@@ -12,6 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MobilePublicDrawerComponent } from './components/mobile-public-drawer/mobile-public-drawer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { UserTopDropdownMenuComponent } from './components/user-top-dropdown-menu/user-top-dropdown-menu.component';
 @NgModule({
   declarations: [
     NeedHelpComponent,
@@ -20,12 +21,14 @@ import { HeaderComponent } from './components/header/header.component';
     MobileFooterComponent,
     MobilePublicDrawerComponent,
     HeaderComponent,
+    UserTopDropdownMenuComponent,
   ],
   imports: [
     CommonModule,
     FlexLayoutModule,
     MatBottomSheetModule,
     MatButtonModule,
+    MatMenuModule,
     MatIconModule,
     MatToolbarModule,
   ],
@@ -40,6 +43,7 @@ import { HeaderComponent } from './components/header/header.component';
     MobileFooterComponent,
     HeaderComponent,
     MysatacLogoComponent,
+    UserTopDropdownMenuComponent,
   ],
 })
 export class SharedModule {}

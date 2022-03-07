@@ -41,6 +41,10 @@
     color: $light-text-color;
     background-color: $light-background-color;
   }
+
+  .user-top-dropdown-menu::before {
+    border-top: 15px solid $light-background-color;
+  }
 }
 
 @mixin typography($theme) {
