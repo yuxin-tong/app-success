@@ -1,5 +1,6 @@
 <div fxLayout="row" fxFlexFill>
-  <div fxFlex="64">
+  <div fxFlex.gt-xs="64" fxLayout="column" fxFlexFill>
+    <app-header fxHide.gt-xs></app-header>
     <router-outlet></router-outlet>
   </div>
   <app-public-sidebar fxFlex="36" fxHide.xs="true"></app-public-sidebar>
