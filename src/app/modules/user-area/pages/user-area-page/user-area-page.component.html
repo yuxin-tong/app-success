@@ -1,2 +1,37 @@
-<p>user-area-page works!</p>
+<mat-toolbar>
+  <app-mysatac-logo [dark]="false"></app-mysatac-logo>
+  John Smith
+  <button
+    mat-icon-button
+    [matMenuTriggerFor]="menu"
+    #menuTrigger="matMenuTrigger"
+    (mouseenter)="mouseenter(1); menuTrigger.openMenu()"
+    (mouseleave)="mouseleave(1)"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" [overlapTrigger]="false">
+    <span
+      (mouseleave)="mouseleave(2); menuTrigger.closeMenu()"
+      (mouseenter)="mouseenter(2)"
+    >
+      <button mat-menu-item>
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>people_outline</mat-icon>
+        <span>Connecting</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>videocam</mat-icon>
+        <span>Let's talk</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Logout</span>
+      </button>
+    </span>
+  </mat-menu>
+</mat-toolbar>
 <router-outlet></router-outlet>

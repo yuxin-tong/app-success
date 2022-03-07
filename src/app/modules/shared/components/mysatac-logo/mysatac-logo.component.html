@@ -1,12 +1,6 @@
+<img [fxShow]="dark" src="./assets/mysatac-logo.png" alt="MySATAC Logo" />
 <img
-  fxShow
-  fxHide.xs="true"
-  src="./assets/mysatac-logo.png"
-  alt="MySATAC Logo"
-/>
-<img
-  fxHide
-  fxShow.xs="true"
-  src="./assets/mysatac-logo-mobile.png"
+  [fxShow]="!dark"
+  src="./assets/mysatac-logo-light.png"
   alt="MySATAC Logo"
 />
