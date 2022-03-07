@@ -34,6 +34,7 @@ import { HeaderComponent } from './components/header/header.component';
     FlexLayoutModule,
     MatBottomSheetModule,
     MatToolbarModule,
+    MatButtonModule,
     MatIconModule,
     MatMenuModule,
     MobileFooterComponent,

@@ -1,31 +1,20 @@
-<mat-toolbar>
+<mat-toolbar fxLayoutAlign="space-between center">
   <app-mysatac-logo [dark]="false"></app-mysatac-logo>
-  John Smith
+  <div></div>
   <button
-    mat-icon-button
+    mat-button
     [matMenuTriggerFor]="menu"
     #menuTrigger="matMenuTrigger"
-    (mouseenter)="mouseenter(1); menuTrigger.openMenu()"
-    (mouseleave)="mouseleave(1)"
+    (mouseenter)="menuTrigger.openMenu()"
   >
-    <mat-icon>menu</mat-icon>
+    John Smith
+    <mat-icon color="accent">circle</mat-icon>
   </button>
   <mat-menu #menu="matMenu" [overlapTrigger]="false">
-    <span
-      (mouseleave)="mouseleave(2); menuTrigger.closeMenu()"
-      (mouseenter)="mouseenter(2)"
-    >
+    <span (mouseleave)="menuTrigger.closeMenu()">
       <button mat-menu-item>
-        <mat-icon>home</mat-icon>
-        <span>Home</span>
-      </button>
-      <button mat-menu-item>
-        <mat-icon>people_outline</mat-icon>
-        <span>Connecting</span>
-      </button>
-      <button mat-menu-item>
-        <mat-icon>videocam</mat-icon>
-        <span>Let's talk</span>
+        <mat-icon>person_outline</mat-icon>
+        <span>Update Profile</span>
       </button>
       <button mat-menu-item>
         <mat-icon>exit_to_app</mat-icon>
