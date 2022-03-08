@@ -10,6 +10,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 import { MobilePublicDrawerComponent } from './components/mobile-public-drawer/mobile-public-drawer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { UserTopDropdownMenuComponent } from './components/user-top-dropdown-menu/user-top-dropdown-menu.component';
@@ -40,10 +44,13 @@ import { UserTopDropdownMenuComponent } from './components/user-top-dropdown-men
     MatButtonModule,
     MatIconModule,
     MatMenuModule,
+    MatFormFieldModule,
+    MatInputModule,
     MobileFooterComponent,
     HeaderComponent,
     MysatacLogoComponent,
     UserTopDropdownMenuComponent,
+    ReactiveFormsModule,
   ],
 })
 export class SharedModule {}

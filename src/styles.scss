@@ -22,7 +22,7 @@ $mysatac-palette: (
   200: #e4e4e4,
   300: #d3d3d3,
   400: #aeaeae,
-  500: #8e8e8e,
+  500: #353535,
   600: #666666,
   700: #535353,
   800: #353535,
@@ -37,7 +37,7 @@ $mysatac-palette: (
     300: #7a7a7a,
     200: #656565,
     100: #464646,
-    50: #252525 // ... continues to 900,,,,,,,,,,,,,,,,,
+    50: #252525 // ... continues to 900,,,,,,,,,,,,,,,,,,,,,
   ),
 );
 
@@ -62,7 +62,7 @@ $mysatac-palette-accent: (
     300: #7a7a7a,
     200: #656565,
     100: #464646,
-    50: #252525 // ... continues to 900,,,,,,,,,,,,,,,,,
+    50: #252525 // ... continues to 900,,,,,,,,,,,,,,,,,,,,,
   ),
 );
 
@@ -106,4 +106,8 @@ body {
 
 .app-panel.mat-bottom-sheet-container {
   padding: 0;
+}
+
+.primary-button {
+  width: 200px;
 }
