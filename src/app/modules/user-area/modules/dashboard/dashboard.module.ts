@@ -4,14 +4,12 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.component';
 
-
 @NgModule({
-  declarations: [
-    DashboardPageComponent
-  ],
-  imports: [
-    CommonModule,
-    DashboardRoutingModule
-  ]
+  declarations: [DashboardPageComponent],
+  imports: [CommonModule, DashboardRoutingModule],
 })
-export class DashboardModule { }
+export class DashboardModule {
+  constructor() {
+    console.log('Hi Dashboard loaded');
+  }
+}

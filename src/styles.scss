@@ -22,7 +22,7 @@ $mysatac-palette: (
   200: #e4e4e4,
   300: #d3d3d3,
   400: #aeaeae,
-  500: #353535,
+  500: #8e8e8e,
   600: #666666,
   700: #535353,
   800: #353535,
@@ -37,7 +37,7 @@ $mysatac-palette: (
     300: #7a7a7a,
     200: #656565,
     100: #464646,
-    50: #252525 // ... continues to 900,,,,,,,,,,,,,,,,,,,,,
+    50: #252525 // ... continues to 900,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
 );
 
@@ -47,11 +47,12 @@ $mysatac-palette-accent: (
   200: #e4e4e4,
   300: #d3d3d3,
   400: #aeaeae,
-  500: #353535,
+  500: red,
+  //#353535,
   600: #666666,
   700: #535353,
-  800: #353535,
-  900: #151515,
+  800: blue,
+  900: pink,
   contrast: (
     900: #fbfbfb,
     800: #f6f6f6,
@@ -62,11 +63,11 @@ $mysatac-palette-accent: (
     300: #7a7a7a,
     200: #656565,
     100: #464646,
-    50: #252525 // ... continues to 900,,,,,,,,,,,,,,,,,,,,,
+    50: #252525,
   ),
 );
 
-$mysatac-primary: mat.define-palette($mysatac-palette);
+$mysatac-primary: mat.define-palette($mysatac-palette, 800);
 //$mysatac-accent: mat.define-palette($mysatac-palette);
 $mysatac-accent: mat.define-palette($mysatac-palette);
 

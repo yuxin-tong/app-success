@@ -1,3 +1,7 @@
 <div class="header">
-  <app-mysatac-logo></app-mysatac-logo>
+  <mat-toolbar fxLayoutAlign="space-between center">
+    <app-mysatac-logo fxHide fxShow.xs [dark]="false"></app-mysatac-logo>
+    <div *ngIf="private"></div>
+    <app-user-top-dropdown-menu *ngIf="private"></app-user-top-dropdown-menu>
+  </mat-toolbar>
 </div>

@@ -1,8 +1,6 @@
 <div fxLayout="row" fxFlexFill>
   <div fxFlex.gt-xs="64" fxLayout="column" fxFlexFill>
-    <mat-toolbar fxHide.gt-xs>
-      <app-mysatac-logo [dark]="false"></app-mysatac-logo>
-    </mat-toolbar>
+    <app-header [private]="false"></app-header>
     <div fxFlexFill fxLayoutAlign="center center">
       <div fxFlex.gt-sm="50" fxFlex.sm="70" fxFlex.xs="80">
         <router-outlet></router-outlet>

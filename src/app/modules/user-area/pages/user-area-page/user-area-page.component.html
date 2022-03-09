@@ -1,6 +1,8 @@
-<mat-toolbar fxLayoutAlign="space-between center">
-  <app-mysatac-logo fxHide fxShow.xs [dark]="false"></app-mysatac-logo>
-  <div></div>
-  <app-user-top-dropdown-menu></app-user-top-dropdown-menu>
-</mat-toolbar>
-<router-outlet></router-outlet>
+<div fxLayout="column" fxFlexFill>
+  <app-header [private]="true"></app-header>
+  <div fxFlexFill fxLayoutAlign="center center">
+    <div fxFlex.gt-sm="50" fxFlex.sm="70" fxFlex.xs="80">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

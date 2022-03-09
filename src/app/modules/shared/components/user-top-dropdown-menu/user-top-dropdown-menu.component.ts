@@ -8,7 +8,11 @@ import { AuthenticationService } from 'src/app/modules/authentication/authentica
   encapsulation: ViewEncapsulation.None,
 })
 export class UserTopDropdownMenuComponent implements OnInit {
-  constructor(private authService: AuthenticationService) {}
+  userFullname: string;
+
+  constructor(private authService: AuthenticationService) {
+    this.userFullname = authService.getUserFullname();
+  }
 
   ngOnInit(): void {}
 

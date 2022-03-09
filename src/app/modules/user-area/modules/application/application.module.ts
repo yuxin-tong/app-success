@@ -5,15 +5,12 @@ import { ApplicationRoutingModule } from './application-routing.module';
 import { ApplicationPageComponent } from './pages/application-page/application-page.component';
 import { EmploymentModule } from './modules/employment/employment.module';
 
-
 @NgModule({
-  declarations: [
-    ApplicationPageComponent
-  ],
-  imports: [
-    CommonModule,
-    ApplicationRoutingModule,
-    EmploymentModule
-  ]
+  declarations: [ApplicationPageComponent],
+  imports: [CommonModule, ApplicationRoutingModule, EmploymentModule],
 })
-export class ApplicationModule { }
+export class ApplicationModule {
+  constructor() {
+    console.log('Hi Im Application Module');
+  }
+}

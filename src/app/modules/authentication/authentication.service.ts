@@ -50,6 +50,10 @@ export class AuthenticationService {
     //return !this.jwtHelper.isTokenExpired(token);
   }
 
+  getUserFullname(): string {
+    return localStorage.getItem('name') || '';
+  }
+
   logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('name');

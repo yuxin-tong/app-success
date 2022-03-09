@@ -7,11 +7,17 @@ import { AuthGuard } from './../../core/guards/auth.guard';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full',
+  },
+  {
+    path: 'dashboard',
     component: UserAreaPageComponent,
     loadChildren: () =>
       import('./modules/dashboard/dashboard.module').then(
         (m) => m.DashboardModule
       ),
+    canLoad: [AuthGuard],
   },
   {
     path: 'application',
