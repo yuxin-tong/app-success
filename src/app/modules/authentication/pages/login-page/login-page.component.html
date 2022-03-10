@@ -1,5 +1,6 @@
 <form fxLayout="column" [formGroup]="loginForm" fxLayoutAlign="center center">
   <h1>Login</h1>
+
   <mat-form-field appearance="fill" fxFlexFill>
     <mat-label>Email</mat-label>
     <input
@@ -26,12 +27,8 @@
     <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
       Password is <strong>required</strong>
     </mat-error>
+    <a href="">Forgot your password?</a>
   </mat-form-field>
-
-  <mat-error *ngIf="showServerError">
-    Sorry, username or password is incorrect.
-  </mat-error>
-
   <button
     mat-raised-button
     color="primary"
@@ -39,6 +36,19 @@
     [disabled]="!loginForm.valid"
     class="primary-button"
   >
-    Login
+    <span fxLayoutAlign="center center">
+      Login
+      <mat-spinner
+        *ngIf="spinnerService.visibility | async"
+        fxFlex="0 0 auto"
+        color="accent"
+        [diameter]="20"
+      ></mat-spinner>
+    </span>
   </button>
+  <div class="server-error-container">
+    <mat-error class="mat-small" *ngIf="loginForm.hasError('notFound')">
+      Sorry, email address or password is incorrect
+    </mat-error>
+  </div>
 </form>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { SpinnerService } from 'src/app/core/services/spinner.service';
 import { AuthenticationService } from '../../authentication.service';
 
 @Component({
@@ -17,7 +18,8 @@ export class LoginPageComponent implements OnInit {
 
   constructor(
     private service: AuthenticationService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    public spinnerService: SpinnerService
   ) {}
 
   ngOnInit(): void {}
@@ -35,7 +37,7 @@ export class LoginPageComponent implements OnInit {
 
   private processLogin(res: any) {
     if (res.statusCode != 200) {
-      this.showServerError = true;
+      this.loginForm.setErrors({ notFound: true });
       return;
     }
 

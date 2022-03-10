@@ -28,12 +28,22 @@ export class AuthGuard implements CanLoad {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    console.log(route);
-    if (!this.authService.isAuthenticated()) {
-      this.router.navigate(['login']);
-      return false;
+    if (route.path == 'auth') {
+      // authenticated but wants to access login/forget-password
+      if (this.authService.isAuthenticated()) {
+        this.router.navigate(['dashboard']);
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      if (!this.authService.isAuthenticated()) {
+        this.router.navigate(['auth/login']);
+        return false;
+      } else {
+        return true;
+      }
     }
-    return true;
   }
 
   /*

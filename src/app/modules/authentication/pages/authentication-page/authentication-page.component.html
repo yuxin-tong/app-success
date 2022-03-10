@@ -1,11 +1,11 @@
 <div fxLayout="row" fxFlexFill>
   <div fxFlex.gt-xs="64" fxLayout="column" fxFlexFill>
-    <app-header [private]="false"></app-header>
+    <app-header fxHide.gt-xs [private]="false"></app-header>
     <div fxFlexFill fxLayoutAlign="center center">
       <div fxFlex.gt-sm="50" fxFlex.sm="70" fxFlex.xs="80">
         <router-outlet></router-outlet>
       </div>
     </div>
   </div>
-  <app-public-sidebar fxFlex="36" fxHide.xs="true"></app-public-sidebar>
+  <app-public-sidebar fxFlex="36" fxHide.xs></app-public-sidebar>
 </div>

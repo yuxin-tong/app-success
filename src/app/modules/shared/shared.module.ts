@@ -13,6 +13,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { MobilePublicDrawerComponent } from './components/mobile-public-drawer/mobile-public-drawer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -35,6 +36,7 @@ import { UserTopDropdownMenuComponent } from './components/user-top-dropdown-men
     MatMenuModule,
     MatIconModule,
     MatToolbarModule,
+    MatProgressSpinnerModule,
   ],
   exports: [
     PublicSidebarComponent,
@@ -51,6 +53,7 @@ import { UserTopDropdownMenuComponent } from './components/user-top-dropdown-men
     MysatacLogoComponent,
     UserTopDropdownMenuComponent,
     ReactiveFormsModule,
+    MatProgressSpinnerModule,
   ],
 })
 export class SharedModule {}
