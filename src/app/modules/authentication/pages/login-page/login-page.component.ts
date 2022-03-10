@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
 import { AuthenticationService } from '../../authentication.service';
 
@@ -14,7 +15,8 @@ export class LoginPageComponent implements OnInit {
     password: ['', [Validators.required]],
   });
 
-  showServerError = false;
+  registrationPath = `/${RoutingConstants.REGISTRATION}`;
+  forgetPasswordPath = `/${RoutingConstants.FORGET_PASSWORD}`;
 
   constructor(
     private service: AuthenticationService,

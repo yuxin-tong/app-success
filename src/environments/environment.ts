@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiBaseUrl: 'https://apisatac1.azure-api.net/dev/v1/api/',
+  apiSubscriptionKey: 'b3fd6d5fb1ed46b7819ea5ee77f1c67a',
 };
 
 /*

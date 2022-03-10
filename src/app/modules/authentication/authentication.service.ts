@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
-
+import { environment } from '../../../environments/environment';
+import { JwtHelperService } from '@auth0/angular-jwt';
 interface Course {
   code: string;
   name: string;
@@ -16,6 +17,8 @@ interface Course {
   providedIn: 'root',
 })
 export class AuthenticationService {
+  jwtHelper = new JwtHelperService();
+
   constructor(private http: HttpClient, private router: Router) {}
 
   login(loginId: string, password: string) {
@@ -24,15 +27,11 @@ export class AuthenticationService {
       password,
     };
     const headers = new HttpHeaders({
-      'Ocp-Apim-Subscription-Key': 'b3fd6d5fb1ed46b7819ea5ee77f1c67a',
+      'Ocp-Apim-Subscription-Key': environment.apiSubscriptionKey,
     });
-    return this.http.post(
-      'https://apisatac1.azure-api.net/dev/v1/api/token',
-      body,
-      {
-        headers: headers,
-      }
-    );
+    return this.http.post(environment.apiBaseUrl + 'token', body, {
+      headers: headers,
+    });
   }
 
   processLoginSuccess(response: any) {
@@ -43,11 +42,8 @@ export class AuthenticationService {
   }
 
   public isAuthenticated(): boolean {
-    const token = localStorage.getItem('token');
-    return !!token;
-    // Check whether the token is expired and return
-    // true or false
-    //return !this.jwtHelper.isTokenExpired(token);
+    const token = localStorage.getItem('token') || undefined;
+    return !this.jwtHelper.isTokenExpired(token);
   }
 
   getUserFullname(): string {

@@ -1,6 +1,5 @@
 .user-top-dropdown-menu {
   position: relative;
-  margin-top: 10px;
 
   .mat-menu-content {
     margin-top: 15px;
@@ -12,13 +11,4 @@
       }
     }
   }
-}
-.user-top-dropdown-menu::before {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 1rem;
-  top: 0px;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
 }

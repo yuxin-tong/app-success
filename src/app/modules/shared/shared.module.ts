@@ -14,10 +14,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 import { MobilePublicDrawerComponent } from './components/mobile-public-drawer/mobile-public-drawer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { UserTopDropdownMenuComponent } from './components/user-top-dropdown-menu/user-top-dropdown-menu.component';
+import { UserSidebarComponent } from './components/user-sidebar/user-sidebar.component';
 @NgModule({
   declarations: [
     NeedHelpComponent,
@@ -27,6 +29,7 @@ import { UserTopDropdownMenuComponent } from './components/user-top-dropdown-men
     MobilePublicDrawerComponent,
     HeaderComponent,
     UserTopDropdownMenuComponent,
+    UserSidebarComponent,
   ],
   imports: [
     CommonModule,
@@ -37,6 +40,7 @@ import { UserTopDropdownMenuComponent } from './components/user-top-dropdown-men
     MatIconModule,
     MatToolbarModule,
     MatProgressSpinnerModule,
+    MatSidenavModule,
   ],
   exports: [
     PublicSidebarComponent,
@@ -54,6 +58,8 @@ import { UserTopDropdownMenuComponent } from './components/user-top-dropdown-men
     UserTopDropdownMenuComponent,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
+    MatSidenavModule,
+    UserSidebarComponent,
   ],
 })
 export class SharedModule {}

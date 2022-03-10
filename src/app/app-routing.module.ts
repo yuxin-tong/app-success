@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RoutingConstants } from './core/constants/routing.constants';
 import { AuthGuard } from './core/guards/auth.guard';
+import { AuthenticationPageComponent } from './modules/authentication/pages/authentication-page/authentication-page.component';
 
 const routes: Routes = [
   {
-    path: 'login',
-    redirectTo: 'auth/login',
+    path: RoutingConstants.LOGIN,
+    redirectTo: `${RoutingConstants.AUTH}/${RoutingConstants.LOGIN}`,
   },
   {
-    path: 'forget-password',
-    redirectTo: 'auth/forget-password',
+    path: RoutingConstants.FORGET_PASSWORD,
+    redirectTo: `${RoutingConstants.AUTH}/${RoutingConstants.FORGET_PASSWORD}`,
   },
   {
-    path: 'auth',
+    path: RoutingConstants.AUTH,
+    component: AuthenticationPageComponent,
     loadChildren: () =>
       import('./modules/authentication/authentication.module').then(
         (m) => m.AuthenticationModule

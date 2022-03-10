@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { DashboardPageComponent } from './modules/dashboard/pages/dashboard-page/dashboard-page.component';
 import { UserAreaPageComponent } from './pages/user-area-page/user-area-page.component';
 import { AuthGuard } from './../../core/guards/auth.guard';
+import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: RoutingConstants.DASHBOARD,
     pathMatch: 'full',
   },
   {
-    path: 'dashboard',
+    path: RoutingConstants.DASHBOARD,
     component: UserAreaPageComponent,
     loadChildren: () =>
       import('./modules/dashboard/dashboard.module').then(
@@ -20,7 +20,7 @@ const routes: Routes = [
     canLoad: [AuthGuard],
   },
   {
-    path: 'application',
+    path: RoutingConstants.APPLICATION,
     component: UserAreaPageComponent,
     loadChildren: () =>
       import('./modules/application/application.module').then(

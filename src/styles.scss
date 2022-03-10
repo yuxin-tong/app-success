@@ -17,7 +17,7 @@ $mysatac-typography: mat.define-typography-config(
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $mysatac-palette: (
-  50: #f4f4f4,
+  50: #fbfafa,
   100: #efefef,
   200: #e4e4e4,
   300: #d3d3d3,
@@ -38,7 +38,7 @@ $mysatac-palette: (
     200: #656565,
     100: #464646,
     50: #252525
-      // ... continues to 900,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      // ... continues to 900,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
 );
 
@@ -73,7 +73,7 @@ $mysatac-primary: mat.define-palette($mysatac-palette, 800);
 $mysatac-accent: mat.define-palette($mysatac-palette);
 
 // The warn palette is optional (defaults to red).
-$mysatac-warn: mat.define-palette(mat.$red-palette);
+$mysatac-warn: mat.define-palette(mat.$red-palette, 700);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
@@ -111,7 +111,7 @@ body {
 }
 
 .primary-button {
-  width: 200px;
+  width: 250px;
 
   mat-spinner {
     margin-left: 10px;

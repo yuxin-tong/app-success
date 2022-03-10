@@ -14,32 +14,48 @@
   );
   $dark-link-color: mat.get-color-from-palette(
     $primary-palette,
-    "600-contrast"
+    "900-contrast"
   );
   $dark-background-color: mat.get-color-from-palette($primary-palette, 800);
 
-  $light-text-color: mat.get-color-from-palette($primary-palette, 50);
+  $light-text-color: mat.get-color-from-palette(
+    $primary-palette,
+    "50-contrast"
+  );
+  $light-link-color: mat.get-color-from-palette(
+    $primary-palette,
+    "300-contrast"
+  );
   $light-background-color: mat.get-color-from-palette($primary-palette, 50);
 
-  app-public-sidebar,
-  app-mobile-footer,
-  app-mobile-public-drawer > div {
-    // Read the 500 hue from the primary color palette.
-    color: $dark-text-color;
-    background-color: $dark-background-color;
+  .main-container {
+    color: $light-text-color;
+    background-color: white; //$light-background-color;
 
     a {
-      color: $dark-text-color;
+      color: $light-text-color;
 
       &:hover {
-        color: $dark-link-color;
+        color: $light-link-color;
       }
     }
-  }
 
-  app-header > div {
-    color: $light-text-color;
-    background-color: $light-background-color;
+    app-user-sidebar,
+    app-public-sidebar,
+    app-mobile-footer,
+    app-mobile-public-drawer > div {
+      // Read the 500 hue from the primary color palette.
+      color: $dark-text-color;
+      background-color: $dark-background-color;
+
+      a {
+        color: $dark-text-color;
+
+        &:hover {
+          color: $dark-link-color;
+        }
+      }
+    }
   }
 
   .user-top-dropdown-menu::before {

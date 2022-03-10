@@ -1,5 +1,5 @@
 <form fxLayout="column" [formGroup]="loginForm" fxLayoutAlign="center center">
-  <h1>Login</h1>
+  <h1 class="mat-display-1">Login</h1>
 
   <mat-form-field appearance="fill" fxFlexFill>
     <mat-label>Email</mat-label>
@@ -24,31 +24,50 @@
       formControlName="password"
       autocomplete="false"
     />
-    <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
-      Password is <strong>required</strong>
+    <mat-error
+      *ngIf="loginForm.get('password')?.hasError('required')"
+      fxLayoutAlign="space-between"
+    >
+      Password is required
+      <mat-hint
+        ><a [routerLink]="forgetPasswordPath"
+          >Forgot your password?</a
+        ></mat-hint
+      >
     </mat-error>
-    <a href="">Forgot your password?</a>
+    <mat-hint align="end"
+      ><a [routerLink]="forgetPasswordPath">Forgot your password?</a></mat-hint
+    >
   </mat-form-field>
-  <button
-    mat-raised-button
-    color="primary"
-    (click)="login()"
-    [disabled]="!loginForm.valid"
-    class="primary-button"
-  >
-    <span fxLayoutAlign="center center">
-      Login
-      <mat-spinner
-        *ngIf="spinnerService.visibility | async"
-        fxFlex="0 0 auto"
-        color="accent"
-        [diameter]="20"
-      ></mat-spinner>
-    </span>
-  </button>
-  <div class="server-error-container">
-    <mat-error class="mat-small" *ngIf="loginForm.hasError('notFound')">
-      Sorry, email address or password is incorrect
-    </mat-error>
+
+  <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+    <div class="server-error-container">
+      <mat-error class="mat-small" *ngIf="loginForm.hasError('notFound')">
+        Sorry, email address or password is incorrect
+      </mat-error>
+    </div>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="login()"
+      [disabled]="!loginForm.valid"
+      class="primary-button"
+    >
+      <span fxLayoutAlign="center center">
+        Login
+        <mat-spinner
+          *ngIf="spinnerService.visibility | async"
+          fxFlex="0 0 auto"
+          color="accent"
+          [diameter]="20"
+        ></mat-spinner>
+      </span>
+    </button>
+    <button mat-stroked-button class="primary-button">Login with Google</button>
+    <div>
+      Do not have a mySATAC account yet?
+      <a [routerLink]="registrationPath">Create an account</a>
+    </div>
+    {{ registrationPath }}
   </div>
 </form>

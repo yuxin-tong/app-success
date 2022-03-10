@@ -10,6 +10,7 @@ import { AuthenticationModule } from './modules/authentication/authentication.mo
 import { RegistrationModule } from './modules/registration/registration.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CustomHttpInterceptor } from './core/interceptors/custom-http.interceptor';
+import { JwtModule } from '@auth0/angular-jwt';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,6 @@ import { CustomHttpInterceptor } from './core/interceptors/custom-http.intercept
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    AuthenticationModule,
     RegistrationModule,
     UserAreaModule,
   ],
