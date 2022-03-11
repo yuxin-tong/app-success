@@ -1,4 +1,7 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatMenuModule } from '@angular/material/menu';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { UserTopDropdownMenuComponent } from './user-top-dropdown-menu.component';
 
@@ -8,9 +11,9 @@ describe('UserTopDropdownMenuComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UserTopDropdownMenuComponent ]
-    })
-    .compileComponents();
+      imports: [HttpClientTestingModule, RouterTestingModule, MatMenuModule],
+      declarations: [UserTopDropdownMenuComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

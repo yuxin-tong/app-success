@@ -1,2404 +1,2104 @@
 {
   "courses": [
     {
-      "code": "8CO60",
-      "name": "Master of Finance",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "animi"
-    },
-    {
-      "code": "8NU270",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "tempore"
-    },
-    {
-      "code": "5UT511",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "placeat"
-    },
-    {
-      "code": "3TE551",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "distinctio"
-    },
-    {
-      "code": "0EA84",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "culpa"
-    },
-    {
-      "code": "0QU502",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "dolorem"
-    },
-    {
-      "code": "7IU637",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "in"
-    },
-    {
-      "code": "7PA762",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "omnis"
-    },
-    {
-      "code": "3SE356",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "non"
-    },
-    {
-      "code": "2ID206",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "quis"
-    },
-    {
-      "code": "1ET784",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "asperiores"
-    },
-    {
-      "code": "9AN401",
-      "name": "Bachelor of Nursing",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "provident"
-    },
-    {
-      "code": "0NO139",
-      "name": "Bachelor of Nursing",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "repudiandae"
-    },
-    {
-      "code": "5QU493",
-      "name": "Master of Finance",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "enim"
-    },
-    {
-      "code": "4MO345",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "autem"
-    },
-    {
-      "code": "4UT74",
-      "name": "Bachelor of Finance",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "quia"
-    },
-    {
-      "code": "4SE784",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "qui"
-    },
-    {
-      "code": "4UT481",
-      "name": "Master of Finance",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "alias"
-    },
-    {
-      "code": "4MO79",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "est"
-    },
-    {
-      "code": "2NE879",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "modi"
-    },
-    {
-      "code": "5DO613",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "similique"
-    },
-    {
-      "code": "0ES63",
-      "name": "Master of Business Admistration",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "maxime"
-    },
-    {
-      "code": "0MI132",
-      "name": "Bachelor of Nursing",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "eius"
-    },
-    {
-      "code": "7CO525",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Online",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "quis"
-    },
-    {
-      "code": "5ET314",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "qui"
-    },
-    {
-      "code": "4AU391",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "esse"
-    },
-    {
-      "code": "6PA998",
-      "name": "Bachelor of Nursing",
-      "attendance": "Online",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "tenetur"
-    },
-    {
-      "code": "4QU419",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "voluptas"
-    },
-    {
-      "code": "4EN912",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "quia"
-    },
-    {
-      "code": "8AS965",
+      "code": "0EI911",
       "name": "Master of Computer Science",
       "attendance": "Uni Adelaide - North Tce",
       "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "reiciendis"
+      "courseStatus": "B"
     },
     {
-      "code": "9IU144",
-      "name": "Master of Business Admistration",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "ullam"
-    },
-    {
-      "code": "0SE126",
-      "name": "Bachelor of Nursing",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "voluptatem"
-    },
-    {
-      "code": "1DE240",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "harum"
-    },
-    {
-      "code": "0IS534",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "et"
-    },
-    {
-      "code": "4SO930",
-      "name": "Master of Computer Science",
-      "attendance": "Online",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "est"
-    },
-    {
-      "code": "7VO66",
-      "name": "Master of Business Admistration",
-      "attendance": "Online",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "blanditiis"
-    },
-    {
-      "code": "1SU183",
-      "name": "Bachelor of Finance",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "quam"
-    },
-    {
-      "code": "7FU856",
-      "name": "Master of Finance",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "molestiae"
-    },
-    {
-      "code": "5PO924",
-      "name": "Master of Accounting",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "facilis"
-    },
-    {
-      "code": "5OC90",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "distinctio"
-    },
-    {
-      "code": "5CU297",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "placeat"
-    },
-    {
-      "code": "7IP333",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "cupiditate"
-    },
-    {
-      "code": "3UT332",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "laudantium"
-    },
-    {
-      "code": "8QU617",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "sed"
-    },
-    {
-      "code": "7CO279",
-      "name": "Bachelor of Finance",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "a"
-    },
-    {
-      "code": "5UT760",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "error"
-    },
-    {
-      "code": "0QU767",
-      "name": "Master of Business Admistration",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "et"
-    },
-    {
-      "code": "1EO843",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "quas"
-    },
-    {
-      "code": "3SU162",
-      "name": "Master of Computer Science",
-      "attendance": "Online",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "consequatur"
-    },
-    {
-      "code": "1EN69",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "mollitia"
-    },
-    {
-      "code": "4DO522",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "atque"
-    },
-    {
-      "code": "9QU650",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "hic"
-    },
-    {
-      "code": "1QU41",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "harum"
-    },
-    {
-      "code": "3EU740",
-      "name": "Bachelor of Finance",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "quis"
-    },
-    {
-      "code": "5DO746",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "hic"
-    },
-    {
-      "code": "0HA813",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "et"
-    },
-    {
-      "code": "6DO729",
-      "name": "Master of Business Admistration",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "autem"
-    },
-    {
-      "code": "7RE876",
-      "name": "Bachelor of Nursing",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "fugiat"
-    },
-    {
-      "code": "3PA150",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "eum"
-    },
-    {
-      "code": "3CO867",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "nihil"
-    },
-    {
-      "code": "2SI662",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "beatae"
-    },
-    {
-      "code": "6AL684",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "ipsam"
-    },
-    {
-      "code": "8ER727",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "velit"
-    },
-    {
-      "code": "5VE475",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "ratione"
-    },
-    {
-      "code": "5VO131",
-      "name": "Bachelor of Nursing",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "dolorum"
-    },
-    {
-      "code": "9PR588",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "illum"
-    },
-    {
-      "code": "2EI739",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "neque"
-    },
-    {
-      "code": "9SI265",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "necessitatibus"
-    },
-    {
-      "code": "4VO774",
-      "name": "Master of Finance",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "laborum"
-    },
-    {
-      "code": "7VE116",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "culpa"
-    },
-    {
-      "code": "1QU367",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "sint"
-    },
-    {
-      "code": "0IL561",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "enim"
-    },
-    {
-      "code": "5PO677",
-      "name": "Master of Business Admistration",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "non"
-    },
-    {
-      "code": "5AL703",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "aut"
-    },
-    {
-      "code": "8VO440",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "ratione"
-    },
-    {
-      "code": "8EV677",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "recusandae"
-    },
-    {
-      "code": "3VO82",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "rem"
-    },
-    {
-      "code": "2VO980",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "sed"
-    },
-    {
-      "code": "2QU453",
-      "name": "Bachelor of Accounting",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "perferendis"
-    },
-    {
-      "code": "1ET167",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "sit"
-    },
-    {
-      "code": "9AU661",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "nam"
-    },
-    {
-      "code": "6VO756",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "ab"
-    },
-    {
-      "code": "0ET454",
-      "name": "Master of Business Admistration",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "dolor"
-    },
-    {
-      "code": "5ER627",
-      "name": "Master of Business Admistration",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "soluta"
-    },
-    {
-      "code": "6LI644",
-      "name": "Master of Nursing",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "minus"
-    },
-    {
-      "code": "9UT707",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "suscipit"
-    },
-    {
-      "code": "6IT92",
-      "name": "Master of Finance",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "ut"
-    },
-    {
-      "code": "4SI798",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "est"
-    },
-    {
-      "code": "5VO83",
-      "name": "Master of Computer Science",
-      "attendance": "Online",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "reprehenderit"
-    },
-    {
-      "code": "6SI153",
-      "name": "Master of Business Admistration",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "qui"
-    },
-    {
-      "code": "2HI731",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "labore"
-    },
-    {
-      "code": "6QU626",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "quaerat"
-    },
-    {
-      "code": "4EA773",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "dolorum"
-    },
-    {
-      "code": "7NO683",
-      "name": "Master of Finance",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "qui"
-    },
-    {
-      "code": "2QU647",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "perferendis"
-    },
-    {
-      "code": "3UN457",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "voluptatum"
-    },
-    {
-      "code": "1DE93",
-      "name": "Master of Finance",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "voluptas"
-    },
-    {
-      "code": "3MI672",
-      "name": "Bachelor of Nursing",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "natus"
-    },
-    {
-      "code": "1AB260",
-      "name": "Master of Accounting",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "nihil"
-    },
-    {
-      "code": "4EA653",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "rerum"
-    },
-    {
-      "code": "7EL251",
-      "name": "Bachelor of Accounting",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "expedita"
-    },
-    {
-      "code": "8IN614",
-      "name": "Bachelor of Nursing",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "molestiae"
-    },
-    {
-      "code": "6DO778",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "quis"
-    },
-    {
-      "code": "0QU935",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "rerum"
-    },
-    {
-      "code": "4ET694",
-      "name": "Master of Finance",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "error"
-    },
-    {
-      "code": "3VE473",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "itaque"
-    },
-    {
-      "code": "8AC524",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "qui"
-    },
-    {
-      "code": "6QU179",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "consequuntur"
-    },
-    {
-      "code": "5NI214",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "necessitatibus"
-    },
-    {
-      "code": "3DE718",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "perspiciatis"
-    },
-    {
-      "code": "2QU323",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "veritatis"
-    },
-    {
-      "code": "3ES589",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "mollitia"
-    },
-    {
-      "code": "3EA633",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "animi"
-    },
-    {
-      "code": "5MO82",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "veniam"
-    },
-    {
-      "code": "2FA826",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "debitis"
-    },
-    {
-      "code": "6QU446",
-      "name": "Master of Computer Science",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "quia"
-    },
-    {
-      "code": "8OC117",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "est"
-    },
-    {
-      "code": "2SI820",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "hic"
-    },
-    {
-      "code": "6AU722",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "ducimus"
-    },
-    {
-      "code": "6SI473",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "dolores"
-    },
-    {
-      "code": "6IP685",
-      "name": "Master of Business Admistration",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "veniam"
-    },
-    {
-      "code": "8EI906",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "laboriosam"
-    },
-    {
-      "code": "8QU647",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Online",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "dicta"
-    },
-    {
-      "code": "0AS896",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "id"
-    },
-    {
-      "code": "9CO19",
-      "name": "Master of Computer Science",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "aliquid"
-    },
-    {
-      "code": "8QU156",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "molestiae"
-    },
-    {
-      "code": "0AD188",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "eaque"
-    },
-    {
-      "code": "6FA942",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "eligendi"
-    },
-    {
-      "code": "1QU488",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "occaecati"
-    },
-    {
-      "code": "5AT475",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "est"
-    },
-    {
-      "code": "9UT831",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "illo"
-    },
-    {
-      "code": "3NO339",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "similique"
-    },
-    {
-      "code": "1TE470",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "voluptatem"
-    },
-    {
-      "code": "9SI853",
-      "name": "Bachelor of Finance",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "velit"
-    },
-    {
-      "code": "6AU821",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "et"
-    },
-    {
-      "code": "1RE872",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "sequi"
-    },
-    {
-      "code": "8QU44",
-      "name": "Master of Nursing",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "fugit"
-    },
-    {
-      "code": "9IU723",
-      "name": "Bachelor of Accounting",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "veritatis"
-    },
-    {
-      "code": "2UN757",
-      "name": "Master of Business Admistration",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "sit"
-    },
-    {
-      "code": "5VI650",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "repellendus"
-    },
-    {
-      "code": "5PO408",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "officiis"
-    },
-    {
-      "code": "5RE540",
-      "name": "Master of Finance",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "cupiditate"
-    },
-    {
-      "code": "6AU959",
-      "name": "Master of Finance",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "itaque"
-    },
-    {
-      "code": "1DO692",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "voluptatem"
-    },
-    {
-      "code": "2TE424",
-      "name": "Bachelor of Nursing",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "hic"
-    },
-    {
-      "code": "4ES177",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "voluptas"
-    },
-    {
-      "code": "3AU863",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "est"
-    },
-    {
-      "code": "8ES534",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "molestiae"
-    },
-    {
-      "code": "1NO278",
-      "name": "Master of Nursing",
-      "attendance": "Online",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "rerum"
-    },
-    {
-      "code": "2NU671",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "consequatur"
-    },
-    {
-      "code": "8AL677",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "molestias"
-    },
-    {
-      "code": "5VO556",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "velit"
-    },
-    {
-      "code": "0PO373",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "rerum"
-    },
-    {
-      "code": "8SI687",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "dolores"
-    },
-    {
-      "code": "7AP946",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "consectetur"
-    },
-    {
-      "code": "5ET34",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "iusto"
-    },
-    {
-      "code": "5TE815",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "soluta"
-    },
-    {
-      "code": "8QU517",
+      "code": "1VO520",
       "name": "Master of Finance",
       "attendance": "Uni Adelaide - Helen Mayo",
       "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "dolorum"
+      "courseStatus": "C"
     },
     {
-      "code": "6ES805",
-      "name": "Bachelor of Nursing",
+      "code": "7DO808",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "1DE21",
+      "name": "Master of Accounting",
       "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "illo"
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
     },
     {
-      "code": "0NE800",
-      "name": "Bachelor of Finance",
+      "code": "4IP585",
+      "name": "Master of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "1PR60",
+      "name": "Bachelor of Nursing",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "8OM746",
+      "name": "Bachelor of Business Admistration",
       "attendance": "Uni Adelaide - Frome Rd",
       "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "commodi"
+      "courseStatus": "A"
     },
     {
-      "code": "7SA529",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "labore"
-    },
-    {
-      "code": "5RE518",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "commodi"
-    },
-    {
-      "code": "7MI676",
+      "code": "7AN772",
       "name": "Master of Accounting",
       "attendance": "Uni Adelaide - North Tce",
       "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "placeat"
+      "courseStatus": "A"
     },
     {
-      "code": "3QU89",
-      "name": "Master of Finance",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "vitae"
-    },
-    {
-      "code": "4IU748",
-      "name": "Master of Finance",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "quas"
-    },
-    {
-      "code": "3RE257",
-      "name": "Master of Computer Science",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "ab"
-    },
-    {
-      "code": "2EX364",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "omnis"
-    },
-    {
-      "code": "8IM925",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "tenetur"
-    },
-    {
-      "code": "7AU591",
+      "code": "2QU605",
       "name": "Bachelor of Nursing",
       "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "quia"
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
     },
     {
-      "code": "1EI120",
+      "code": "3VE945",
       "name": "Bachelor of Accounting",
       "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "non"
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
     },
     {
-      "code": "0RE227",
-      "name": "Bachelor of Finance",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "explicabo"
-    },
-    {
-      "code": "7ET835",
+      "code": "1DI273",
       "name": "Bachelor of Nursing",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "aliquam"
-    },
-    {
-      "code": "1QU944",
-      "name": "Master of Business Admistration",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "consequatur"
-    },
-    {
-      "code": "4LA918",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Online",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "in"
-    },
-    {
-      "code": "5ET431",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "sit"
-    },
-    {
-      "code": "3IN65",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "aut"
-    },
-    {
-      "code": "9FU899",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "quod"
-    },
-    {
-      "code": "8MO292",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "voluptatem"
-    },
-    {
-      "code": "3MO714",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "fugit"
-    },
-    {
-      "code": "0TE904",
-      "name": "Bachelor of Business Admistration",
       "attendance": "Uni Adelaide - Frome Rd",
       "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "et"
+      "courseStatus": "B"
     },
     {
-      "code": "7VO531",
-      "name": "Bachelor of Nursing",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "quis"
-    },
-    {
-      "code": "8CO639",
+      "code": "8ET546",
       "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "voluptates"
-    },
-    {
-      "code": "4VO831",
-      "name": "Bachelor of Nursing",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "rerum"
-    },
-    {
-      "code": "3AB24",
-      "name": "Bachelor of Finance",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "asperiores"
-    },
-    {
-      "code": "8NI210",
-      "name": "Bachelor of Computer Science",
       "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "veniam"
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
     },
     {
-      "code": "5AU959",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "aut"
-    },
-    {
-      "code": "9RE32",
+      "code": "9NO457",
       "name": "Bachelor of Business Admistration",
       "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "id"
-    },
-    {
-      "code": "6VO621",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "velit"
-    },
-    {
-      "code": "2TE918",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - Helen Mayo",
       "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "sed"
+      "courseStatus": "C"
     },
     {
-      "code": "6OM331",
-      "name": "Bachelor of Computer Engineering",
+      "code": "1QU408",
+      "name": "Bachelor of Accounting",
       "attendance": "Uni Adelaide - Frome Rd",
       "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "est"
+      "courseStatus": "B"
     },
     {
-      "code": "6SE508",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "recusandae"
-    },
-    {
-      "code": "9AU781",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "cum"
-    },
-    {
-      "code": "4RE518",
-      "name": "Bachelor of Finance",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "non"
-    },
-    {
-      "code": "9ET302",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "culpa"
-    },
-    {
-      "code": "9VO126",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "sint"
-    },
-    {
-      "code": "3EI582",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "laborum"
-    },
-    {
-      "code": "9LA854",
+      "code": "3BE421",
       "name": "Master of Business Admistration",
       "attendance": "Online",
       "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "exercitationem"
+      "courseStatus": "B"
     },
     {
-      "code": "3MA319",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "corrupti"
-    },
-    {
-      "code": "9QU787",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "laudantium"
-    },
-    {
-      "code": "9MA279",
-      "name": "Bachelor of Nursing",
+      "code": "5QU886",
+      "name": "Bachelor of Computer Science",
       "attendance": "Uni Adelaide - North Tce",
       "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "illum"
+      "courseStatus": "A"
     },
     {
-      "code": "0NO384",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "totam"
-    },
-    {
-      "code": "0AS575",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "labore"
-    },
-    {
-      "code": "7DE430",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "facere"
-    },
-    {
-      "code": "2HA872",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "qui"
-    },
-    {
-      "code": "0LA369",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "sint"
-    },
-    {
-      "code": "0DO970",
-      "name": "Master of Computer Science",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "commodi"
-    },
-    {
-      "code": "6AS807",
-      "name": "Bachelor of Finance",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "maxime"
-    },
-    {
-      "code": "8CO174",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "amet"
-    },
-    {
-      "code": "0EX775",
-      "name": "Bachelor of Nursing",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "minus"
-    },
-    {
-      "code": "0EA970",
+      "code": "7QU9",
       "name": "Master of Finance",
       "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "nam"
-    },
-    {
-      "code": "1TO139",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
       "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "est"
+      "courseStatus": "C"
     },
     {
-      "code": "4AL145",
+      "code": "2SI55",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6IL279",
+      "name": "Bachelor of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "9UL926",
+      "name": "Master of Computer Engineering",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "5VO337",
       "name": "Master of Business Admistration",
       "attendance": "Online",
       "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "rerum"
+      "courseStatus": "A"
     },
     {
-      "code": "9SI857",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "et"
-    },
-    {
-      "code": "8VE240",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "praesentium"
-    },
-    {
-      "code": "9NU730",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "fugiat"
-    },
-    {
-      "code": "2RA205",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "laudantium"
-    },
-    {
-      "code": "3AU709",
-      "name": "Bachelor of Nursing",
-      "attendance": "Online",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "eum"
-    },
-    {
-      "code": "9IL133",
-      "name": "Bachelor of Nursing",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "facere"
-    },
-    {
-      "code": "9IL112",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "molestiae"
-    },
-    {
-      "code": "1FU718",
-      "name": "Master of Finance",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "eligendi"
-    },
-    {
-      "code": "4NI41",
-      "name": "Bachelor of Finance",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "voluptatem"
-    },
-    {
-      "code": "8NO757",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "accusamus"
-    },
-    {
-      "code": "6ID287",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "voluptas"
-    },
-    {
-      "code": "5CO17",
-      "name": "Bachelor of Nursing",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "in"
-    },
-    {
-      "code": "1QU469",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "quisquam"
-    },
-    {
-      "code": "5FU366",
-      "name": "Master of Business Admistration",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "sit"
-    },
-    {
-      "code": "6QU66",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "amet"
-    },
-    {
-      "code": "8CO290",
-      "name": "Bachelor of Finance",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "consectetur"
-    },
-    {
-      "code": "4ET732",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "ab"
-    },
-    {
-      "code": "4OM488",
-      "name": "Master of Finance",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "consequuntur"
-    },
-    {
-      "code": "3EL133",
-      "name": "Bachelor of Nursing",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "provident"
-    },
-    {
-      "code": "0SI576",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "natus"
-    },
-    {
-      "code": "8NE736",
+      "code": "2UL983",
       "name": "Bachelor of Accounting",
       "attendance": "Online",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "eveniet"
-    },
-    {
-      "code": "3RA88",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "autem"
-    },
-    {
-      "code": "5SE786",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "natus"
-    },
-    {
-      "code": "3ET44",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Frome Rd",
       "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "dolores"
+      "courseStatus": "A"
     },
     {
-      "code": "7QU552",
-      "name": "Master of Finance",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "provident"
-    },
-    {
-      "code": "6OM906",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "qui"
-    },
-    {
-      "code": "7TE473",
-      "name": "Bachelor of Nursing",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "est"
-    },
-    {
-      "code": "9UL18",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "voluptatibus"
-    },
-    {
-      "code": "0QU363",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "a"
-    },
-    {
-      "code": "9SI202",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "incidunt"
-    },
-    {
-      "code": "5SE130",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "minus"
-    },
-    {
-      "code": "5VE797",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "eius"
-    },
-    {
-      "code": "0QU137",
-      "name": "Master of Business Admistration",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "iste"
-    },
-    {
-      "code": "5LI30",
-      "name": "Master of Computer Engineering",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "facilis"
-    },
-    {
-      "code": "7UT800",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "quo"
-    },
-    {
-      "code": "4NA50",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "recusandae"
-    },
-    {
-      "code": "6CO820",
+      "code": "1DO301",
       "name": "Master of Computer Engineering",
       "attendance": "Online",
       "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "nihil"
+      "courseStatus": "B"
     },
     {
-      "code": "3UT71",
-      "name": "Bachelor of Accounting",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "deserunt"
-    },
-    {
-      "code": "0IT323",
+      "code": "6AT148",
       "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "ab"
-    },
-    {
-      "code": "8ET239",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "iusto"
-    },
-    {
-      "code": "6AD109",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - North Tce",
+      "attendance": "Uni Adelaide - Frome Rd",
       "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "ut"
+      "courseStatus": "C"
     },
     {
-      "code": "3UT542",
-      "name": "Bachelor of Accounting",
+      "code": "1CO220",
+      "name": "Master of Nursing",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "0AU513",
+      "name": "Master of Computer Engineering",
       "attendance": "Uni Adelaide - Helen Mayo",
       "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "et"
+      "courseStatus": "B"
     },
     {
-      "code": "1NI893",
-      "name": "Bachelor of Accounting",
+      "code": "1PL828",
+      "name": "Bachelor of Computer Science",
       "attendance": "Uni Adelaide - Frome Rd",
       "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "in"
+      "courseStatus": "C"
     },
     {
-      "code": "4UT203",
-      "name": "Bachelor of Business Admistration",
+      "code": "5QU342",
+      "name": "Master of Accounting",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "0VO726",
+      "name": "Bachelor of Accounting",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "9DE206",
+      "name": "Master of Nursing",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "0SI427",
+      "name": "Master of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "3VE794",
+      "name": "Bachelor of Accounting",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "0CO936",
+      "name": "Master of Accounting",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "8RE463",
+      "name": "Bachelor of Finance",
       "attendance": "Uni Adelaide - Helen Mayo",
       "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "inventore"
+      "courseStatus": "C"
     },
     {
-      "code": "3QU984",
-      "name": "Master of Business Admistration",
-      "attendance": "Uni Adelaide - Helen Mayo",
+      "code": "1NE341",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "8SA207",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - North Tce",
       "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "voluptatem"
+      "courseStatus": "C"
     },
     {
-      "code": "1UT245",
-      "name": "Master of Business Admistration",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "debitis"
-    },
-    {
-      "code": "5ET244",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "cumque"
-    },
-    {
-      "code": "4MI189",
+      "code": "5NU140",
       "name": "Bachelor of Finance",
       "attendance": "Uni Adelaide - Frome Rd",
       "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "doloribus"
+      "courseStatus": "B"
     },
     {
-      "code": "4SO371",
-      "name": "Bachelor of Accounting",
+      "code": "3VE466",
+      "name": "Bachelor of Computer Science",
       "attendance": "Uni Adelaide - Helen Mayo",
       "attendanceType": "Full Time",
-      "courseStatus": "B",
-      "courseLevel": "et"
+      "courseStatus": "B"
     },
     {
-      "code": "2NU108",
+      "code": "8EI275",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "9AD631",
+      "name": "Bachelor of Accounting",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "3NI634",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "3PA338",
+      "name": "Bachelor of Nursing",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "6VO217",
+      "name": "Bachelor of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "9EU47",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "1CO465",
+      "name": "Bachelor of Accounting",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "3DE270",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "0QU886",
+      "name": "Master of Nursing",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "1SE455",
+      "name": "Master of Nursing",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "3VI51",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "9AU789",
+      "name": "Master of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "0BL706",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "5IL251",
+      "name": "Bachelor of Finance",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "6EX505",
+      "name": "Master of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "0VO374",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "6FU69",
+      "name": "Master of Computer Engineering",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "2PR939",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "5QU833",
+      "name": "Bachelor of Finance",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "2NA202",
+      "name": "Master of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "3AU380",
+      "name": "Bachelor of Finance",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "8EX783",
+      "name": "Master of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "1FU633",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "8CO868",
+      "name": "Bachelor of Nursing",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "8PA989",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "1MO658",
+      "name": "Master of Computer Engineering",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "2RA629",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6NE994",
+      "name": "Master of Business Admistration",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "7LI376",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "8EX356",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "1AP165",
+      "name": "Bachelor of Finance",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "8AP478",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "4UT236",
+      "name": "Bachelor of Business Admistration",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6AU204",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "3PR46",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "1EL405",
+      "name": "Bachelor of Business Admistration",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "3LA393",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "3VE467",
+      "name": "Bachelor of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "4ET686",
+      "name": "Master of Nursing",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "5DO56",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "3EN63",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "1ES703",
+      "name": "Bachelor of Nursing",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "4UL951",
+      "name": "Bachelor of Business Admistration",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "1QU363",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "0IP141",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "0VO691",
+      "name": "Master of Nursing",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "5QU118",
+      "name": "Master of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6RE853",
+      "name": "Master of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "2UT49",
+      "name": "Master of Business Admistration",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "7DO13",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "1EX983",
+      "name": "Bachelor of Nursing",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "8QU65",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "8CO27",
+      "name": "Master of Nursing",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "4DE869",
+      "name": "Master of Accounting",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "9VE437",
+      "name": "Bachelor of Finance",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6EO133",
       "name": "Master of Finance",
       "attendance": "Online",
       "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "excepturi"
+      "courseStatus": "B"
     },
     {
-      "code": "1HI537",
+      "code": "8TO570",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "7CO97",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "9EI751",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "0ES265",
       "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "8AC212",
+      "name": "Master of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "7QU558",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "9LA498",
+      "name": "Master of Nursing",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "6VE166",
+      "name": "Master of Finance",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "6MI53",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "6OM499",
+      "name": "Bachelor of Nursing",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "4VE409",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "4NI98",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "3QU722",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "3ET91",
+      "name": "Bachelor of Finance",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "9FU730",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "2PA473",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "3LI137",
+      "name": "Master of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "4RE565",
+      "name": "Bachelor of Accounting",
       "attendance": "Online",
       "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "perferendis"
+      "courseStatus": "B"
     },
     {
-      "code": "9SU302",
+      "code": "4VO994",
+      "name": "Master of Business Admistration",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "6QU194",
+      "name": "Bachelor of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "2EX118",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "9DE619",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "3TO299",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "3RE258",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "6PA232",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "0HI75",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "1NI967",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "1SI757",
+      "name": "Bachelor of Business Admistration",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "1SI656",
+      "name": "Bachelor of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "7DE782",
+      "name": "Bachelor of Business Admistration",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "7NU482",
+      "name": "Master of Nursing",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "0SU517",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "2DO785",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "9SI274",
+      "name": "Bachelor of Finance",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "9OC960",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6QU323",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "3UL631",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "6AS560",
+      "name": "Master of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "6VE638",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "0AU136",
+      "name": "Bachelor of Accounting",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "5OM270",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6LA872",
+      "name": "Bachelor of Finance",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "0FU622",
+      "name": "Bachelor of Nursing",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "9QU8",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "8VO858",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "5PE375",
+      "name": "Bachelor of Accounting",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "8DE737",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "0TE248",
+      "name": "Master of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "0ET930",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "6OF246",
+      "name": "Bachelor of Business Admistration",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "0AL259",
+      "name": "Master of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "7OM185",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "3QU287",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "2NO598",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "1NU5",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "5DO708",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "3SA727",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "8RE103",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "0OD226",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "9QU872",
+      "name": "Bachelor of Finance",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "9AU494",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "7MI275",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "6DE451",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "2SE501",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "9VO87",
+      "name": "Bachelor of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "8ES637",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "4QU896",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "4CO82",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "3MI317",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "7SI174",
+      "name": "Bachelor of Nursing",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "0AS641",
+      "name": "Master of Computer Engineering",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "1RE948",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "2FU101",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "0OC672",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "1IP865",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "7OC247",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "6ET13",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6TE67",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "4CO503",
+      "name": "Bachelor of Finance",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6QU891",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "9VO295",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "6ET357",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "6SU130",
+      "name": "Master of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6LA484",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "5LA995",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "5FU78",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "2LA965",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "0VE445",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "7AP606",
+      "name": "Bachelor of Nursing",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "4AS78",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "3ES190",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "1ET104",
+      "name": "Bachelor of Finance",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "4DO727",
+      "name": "Bachelor of Nursing",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "2NE172",
+      "name": "Master of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6AU269",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "3VO804",
+      "name": "Master of Nursing",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "7DO887",
+      "name": "Bachelor of Business Admistration",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "5CO126",
+      "name": "Master of Finance",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "5SU522",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "5VO925",
+      "name": "Master of Nursing",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "5EO404",
+      "name": "Master of Business Admistration",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "2QU490",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "1SE403",
+      "name": "Bachelor of Nursing",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "4CO834",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "7EV970",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "8NO584",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6NI810",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "3QU302",
+      "name": "Master of Business Admistration",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "2VE606",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "5SO553",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "9RE963",
+      "name": "Master of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6VO693",
+      "name": "Master of Computer Science",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "3DI605",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "9NE39",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "0AL178",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "5SA462",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "1NE333",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "7RE383",
       "name": "Bachelor of Nursing",
       "attendance": "Uni Adelaide - Helen Mayo",
       "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "quia"
+      "courseStatus": "B"
     },
     {
-      "code": "8ES376",
+      "code": "3AS664",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "5PR792",
+      "name": "Master of Computer Engineering",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "0AU980",
       "name": "Bachelor of Finance",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "voluptatum"
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
     },
     {
-      "code": "2QU492",
+      "code": "8AB612",
       "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "4IN351",
+      "name": "Bachelor of Nursing",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "1NO967",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "9AC594",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "0ET763",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "3IN663",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "7NE690",
+      "name": "Bachelor of Nursing",
       "attendance": "Online",
       "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "sed"
+      "courseStatus": "A"
     },
     {
-      "code": "8CO609",
+      "code": "9AU649",
+      "name": "Master of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "8VO590",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "6EL967",
+      "name": "Master of Nursing",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "7LA54",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "1QU976",
+      "name": "Bachelor of Business Admistration",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "5VO559",
+      "name": "Bachelor of Business Admistration",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "0NE551",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "6OM843",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "1DE947",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "1EL41",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "1NE781",
+      "name": "Bachelor of Business Admistration",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "9QU47",
+      "name": "Bachelor of Finance",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "1EA312",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "1UT103",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "5VO546",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "6QU363",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "1MO734",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "7AU222",
+      "name": "Bachelor of Nursing",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "5DE285",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6MI129",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "0VO349",
       "name": "Master of Computer Engineering",
       "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "sequi"
-    },
-    {
-      "code": "0A82",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - Frome Rd",
       "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "et"
+      "courseStatus": "B"
     },
     {
-      "code": "6RE681",
+      "code": "9VO66",
+      "name": "Bachelor of Accounting",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "4VO819",
       "name": "Master of Finance",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "libero"
-    },
-    {
-      "code": "0QU402",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "tempore"
-    },
-    {
-      "code": "1FU471",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "non"
-    },
-    {
-      "code": "5MI140",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "est"
-    },
-    {
-      "code": "4MO378",
-      "name": "Master of Finance",
-      "attendance": "Online",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "sed"
-    },
-    {
-      "code": "6RE811",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "sint"
-    },
-    {
-      "code": "8RE118",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "id"
-    },
-    {
-      "code": "9VI35",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "aut"
-    },
-    {
-      "code": "9DE642",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "voluptatem"
-    },
-    {
-      "code": "7EX2",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "B",
-      "courseLevel": "rem"
-    },
-    {
-      "code": "0BE681",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "temporibus"
-    },
-    {
-      "code": "8EN317",
-      "name": "Master of Accounting",
       "attendance": "Uni Adelaide - Helen Mayo",
       "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "nostrum"
+      "courseStatus": "A"
     },
     {
-      "code": "0IP553",
-      "name": "Bachelor of Finance",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "vero"
-    },
-    {
-      "code": "4QU85",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "qui"
-    },
-    {
-      "code": "5FA89",
-      "name": "Master of Accounting",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "illum"
-    },
-    {
-      "code": "7IL912",
-      "name": "Master of Nursing",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "in"
-    },
-    {
-      "code": "6QU474",
-      "name": "Bachelor of Finance",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "est"
-    },
-    {
-      "code": "3MA818",
-      "name": "Bachelor of Business Admistration",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "nesciunt"
-    },
-    {
-      "code": "3EI334",
-      "name": "Bachelor of Finance",
-      "attendance": "Online",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "natus"
-    },
-    {
-      "code": "5QU498",
-      "name": "Bachelor of Finance",
-      "attendance": "Online",
-      "attendanceType": "Full Time or Part Time",
-      "courseStatus": "A",
-      "courseLevel": "sed"
-    },
-    {
-      "code": "1MA20",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Uni Adelaide - Helen Mayo",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "ratione"
-    },
-    {
-      "code": "2AT114",
+      "code": "2SA53",
       "name": "Master of Computer Science",
       "attendance": "Uni Adelaide - North Tce",
       "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "a"
+      "courseStatus": "C"
     },
     {
-      "code": "9QU977",
+      "code": "7AU818",
+      "name": "Master of Accounting",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "6ER409",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "1TE788",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "4MA522",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "9EU708",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "7CO257",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "7RE684",
+      "name": "Bachelor of Nursing",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "0IP222",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "0FU33",
+      "name": "Master of Nursing",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "7AU345",
+      "name": "Master of Computer Engineering",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "0UT689",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "2AU701",
+      "name": "Bachelor of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "4RE715",
+      "name": "Master of Finance",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "8SI78",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "9CU542",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "8ES72",
+      "name": "Bachelor of Business Admistration",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "5RE897",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "7ES803",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "5RE224",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "5PA646",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "8OM73",
+      "name": "Bachelor of Accounting",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "9DI741",
+      "name": "Bachelor of Business Admistration",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6EX665",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "0QU738",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "8AU824",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "9ET492",
+      "name": "Bachelor of Finance",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "7OC865",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "2AU765",
+      "name": "Master of Accounting",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "4SO360",
+      "name": "Bachelor of Business Admistration",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "9FU727",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "5VE520",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "8DO71",
+      "name": "Master of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "1IL907",
+      "name": "Bachelor of Computer Engineering",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "4DO986",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "3BL189",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Part Time",
+      "courseStatus": "B"
+    },
+    {
+      "code": "7FU506",
+      "name": "Bachelor of Nursing",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "3UT613",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "5QU302",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "1VE711",
       "name": "Master of Finance",
       "attendance": "Online",
       "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "et"
+      "courseStatus": "B"
     },
     {
-      "code": "2MA4",
+      "code": "1IP796",
+      "name": "Bachelor of Business Admistration",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "0EA337",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "2DO849",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "8AU143",
+      "name": "Bachelor of Business Admistration",
+      "attendance": "Online",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "6QU463",
       "name": "Bachelor of Accounting",
       "attendance": "Uni Adelaide - Helen Mayo",
       "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "reprehenderit"
+      "courseStatus": "C"
     },
     {
-      "code": "2QU533",
+      "code": "4IT616",
+      "name": "Bachelor of Computer Science",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "4MA321",
+      "name": "Master of Computer Engineering",
+      "attendance": "Online",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "7QU352",
+      "name": "Bachelor of Accounting",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "8ID94",
+      "name": "Master of Accounting",
+      "attendance": "Uni Adelaide - Helen Mayo",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "0UT270",
+      "name": "Master of Business Admistration",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Part Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "0ET938",
+      "name": "Master of Computer Science",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time",
+      "courseStatus": "A"
+    },
+    {
+      "code": "1CO141",
+      "name": "Master of Computer Engineering",
+      "attendance": "Uni Adelaide - North Tce",
+      "attendanceType": "Full Time",
+      "courseStatus": "C"
+    },
+    {
+      "code": "6SU227",
       "name": "Master of Nursing",
       "attendance": "Uni Adelaide - North Tce",
       "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "consequatur"
+      "courseStatus": "A"
     },
     {
-      "code": "5IS18",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "C",
-      "courseLevel": "iste"
+      "code": "4FA429",
+      "name": "Master of Finance",
+      "attendance": "Uni Adelaide - Frome Rd",
+      "attendanceType": "Full Time or Part Time",
+      "courseStatus": "C"
     },
     {
-      "code": "7PA983",
-      "name": "Master of Computer Science",
-      "attendance": "Uni Adelaide - North Tce",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "et"
-    },
-    {
-      "code": "1VO121",
-      "name": "Master of Computer Science",
-      "attendance": "Online",
-      "attendanceType": "Part Time",
-      "courseStatus": "A",
-      "courseLevel": "enim"
-    },
-    {
-      "code": "4HI643",
-      "name": "Bachelor of Computer Science",
-      "attendance": "Online",
-      "attendanceType": "Part Time",
-      "courseStatus": "B",
-      "courseLevel": "quis"
-    },
-    {
-      "code": "2IU513",
-      "name": "Master of Computer Science",
-      "attendance": "Online",
-      "attendanceType": "Full Time",
-      "courseStatus": "C",
-      "courseLevel": "ducimus"
-    },
-    {
-      "code": "9AU665",
-      "name": "Master of Computer Engineering",
+      "code": "3DU991",
+      "name": "Bachelor of Accounting",
       "attendance": "Uni Adelaide - Helen Mayo",
       "attendanceType": "Full Time or Part Time",
-      "courseStatus": "C",
-      "courseLevel": "nisi"
-    },
-    {
-      "code": "1QU167",
-      "name": "Bachelor of Computer Engineering",
-      "attendance": "Uni Adelaide - Frome Rd",
-      "attendanceType": "Full Time",
-      "courseStatus": "A",
-      "courseLevel": "consectetur"
+      "courseStatus": "A"
     }
   ]
 }
