@@ -14,7 +14,10 @@ describe('LoginPageComponent', () => {
   let authenticationServiceStub: Partial<AuthenticationService>;
 
   beforeEach(async () => {
-    authServiceSpy = jasmine.createSpyObj('AuthenticationService', ['login']);
+    authServiceSpy = jasmine.createSpyObj('AuthenticationService', [
+      'login',
+      'processLoginSuccess',
+    ]);
     await TestBed.configureTestingModule({
       imports: [
         HttpClientTestingModule,
@@ -30,8 +33,6 @@ describe('LoginPageComponent', () => {
     fixture = TestBed.createComponent(LoginPageComponent);
     component = fixture.componentInstance;
     authServiceSpy = TestBed.get(AuthenticationService);
-    console.warn('############');
-    console.log(authenticationServiceStub);
     fixture.detectChanges();
   });
 
@@ -41,19 +42,39 @@ describe('LoginPageComponent', () => {
 
   it(`should call authentication service when form is valid`, () => {
     component.loginForm.controls['email'].setValue('test@email.com');
-    component.loginForm.controls['password'].setValue('test@email.com');
+    component.loginForm.controls['password'].setValue('password');
     authServiceSpy.login.and.returnValue(of('some value'));
     component.login();
 
     expect(authServiceSpy.login).toHaveBeenCalled();
   });
 
-  it(`should not call authentication service when form is valid`, () => {
+  it(`should not call authentication service when form is invalid`, () => {
     component.loginForm.controls['email'].setValue('');
-    component.loginForm.controls['password'].setValue('test@email.com');
+    component.loginForm.controls['password'].setValue('password');
     authServiceSpy.login.and.returnValue(of('some value'));
     component.login();
 
     expect(authServiceSpy.login).not.toHaveBeenCalled();
+  });
+
+  it(`should call processLoginSuccess when login is successful`, () => {
+    component.loginForm.controls['email'].setValue('test@email.com');
+    component.loginForm.controls['password'].setValue('password');
+
+    authServiceSpy.login.and.returnValue(of({ statusCode: 200 }));
+    component.login();
+
+    expect(authServiceSpy.processLoginSuccess).toHaveBeenCalled();
+  });
+
+  it(`should not call processLoginSuccess when login is not successful`, () => {
+    component.loginForm.controls['email'].setValue('test@email.com');
+    component.loginForm.controls['password'].setValue('');
+
+    authServiceSpy.login.and.returnValue(of({ statusCode: 404 }));
+    component.login();
+
+    expect(authServiceSpy.processLoginSuccess).not.toHaveBeenCalled();
   });
 });
