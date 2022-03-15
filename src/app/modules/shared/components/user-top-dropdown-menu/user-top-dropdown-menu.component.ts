@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { AuthRepository } from 'src/app/core/repositories/auth.repository';
 import { AuthenticationService } from 'src/app/modules/authentication/authentication.service';
 
 @Component({
@@ -8,11 +9,10 @@ import { AuthenticationService } from 'src/app/modules/authentication/authentica
   encapsulation: ViewEncapsulation.None,
 })
 export class UserTopDropdownMenuComponent implements OnInit {
-  userFullname: string;
-
-  constructor(private authService: AuthenticationService) {
-    this.userFullname = authService.getUserFullname();
-  }
+  constructor(
+    public authRepo: AuthRepository,
+    private authService: AuthenticationService
+  ) {}
 
   ngOnInit(): void {}
 

@@ -4,7 +4,7 @@
   #menuTrigger="matMenuTrigger"
   (mouseenter)="menuTrigger.openMenu()"
 >
-  {{ userFullname }}
+  {{ (authRepo.user$ | async)?.fullName }}
   <mat-icon color="accent">circle</mat-icon>
 </button>
 <mat-menu

@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { first, Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { environment } from '../../../environments/environment';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { AuthRepository } from 'src/app/core/repositories/auth.repository';
 interface Course {
   code: string;
   name: string;
@@ -19,7 +20,11 @@ interface Course {
 export class AuthenticationService {
   jwtHelper = new JwtHelperService();
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private authRepo: AuthRepository
+  ) {}
 
   login(loginId: string, password: string) {
     const body = {
@@ -35,24 +40,22 @@ export class AuthenticationService {
   }
 
   processLoginSuccess(response: any) {
-    localStorage.setItem('token', response.token);
-    localStorage.setItem('name', response.user.fullName);
+    const user = response.user;
+    this.authRepo.setUser({
+      email: user.email,
+      fullName: user.fullName,
+    });
+    this.authRepo.setToken(response.token);
 
     this.router.navigate(['/']);
   }
 
   public isAuthenticated(): boolean {
-    const token = localStorage.getItem('token') || undefined;
-    return !this.jwtHelper.isTokenExpired(token);
-  }
-
-  getUserFullname(): string {
-    return localStorage.getItem('name') || '';
+    return !this.jwtHelper.isTokenExpired(this.authRepo.getToken());
   }
 
   logout() {
-    localStorage.removeItem('token');
-    localStorage.removeItem('name');
+    this.authRepo.reset();
 
     this.router.navigate(['/login']);
   }
