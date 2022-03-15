@@ -25,7 +25,8 @@
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
     "@auth0/angular-jwt": "^5.0.2",
-    "@datorama/akita": "^7.1.1",
+    "@ngneat/elf": "^1.5.0",
+    "@ngneat/elf-entities": "^4.1.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
