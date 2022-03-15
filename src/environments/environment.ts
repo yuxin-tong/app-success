@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'https://apisatac1.azure-api.net/dev/v1/api/',
-  apiSubscriptionKey: 'b3fd6d5fb1ed46b7819ea5ee77f1c67a',
+  apiBaseUrl: ' https://stcgw.azure-api.net/dev/v1/api/',
+  apiSubscriptionKey: '978bc8e81b4643c9b22a74a5ecf898bd',
 };
 
 /*
