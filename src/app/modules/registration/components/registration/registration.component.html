@@ -1,19 +1,13 @@
-test
-<form fxLayout="column" [formGroup]="loginForm" fxLayoutAlign="center center">
-  <h1 class="mat-display-1">Login</h1>
+<form fxLayout="column" [formGroup]="form" fxLayoutAlign="center center">
+  <h1 class="mat-display-1">Register</h1>
 
   <mat-form-field appearance="fill" fxFlexFill>
     <mat-label>Email</mat-label>
-    <input
-      type="email"
-      matInput
-      formControlName="email"
-      placeholder="email.address@domain.com"
-    />
-    <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+    <input type="email" matInput formControlName="email" />
+    <mat-error *ngIf="form.get('email')?.hasError('email')">
       Please enter a valid email address
     </mat-error>
-    <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+    <mat-error *ngIf="form.get('email')?.hasError('required')">
       Email is <strong>required</strong>
     </mat-error>
   </mat-form-field>
@@ -21,41 +15,149 @@ test
     <mat-label>Password</mat-label>
     <input
       type="password"
+      #password
       matInput
       formControlName="password"
       autocomplete="false"
     />
+    <mat-hint
+      >Password should contain at least one of lowercase, uppercase, digit and
+      special character and should be minimum 8 characters long</mat-hint
+    >
     <mat-error
-      *ngIf="loginForm.get('password')?.hasError('required')"
+      *ngIf="form.get('password')?.hasError('required')"
       fxLayoutAlign="space-between"
     >
       Password is required
-      <mat-hint
-        ><a [routerLink]="forgetPasswordPath"
-          >Forgot your password?</a
-        ></mat-hint
-      >
     </mat-error>
-    <mat-hint align="end"
-      ><a [routerLink]="forgetPasswordPath">Forgot your password?</a></mat-hint
+    <mat-error
+      *ngIf="form.get('password')?.hasError('pattern')"
+      fxLayoutAlign="space-between"
     >
+      Password is not strong enough
+    </mat-error>
   </mat-form-field>
-
-  <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
-    <div class="server-error-container">
-      <mat-error class="mat-small" *ngIf="loginForm.hasError('notFound')">
-        Sorry, email address or password is incorrect
+  <mat-password-strength #passwordComponent [password]="password.value">
+  </mat-password-strength>
+  <mat-password-strength-info
+    class="mat-small"
+    [passwordComponent]="passwordComponent"
+  >
+  </mat-password-strength-info>
+  <div
+    fxFlexFill
+    fxLayoutAlign.gt-sm="space-between center"
+    fxLayout.lt-md="column"
+  >
+    <mat-form-field appearance="fill" fxFlex="49" fxFlex.lt-md="100">
+      <mat-label>First Name</mat-label>
+      <input type="text" matInput formControlName="firstName" />
+      <mat-error *ngIf="form.get('firstName')?.hasError('required')">
+        First Name is <strong>required</strong>
       </mat-error>
-    </div>
+    </mat-form-field>
+    <mat-form-field appearance="fill" fxFlex="49" fxFlex.lt-md="100">
+      <mat-label>Last Name</mat-label>
+      <input type="text" matInput formControlName="lastName" />
+      <mat-error *ngIf="form.get('lastName')?.hasError('required')">
+        Last Name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div
+    fxFlexFill
+    fxLayoutAlign.gt-sm="space-between center"
+    fxLayout.lt-md="column"
+  >
+    <mat-form-field appearance="fill" fxFlex="49" fxFlex.lt-md="100">
+      <mat-label>Date of Birth</mat-label>
+      <input type="date" matInput formControlName="dateOfBirth" />
+      <mat-error *ngIf="form.get('dateOfBirth')?.hasError('required')">
+        Date of Birth is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill" fxFlex="49" fxFlex.lt-md="100">
+      <mat-label>Gender</mat-label>
+      <mat-select formControlName="gender">
+        <mat-option value="M">Male</mat-option>
+        <mat-option value="F">Female</mat-option>
+        <mat-option value="X">Indeterminate/Intersex/Unspecified</mat-option>
+      </mat-select>
+      <mat-error *ngIf="form.get('gender')?.hasError('required')">
+        Gender is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <mat-form-field appearance="fill" fxFlexFill>
+    <mat-label>Citizenship Status</mat-label>
+    <mat-select formControlName="citizenshipStatus">
+      <mat-option value="C1">Australian citizen</mat-option>
+      <mat-option value="C2"
+        >New Zealand citizen (excluding those with Australian
+        citizenship)</mat-option
+      >
+      <mat-option value="C3"
+        >Permanent resident of Australia (but not citizen)</mat-option
+      >
+      <mat-option value="C8"
+        >Holder of an Australian permanent humanitarian visa</mat-option
+      >
+      <mat-option value="C4"
+        >Holder of a student visa, temporary resident visa or visitor
+        visa</mat-option
+      >
+      <mat-option value="C5">None of the above</mat-option>
+    </mat-select>
+    <mat-error *ngIf="form.get('citizenshipStatus')?.hasError('required')">
+      Citizenship Status is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-checkbox formControlName="termsConditions" fxFlexAlign="start">
+    I have read and accept SATAC's <a href="">Terms & Conditions</a>
+  </mat-checkbox>
+  <div class="mat-small fixed-height-15">
+    <mat-error
+      *ngIf="
+        form.get('termsConditions')?.hasError('required') &&
+        form.get('termsConditions')?.dirty
+      "
+      class="mat-small"
+      fxFlexAlign="start"
+    >
+      Acceptance of Terms & Conditions is <strong>required</strong>
+    </mat-error>
+  </div>
+  <mat-checkbox formControlName="privacyPolicy" fxFlexAlign="start">
+    I have read and accept SATAC's <a href="">Privacy Policy</a>
+  </mat-checkbox>
+  <div class="mat-small fixed-height-15">
+    <mat-error
+      *ngIf="
+        form.get('privacyPolicy')?.hasError('required') &&
+        form.get('privacyPolicy')?.dirty
+      "
+      fxFlexAlign="start"
+    >
+      Acceptance of Privacy Policy is <strong>required</strong>
+    </mat-error>
+  </div>
+  <mat-checkbox formControlName="subscription" fxFlexAlign="start">
+    Please send me updates relating to application key dates & important
+    information
+  </mat-checkbox>
+  <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+    <mat-error class="mat-small fixed-height" *ngIf="form.hasError('notFound')">
+      Sorry, email address or password is incorrect
+    </mat-error>
     <button
       mat-raised-button
       color="primary"
       (click)="submit()"
-      [disabled]="!loginForm.valid"
+      [disabled]="!form.valid"
       class="primary-button"
     >
       <span fxLayoutAlign="center center">
-        Login
+        Create Account
         <mat-spinner
           *ngIf="spinnerService.visibility | async"
           fxFlex="0 0 auto"
@@ -64,10 +166,12 @@ test
         ></mat-spinner>
       </span>
     </button>
-    <button mat-stroked-button class="primary-button">Login with Google</button>
+    <button mat-stroked-button class="primary-button">
+      Sign up with Google
+    </button>
     <div>
-      Do not have a mySATAC account yet?
-      <a [routerLink]="">Create an account</a>
+      Already have a MySATAC account?
+      <a [routerLink]="loginPath">Login</a>
     </div>
   </div>
 </form>

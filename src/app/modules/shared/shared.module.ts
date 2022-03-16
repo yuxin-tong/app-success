@@ -15,6 +15,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
 
 import { MobilePublicDrawerComponent } from './components/mobile-public-drawer/mobile-public-drawer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -41,6 +44,9 @@ import { UserSidebarComponent } from './components/user-sidebar/user-sidebar.com
     MatToolbarModule,
     MatProgressSpinnerModule,
     MatSidenavModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    MatPasswordStrengthModule,
   ],
   exports: [
     PublicSidebarComponent,
@@ -52,6 +58,8 @@ import { UserSidebarComponent } from './components/user-sidebar/user-sidebar.com
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSelectModule,
+    MatCheckboxModule,
     MobileFooterComponent,
     HeaderComponent,
     MysatacLogoComponent,
@@ -60,6 +68,7 @@ import { UserSidebarComponent } from './components/user-sidebar/user-sidebar.com
     MatProgressSpinnerModule,
     MatSidenavModule,
     UserSidebarComponent,
+    MatPasswordStrengthModule,
   ],
 })
 export class SharedModule {}

@@ -66,9 +66,10 @@
 @mixin typography($theme) {
   // Get the typography config from the theme.
   $typography-config: mat.get-typography-config($theme);
+  $small-font-size: mat.font-size($typography-config, "mat-small");
 
-  .my-carousel {
-    font-family: mat.font-family($typography-config);
+  mat-password-strength-info mat-card {
+    font-size: 100px !important;
   }
 }
 

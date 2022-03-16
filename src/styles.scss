@@ -11,6 +11,13 @@ $mysatac-typography: mat.define-typography-config(
   $font-family: "'museo-sans', Helvetica, sans-serif",
 );
 
+mat-password-strength-info mat-card > mat-card-content div {
+  &,
+  mat-icon {
+    @include mat.typography-level($mysatac-typography, "caption");
+  }
+}
+
 @include mat.core($mysatac-typography);
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
@@ -38,7 +45,7 @@ $mysatac-palette: (
     200: #656565,
     100: #464646,
     50: #252525
-      // ... continues to 900,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      // ... continues to 900,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
 );
 
@@ -120,4 +127,8 @@ body {
 
 mat-form-field {
   margin-bottom: 8px;
+}
+
+.fixed-height-15 {
+  height: 15px;
 }
