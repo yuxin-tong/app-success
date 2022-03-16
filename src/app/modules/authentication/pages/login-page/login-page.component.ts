@@ -38,7 +38,6 @@ export class LoginPageComponent implements OnInit {
   }
 
   private processLogin(res: any) {
-    console.warn('######', res);
     if (res.statusCode != 200) {
       this.loginForm.setErrors({ notFound: true });
       return;

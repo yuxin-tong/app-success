@@ -1,0 +1,73 @@
+test
+<form fxLayout="column" [formGroup]="loginForm" fxLayoutAlign="center center">
+  <h1 class="mat-display-1">Login</h1>
+
+  <mat-form-field appearance="fill" fxFlexFill>
+    <mat-label>Email</mat-label>
+    <input
+      type="email"
+      matInput
+      formControlName="email"
+      placeholder="email.address@domain.com"
+    />
+    <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" fxFlexFill>
+    <mat-label>Password</mat-label>
+    <input
+      type="password"
+      matInput
+      formControlName="password"
+      autocomplete="false"
+    />
+    <mat-error
+      *ngIf="loginForm.get('password')?.hasError('required')"
+      fxLayoutAlign="space-between"
+    >
+      Password is required
+      <mat-hint
+        ><a [routerLink]="forgetPasswordPath"
+          >Forgot your password?</a
+        ></mat-hint
+      >
+    </mat-error>
+    <mat-hint align="end"
+      ><a [routerLink]="forgetPasswordPath">Forgot your password?</a></mat-hint
+    >
+  </mat-form-field>
+
+  <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+    <div class="server-error-container">
+      <mat-error class="mat-small" *ngIf="loginForm.hasError('notFound')">
+        Sorry, email address or password is incorrect
+      </mat-error>
+    </div>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="submit()"
+      [disabled]="!loginForm.valid"
+      class="primary-button"
+    >
+      <span fxLayoutAlign="center center">
+        Login
+        <mat-spinner
+          *ngIf="spinnerService.visibility | async"
+          fxFlex="0 0 auto"
+          color="accent"
+          [diameter]="20"
+        ></mat-spinner>
+      </span>
+    </button>
+    <button mat-stroked-button class="primary-button">Login with Google</button>
+    <div>
+      Do not have a mySATAC account yet?
+      <a [routerLink]="">Create an account</a>
+    </div>
+  </div>
+</form>
