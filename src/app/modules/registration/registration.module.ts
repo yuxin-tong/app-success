@@ -8,7 +8,11 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { RegistrationSuccessComponent } from './components/registration-success/registration-success.component';
 
 @NgModule({
-  declarations: [RegistrationPageComponent, RegistrationComponent, RegistrationSuccessComponent],
+  declarations: [
+    RegistrationPageComponent,
+    RegistrationComponent,
+    RegistrationSuccessComponent,
+  ],
   imports: [CommonModule, RegistrationRoutingModule, SharedModule],
 })
 export class RegistrationModule {}
