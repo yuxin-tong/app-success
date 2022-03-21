@@ -23,46 +23,18 @@ import {
   transition,
 } from '@angular/animations';
 import { Utils } from 'src/app/core/utils/utils';
+import { AppConstants } from 'src/app/core/constants/app.constants';
 
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss'],
-  animations: [
-    trigger('inOutAnimation', [
-      transition(':enter', [
-        style({ height: 0, opacity: 0 }),
-        animate('1s ease-out', style({ height: '*', opacity: 1 })),
-      ]),
-      transition(':leave', [
-        style({ height: '*', opacity: 1 }),
-        animate('1s ease-in', style({ height: 0, opacity: 0 })),
-      ]),
-    ]),
-  ],
+  animations: AppConstants.IN_OUT_ANIMATION,
 })
 export class RegistrationComponent implements OnInit {
-  passwordRegex = [
-    /(?=.*[a-z])/,
-    /(?=.*[A-Z])/,
-    /(?=.*\d)/,
-    /(?=.*[@$!%*?&])/,
-    /[A-Za-z\d@$!%*?&]{8,}/,
-  ];
-
   form = this.formBuilder.group({
     email: ['', [Validators.required, Validators.email]],
-    password: [
-      '',
-      [
-        Validators.required,
-        Validators.pattern(
-          '^' + this.passwordRegex.map((regex) => regex.source).join('') + '$'
-        ),
-      ],
-      null,
-      { updateOn: blur },
-    ],
+    password: AppConstants.PASSWORD_FORM_CONTROL(AppConstants.PASSWORD_REGEX),
     firstName: ['', [Validators.required]],
     lastName: ['', [Validators.required]],
     birthDate: ['', [Validators.required]],
@@ -81,6 +53,7 @@ export class RegistrationComponent implements OnInit {
   termsConditions = '';
   privacyPolicy = '';
   showPasswordPolicy = false;
+  passwordValid = Utils.getPasswordValidity;
 
   currentDate = new Date();
   maxDate = new Date(
@@ -130,14 +103,6 @@ export class RegistrationComponent implements OnInit {
           this.form.controls['email'].setErrors(null);
         }
       });
-  }
-
-  get passwordValid(): boolean[] {
-    const password = this.form.controls['password']?.value;
-
-    return this.passwordRegex.map((regex: RegExp) => {
-      return regex.test(password);
-    });
   }
 
   removeBirthDateValidation() {
@@ -191,6 +156,9 @@ export class RegistrationComponent implements OnInit {
   }
 
   submit() {
+    if (!this.form.valid) {
+      return;
+    }
     let user = {} as RegistrationUser;
     user.email = this.form.controls['email'].value;
     user.password = this.form.controls['password'].value;

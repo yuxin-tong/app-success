@@ -56,7 +56,7 @@
   <app-password-policy
     *ngIf="showPasswordPolicy"
     [@inOutAnimation]
-    [valid]="passwordValid"
+    [valid]="passwordValid(form.get('password')?.value)"
     fxFlexFill
   ></app-password-policy>
   <div
@@ -204,7 +204,6 @@
       color="primary"
       (click)="submit()"
       class="primary-button"
-      [disabled]="!form.valid"
     >
       <span fxLayoutAlign="center center">
         Create Account
