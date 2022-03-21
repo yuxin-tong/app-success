@@ -18,7 +18,7 @@
     <mat-error *ngIf="form.get('email')?.hasError('inuse')">
       This email is already be in use. please
       <a [routerLink]="loginPath">Login</a> or
-      <a [routerLink]="forgetPasswordPath">reset your password</a>
+      <a [routerLink]="forgotPasswordPath">reset your password</a>
     </mat-error>
   </mat-form-field>
   <mat-form-field appearance="fill" fxFlexFill>

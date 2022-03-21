@@ -29,7 +29,7 @@ export class AuthGuard implements CanLoad {
     | boolean
     | UrlTree {
     if (route.path == 'auth') {
-      // authenticated but wants to access login/forget-password
+      // authenticated but wants to access login/forgot-password
       if (this.authService.isAuthenticated()) {
         this.router.navigate(['dashboard']);
         return false;

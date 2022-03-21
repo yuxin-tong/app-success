@@ -16,7 +16,7 @@ export class LoginPageComponent implements OnInit {
   });
 
   registrationPath = `/${RoutingConstants.REGISTRATION}`;
-  forgetPasswordPath = `/${RoutingConstants.FORGET_PASSWORD}`;
+  forgotPasswordPath = `/${RoutingConstants.FORGOT_PASSWORD}`;
 
   constructor(
     private service: AuthenticationService,

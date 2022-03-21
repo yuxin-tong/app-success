@@ -10,8 +10,8 @@ const routes: Routes = [
     redirectTo: `${RoutingConstants.AUTH}/${RoutingConstants.LOGIN}`,
   },
   {
-    path: RoutingConstants.FORGET_PASSWORD,
-    redirectTo: `${RoutingConstants.AUTH}/${RoutingConstants.FORGET_PASSWORD}`,
+    path: RoutingConstants.FORGOT_PASSWORD,
+    redirectTo: `${RoutingConstants.AUTH}/${RoutingConstants.FORGOT_PASSWORD}`,
   },
   {
     path: RoutingConstants.AUTH,

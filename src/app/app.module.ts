@@ -6,11 +6,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserAreaModule } from './modules/user-area/user-area.module';
 import { SharedModule } from './modules/shared/shared.module';
-import { AuthenticationModule } from './modules/authentication/authentication.module';
 import { RegistrationModule } from './modules/registration/registration.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CustomHttpInterceptor } from './core/interceptors/custom-http.interceptor';
-import { JwtModule } from '@auth0/angular-jwt';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 
 @NgModule({
