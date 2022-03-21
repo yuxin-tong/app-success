@@ -1,5 +1,5 @@
 {
   "/api": {
-    "target": "https://apisatac1.azure-api.net/dev/v1/api"
+    "target": "http://localhost:3000"
   }
 }

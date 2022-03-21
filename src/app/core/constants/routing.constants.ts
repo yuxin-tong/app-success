@@ -4,6 +4,7 @@ export const RoutingConstants = {
   FORGET_PASSWORD: 'forget-password',
 
   REGISTRATION: 'registration',
+  REGISTRATION_SUCCESS: 'success',
 
   DASHBOARD: 'dashboard',
   APPLICATION: 'application',

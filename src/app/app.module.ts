@@ -11,6 +11,7 @@ import { RegistrationModule } from './modules/registration/registration.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CustomHttpInterceptor } from './core/interceptors/custom-http.interceptor';
 import { JwtModule } from '@auth0/angular-jwt';
+import { MAT_DATE_LOCALE } from '@angular/material/core';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +30,7 @@ import { JwtModule } from '@auth0/angular-jwt';
       useClass: CustomHttpInterceptor,
       multi: true,
     },
+    { provide: MAT_DATE_LOCALE, useValue: 'en-AU' },
   ],
   bootstrap: [AppComponent],
 })

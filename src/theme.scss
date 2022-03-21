@@ -28,9 +28,17 @@
   );
   $light-background-color: mat.get-color-from-palette($primary-palette, 50);
 
+  .accept-reject-dialog-panel mat-dialog-container {
+    background-color: $light-background-color;
+
+    mat-dialog-content {
+      background-color: white;
+    }
+  }
+
   .main-container {
     color: $light-text-color;
-    background-color: white; //$light-background-color;
+    background-color: $light-background-color;
 
     a {
       color: $light-text-color;

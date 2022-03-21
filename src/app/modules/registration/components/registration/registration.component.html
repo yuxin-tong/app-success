@@ -3,47 +3,62 @@
 
   <mat-form-field appearance="fill" fxFlexFill>
     <mat-label>Email</mat-label>
-    <input type="email" matInput formControlName="email" />
+    <input
+      type="email"
+      matInput
+      formControlName="email"
+      (focusout)="emailExistenceCheck()"
+    />
     <mat-error *ngIf="form.get('email')?.hasError('email')">
       Please enter a valid email address
     </mat-error>
     <mat-error *ngIf="form.get('email')?.hasError('required')">
       Email is <strong>required</strong>
     </mat-error>
+    <mat-error *ngIf="form.get('email')?.hasError('inuse')">
+      This email is already be in use. please
+      <a [routerLink]="loginPath">Login</a> or
+      <a [routerLink]="forgetPasswordPath">reset your password</a>
+    </mat-error>
   </mat-form-field>
   <mat-form-field appearance="fill" fxFlexFill>
     <mat-label>Password</mat-label>
     <input
       type="password"
-      #password
       matInput
       formControlName="password"
       autocomplete="false"
+      (focus)="showPasswordPolicy = true"
+      (focusout)="showPasswordPolicy = false"
     />
-    <mat-hint
-      >Password should contain at least one of lowercase, uppercase, digit and
-      special character and should be minimum 8 characters long</mat-hint
-    >
-    <mat-error
-      *ngIf="form.get('password')?.hasError('required')"
-      fxLayoutAlign="space-between"
-    >
+    <!-- cdkOverlayOrigin
+      (focus)="isOpen = true"
+      (focusout)="isOpen = false"
+      #trigger="cdkOverlayOrigin"-->
+
+    <mat-error *ngIf="form.get('password')?.hasError('required')">
       Password is required
     </mat-error>
-    <mat-error
-      *ngIf="form.get('password')?.hasError('pattern')"
-      fxLayoutAlign="space-between"
-    >
-      Password is not strong enough
+    <mat-error *ngIf="form.get('password')?.hasError('pattern')">
+      Password policy is not met
     </mat-error>
+    <!--ng-template
+      cdkConnectedOverlay
+      [cdkConnectedOverlayOrigin]="trigger"
+      [cdkConnectedOverlayOpen]="
+        (isOpen && !form.get('password')?.value) ||
+        (isOpen && (form.get('password')?.hasError('pattern') ?? false))
+      "
+      >Hello
+    </ng-template-->
   </mat-form-field>
-  <mat-password-strength #passwordComponent [password]="password.value">
-  </mat-password-strength>
-  <mat-password-strength-info
-    class="mat-small"
-    [passwordComponent]="passwordComponent"
-  >
-  </mat-password-strength-info>
+
+  <app-password-policy
+    *ngIf="showPasswordPolicy"
+    [@inOutAnimation]
+    [valid]="passwordValid"
+    fxFlexFill
+  ></app-password-policy>
   <div
     fxFlexFill
     fxLayoutAlign.gt-sm="space-between center"
@@ -56,7 +71,7 @@
         First Name is <strong>required</strong>
       </mat-error>
     </mat-form-field>
-    <mat-form-field appearance="fill" fxFlex="49" fxFlex.lt-md="100">
+    <mat-form-field appearance="fill" fxFlex.gt-sm="49" fxFlex.lt-md="100">
       <mat-label>Last Name</mat-label>
       <input type="text" matInput formControlName="lastName" />
       <mat-error *ngIf="form.get('lastName')?.hasError('required')">
@@ -69,19 +84,38 @@
     fxLayoutAlign.gt-sm="space-between center"
     fxLayout.lt-md="column"
   >
-    <mat-form-field appearance="fill" fxFlex="49" fxFlex.lt-md="100">
+    <mat-form-field appearance="fill" fxFlex.gt-sm="49" fxFlex.lt-md="100">
       <mat-label>Date of Birth</mat-label>
-      <input type="date" matInput formControlName="dateOfBirth" />
-      <mat-error *ngIf="form.get('dateOfBirth')?.hasError('required')">
-        Date of Birth is <strong>required</strong>
+      <input
+        matInput
+        [max]="maxDate"
+        [min]="minDate"
+        [matDatepicker]="picker"
+        formControlName="birthDate"
+        (focus)="picker.open()"
+        [readonly]="true"
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker
+        #picker
+        [startView]="form.get('birthDate')?.value ? 'month' : 'multi-year'"
+        (opened)="removeBirthDateValidation()"
+        (closed)="addBirthDateValidation()"
+      >
+      </mat-datepicker>
+
+      <mat-error *ngIf="form.get('birthDate')?.hasError('required')">
+        A valid Date of Birth is <strong>required</strong>
       </mat-error>
     </mat-form-field>
     <mat-form-field appearance="fill" fxFlex="49" fxFlex.lt-md="100">
       <mat-label>Gender</mat-label>
       <mat-select formControlName="gender">
-        <mat-option value="M">Male</mat-option>
-        <mat-option value="F">Female</mat-option>
-        <mat-option value="X">Indeterminate/Intersex/Unspecified</mat-option>
+        <mat-option
+          *ngFor="let gender of genders | async"
+          [value]="gender.value"
+          >{{ gender.description }}</mat-option
+        >
       </mat-select>
       <mat-error *ngIf="form.get('gender')?.hasError('required')">
         Gender is <strong>required</strong>
@@ -90,71 +124,87 @@
   </div>
   <mat-form-field appearance="fill" fxFlexFill>
     <mat-label>Citizenship Status</mat-label>
-    <mat-select formControlName="citizenshipStatus">
-      <mat-option value="C1">Australian citizen</mat-option>
-      <mat-option value="C2"
-        >New Zealand citizen (excluding those with Australian
-        citizenship)</mat-option
+    <mat-select formControlName="citizenship">
+      <mat-option
+        *ngFor="let citizenship of citizenships | async"
+        [value]="citizenship.value"
       >
-      <mat-option value="C3"
-        >Permanent resident of Australia (but not citizen)</mat-option
-      >
-      <mat-option value="C8"
-        >Holder of an Australian permanent humanitarian visa</mat-option
-      >
-      <mat-option value="C4"
-        >Holder of a student visa, temporary resident visa or visitor
-        visa</mat-option
-      >
-      <mat-option value="C5">None of the above</mat-option>
+        {{ citizenship.description }}
+      </mat-option>
     </mat-select>
-    <mat-error *ngIf="form.get('citizenshipStatus')?.hasError('required')">
+    <mat-error *ngIf="form.get('citizenship')?.hasError('required')">
       Citizenship Status is <strong>required</strong>
     </mat-error>
   </mat-form-field>
-  <mat-checkbox formControlName="termsConditions" fxFlexAlign="start">
-    I have read and accept SATAC's <a href="">Terms & Conditions</a>
+  <mat-checkbox
+    #tc
+    formControlName="termsConditions"
+    fxFlexAlign="start"
+    (keyup.space)="showTermsConditions(tc.checked)"
+    (click)="showTermsConditions(tc.checked)"
+  >
+    I have read and accept SATAC's Terms and Conditions
   </mat-checkbox>
-  <div class="mat-small fixed-height-15">
+  <div class="mat-small fixed-height-15" fxFlexAlign="start">
     <mat-error
       *ngIf="
         form.get('termsConditions')?.hasError('required') &&
         form.get('termsConditions')?.dirty
       "
-      class="mat-small"
-      fxFlexAlign="start"
     >
       Acceptance of Terms & Conditions is <strong>required</strong>
     </mat-error>
   </div>
-  <mat-checkbox formControlName="privacyPolicy" fxFlexAlign="start">
-    I have read and accept SATAC's <a href="">Privacy Policy</a>
+  <mat-checkbox
+    #pp
+    formControlName="privacyPolicy"
+    fxFlexAlign="start"
+    (keyup.space)="showPrivacyPolicy(pp.checked)"
+    (click)="showPrivacyPolicy(pp.checked)"
+  >
+    I have read and accept SATAC's Privacy Policy
   </mat-checkbox>
-  <div class="mat-small fixed-height-15">
+  <div class="mat-small fixed-height-15" fxFlexAlign="start">
     <mat-error
       *ngIf="
         form.get('privacyPolicy')?.hasError('required') &&
         form.get('privacyPolicy')?.dirty
       "
-      fxFlexAlign="start"
     >
       Acceptance of Privacy Policy is <strong>required</strong>
     </mat-error>
   </div>
-  <mat-checkbox formControlName="subscription" fxFlexAlign="start">
+  <mat-checkbox
+    formControlName="subscription"
+    fxFlexAlign="start"
+    class="text-wrap"
+  >
     Please send me updates relating to application key dates & important
     information
   </mat-checkbox>
-  <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
-    <mat-error class="mat-small fixed-height" *ngIf="form.hasError('notFound')">
-      Sorry, email address or password is incorrect
+  <div fxLayout="column" class="fixed-height-45" fxLayoutAlign="center center">
+    <mat-error class="mat-small" *ngIf="form.hasError('duplicate')">
+      A User with email {{ form.get("email")?.value }} already exists.
     </mat-error>
+    <mat-error
+      class="mat-small fixed-height"
+      *ngIf="form.hasError('serverError')"
+    >
+      Sorry, an error occurred while processing the registration.<br />
+
+      Please try later or
+      <a href="http://www.satac.edu.au/enquiries" target="blank"
+        >contact SATAC</a
+      >.
+    </mat-error>
+  </div>
+  <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
     <button
       mat-raised-button
       color="primary"
       (click)="submit()"
-      [disabled]="!form.valid"
       class="primary-button"
+      [disabled]="!form.valid"
     >
       <span fxLayoutAlign="center center">
         Create Account

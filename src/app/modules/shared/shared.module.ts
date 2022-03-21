@@ -17,12 +17,20 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 import { MobilePublicDrawerComponent } from './components/mobile-public-drawer/mobile-public-drawer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { UserTopDropdownMenuComponent } from './components/user-top-dropdown-menu/user-top-dropdown-menu.component';
 import { UserSidebarComponent } from './components/user-sidebar/user-sidebar.component';
+import { AcceptDeclineDialogComponent } from './components/accept-decline-dialog/accept-decline-dialog.component';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MysatacInfoComponent } from './components/mysatac-info/mysatac-info.component';
+import { PasswordPolicyComponent } from './components/password-policy/password-policy.component';
 @NgModule({
   declarations: [
     NeedHelpComponent,
@@ -33,6 +41,9 @@ import { UserSidebarComponent } from './components/user-sidebar/user-sidebar.com
     HeaderComponent,
     UserTopDropdownMenuComponent,
     UserSidebarComponent,
+    AcceptDeclineDialogComponent,
+    MysatacInfoComponent,
+    PasswordPolicyComponent,
   ],
   imports: [
     CommonModule,
@@ -47,6 +58,11 @@ import { UserSidebarComponent } from './components/user-sidebar/user-sidebar.com
     MatSelectModule,
     MatCheckboxModule,
     MatPasswordStrengthModule,
+    OverlayModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
   exports: [
     PublicSidebarComponent,
@@ -64,11 +80,17 @@ import { UserSidebarComponent } from './components/user-sidebar/user-sidebar.com
     HeaderComponent,
     MysatacLogoComponent,
     UserTopDropdownMenuComponent,
+    PasswordPolicyComponent,
     ReactiveFormsModule,
     MatProgressSpinnerModule,
     MatSidenavModule,
     UserSidebarComponent,
     MatPasswordStrengthModule,
+    OverlayModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
 })
 export class SharedModule {}

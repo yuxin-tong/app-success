@@ -31,12 +31,7 @@ export class AuthenticationService {
       loginId,
       password,
     };
-    const headers = new HttpHeaders({
-      'Ocp-Apim-Subscription-Key': environment.apiSubscriptionKey,
-    });
-    return this.http.post(environment.apiBaseUrl + 'token', body, {
-      headers: headers,
-    });
+    return this.http.post(environment.apiBaseUrl + 'token', body);
   }
 
   processLoginSuccess(response: any) {

@@ -1,4 +1,4 @@
-import { Component, OnInit, Optional } from '@angular/core';
+import { Component, Input, OnInit, Optional } from '@angular/core';
 
 @Component({
   selector: 'app-public-sidebar',
@@ -6,6 +6,9 @@ import { Component, OnInit, Optional } from '@angular/core';
   styleUrls: ['./public-sidebar.component.scss'],
 })
 export class PublicSidebarComponent implements OnInit {
+  @Input()
+  showMySatacInfo = true;
+
   constructor() {}
 
   ngOnInit(): void {}

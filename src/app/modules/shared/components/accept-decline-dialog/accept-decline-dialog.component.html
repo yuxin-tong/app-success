@@ -1,0 +1,15 @@
+<h2 mat-dialog-title [innerHTML]="data.header"></h2>
+<mat-dialog-content class="mat-typography" [innerHTML]="data.body">
+</mat-dialog-content>
+
+<mat-dialog-actions fxLayoutAlign="end">
+  <button mat-button mat-dialog-close>Decline</button>
+  <button
+    mat-raised-button
+    color="primary"
+    [mat-dialog-close]="true"
+    cdkFocusInitial
+  >
+    Accept
+  </button>
+</mat-dialog-actions>

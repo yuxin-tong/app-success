@@ -28,6 +28,8 @@ export class LoginPageComponent implements OnInit {
 
   login() {
     if (this.loginForm.valid) {
+      this.spinnerService.show();
+
       this.service
         .login(
           this.loginForm.controls['email'].value,

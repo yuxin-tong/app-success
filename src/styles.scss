@@ -45,7 +45,7 @@ $mysatac-palette: (
     200: #656565,
     100: #464646,
     50: #252525
-      // ... continues to 900,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      // ... continues to 900,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
 );
 
@@ -110,7 +110,6 @@ body {
 }
 body {
   margin: 0;
-  background-color: black;
 }
 
 .app-panel.mat-bottom-sheet-container {
@@ -131,4 +130,19 @@ mat-form-field {
 
 .fixed-height-15 {
   height: 15px;
+}
+
+.fixed-height-45 {
+  height: 45px;
+}
+
+form .padding-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+mat-checkbox {
+  label.mat-checkbox-layout {
+    white-space: normal;
+  }
 }

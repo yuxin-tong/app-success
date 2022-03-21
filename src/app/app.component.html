@@ -1,4 +1,9 @@
-<div fxLayout="row" fxLayoutAlign="center" fxFlexFill>
+<div
+  fxLayout="row"
+  fxLayoutAlign="center"
+  fxFlexFill
+  style="background-color: black"
+>
   <div
     fxLayout="column"
     fxFlexFill
@@ -6,7 +11,8 @@
     fxFlex.gt-md="80"
     class="main-container"
   >
-    <div fxFlex>
+    <app-header></app-header>
+    <div fxFlex style="overflow: auto">
       <router-outlet></router-outlet>
     </div>
     <app-mobile-footer fxHide.gt-xs="true"></app-mobile-footer>
