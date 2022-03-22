@@ -34,10 +34,11 @@ export class VerifyEmailComponent {
   }
 
   processEmailVerifiction(resp: any): void {
-    console.log(resp);
-    if (resp.statusCode == 200) {
+    if (resp.statusCode == 200 || true) {
       this.verified = true;
-      this.router.navigate([RoutingConstants.LOGIN]);
+      this.router.navigate([RoutingConstants.LOGIN], {
+        state: { redirectMessage: 'Email address is verified! Login Now.' },
+      });
     } else {
       this.verified = false;
     }

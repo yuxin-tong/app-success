@@ -20,7 +20,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
+import { MatCardModule } from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { OverlayModule } from '@angular/cdk/overlay';
 
 import { MobilePublicDrawerComponent } from './components/mobile-public-drawer/mobile-public-drawer.component';
@@ -60,13 +61,14 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatPasswordStrengthModule,
+    MatCardModule,
     OverlayModule,
     MatDialogModule,
     MatDividerModule,
     MatDatepickerModule,
     MatNativeDateModule,
     RouterModule,
+    MatSnackBarModule,
   ],
   exports: [
     PublicSidebarComponent,
@@ -90,12 +92,13 @@ import { RouterModule } from '@angular/router';
     MatProgressSpinnerModule,
     MatSidenavModule,
     UserSidebarComponent,
-    MatPasswordStrengthModule,
+    MatCardModule,
     OverlayModule,
     MatDialogModule,
     MatDividerModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSnackBarModule,
   ],
 })
 export class SharedModule {}

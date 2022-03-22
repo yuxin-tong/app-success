@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
+import { ActivatedRoute } from '@angular/router';
 import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
 import { AuthenticationService } from '../../authentication.service';
@@ -21,12 +27,24 @@ export class LoginPageComponent implements OnInit {
   constructor(
     private service: AuthenticationService,
     private formBuilder: FormBuilder,
-    public spinnerService: SpinnerService
+    public spinnerService: SpinnerService,
+    private snackBar: MatSnackBar,
+    private route: ActivatedRoute
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (history && history.state && history.state.redirectMessage) {
+      this.snackBar.open(history.state.redirectMessage, 'Close', {
+        horizontalPosition: 'right' as MatSnackBarHorizontalPosition,
+        verticalPosition: 'top' as MatSnackBarVerticalPosition,
+        panelClass: 'snackbar-panel',
+      });
+    }
+  }
 
   login() {
+    this.snackBar.dismiss();
+
     if (this.loginForm.valid) {
       this.spinnerService.show();
 
