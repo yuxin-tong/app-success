@@ -1,2 +1,11 @@
-<app-header [private]="true"></app-header>
-<router-outlet></router-outlet>
+<div fxLayout="row" fxFlexFill>
+  <app-user-sidebar fxFlex="22" fxHide.xs></app-user-sidebar>
+  <div fxLayout="column" fxFlex.gt-xs="78" fxFlexFill>
+    <app-header [private]="true"></app-header>
+    <div fxFlexFill fxLayoutAlign="center center">
+      <div fxFlex.gt-sm="50" fxFlex.sm="70" fxFlex.xs="80">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,16 @@
-<router-outlet></router-outlet>
+<div fxFlexFill fxLayout="column">
+  <app-header fxHide.gt-xs="true"></app-header>
+  <div fxFlex style="overflow: auto">
+    <app-public-sidebar
+      [showMySatacInfo]="false"
+      fxFlex="36"
+      fxHide.xs
+    ></app-public-sidebar>
+    <div fxFlex.gt-xs="64" fxLayout="row" fxLayoutAlign="center center">
+      <div fxFlex.gt-sm="70" fxFlex.sm="80" fxFlex.xs="90" class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  <app-mobile-footer fxHide.gt-xs="true"></app-mobile-footer>
+</div>

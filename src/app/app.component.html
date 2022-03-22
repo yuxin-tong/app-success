@@ -1,30 +1,7 @@
 <div fxLayout="row" fxLayoutAlign="center" fxFlexFill class="body-container">
-  <div
-    fxLayout="column"
-    fxFlexFill
-    fxFlex="100"
-    fxFlex.gt-md="80"
-    class="main-container"
-  >
-    <app-header fxHide.gt-xs="true"></app-header>
-    <div fxFlex style="overflow: auto">
-      <app-public-sidebar
-        [showMySatacInfo]="!authArea"
-        [fxFlexOrder]="authArea ? 2 : 0"
-        fxFlex="36"
-        fxHide.xs
-      ></app-public-sidebar>
-      <div fxFlex.gt-xs="64" fxLayout="row" fxLayoutAlign="center center">
-        <div
-          fxFlex.gt-sm="70"
-          fxFlex.sm="80"
-          fxFlex.xs="90"
-          class="main-content"
-        >
-          <router-outlet></router-outlet>
-        </div>
-      </div>
+  <div fxLayout="column" fxFlex="100" fxFlex.gt-md="80" class="main-container">
+    <div fxFlex>
+      <router-outlet></router-outlet>
     </div>
-    <app-mobile-footer fxHide.gt-xs="true"></app-mobile-footer>
   </div>
 </div>
