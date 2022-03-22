@@ -1,6 +1,5 @@
-<form fxLayout="column" [formGroup]="form" fxLayoutAlign="center center">
-  <h1 class="mat-display-1">Register</h1>
-
+<h1>Register</h1>
+<form fxLayout="column" [formGroup]="form">
   <mat-form-field appearance="fill" fxFlexFill>
     <mat-label>Email</mat-label>
     <input
@@ -8,6 +7,7 @@
       matInput
       formControlName="email"
       (focusout)="emailExistenceCheck()"
+      autocomplete="new-email"
     />
     <mat-error *ngIf="form.get('email')?.hasError('email')">
       Please enter a valid email address
@@ -16,7 +16,7 @@
       Email is <strong>required</strong>
     </mat-error>
     <mat-error *ngIf="form.get('email')?.hasError('inuse')">
-      This email is already be in use. please
+      This email is already be in use. Please
       <a [routerLink]="loginPath">Login</a> or
       <a [routerLink]="forgotPasswordPath">reset your password</a>
     </mat-error>
@@ -184,7 +184,9 @@
   </mat-checkbox>
   <div fxLayout="column" class="fixed-height-45" fxLayoutAlign="center center">
     <mat-error class="mat-small" *ngIf="form.hasError('duplicate')">
-      A User with email {{ form.get("email")?.value }} already exists.
+      This email is already be in use. Please
+      <a [routerLink]="loginPath">Login</a> or
+      <a [routerLink]="forgotPasswordPath">reset your password</a>
     </mat-error>
     <mat-error
       class="mat-small fixed-height"

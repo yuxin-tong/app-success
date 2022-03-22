@@ -74,7 +74,6 @@ export class RegistrationComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    console.log();
     this.genders = this.metadataService.getValueDescriptionList('genders');
     this.citizenships =
       this.metadataService.getValueDescriptionList('citizenships');
@@ -87,22 +86,17 @@ export class RegistrationComponent implements OnInit {
   }
 
   emailExistenceCheck() {
-    if (
-      this.form.get('email')?.hasError('required') ||
-      this.form.get('email')?.hasError('email')
-    ) {
-      return;
+    if (!this.form.get('email')?.errors) {
+      this.registerService
+        .checkEmailExists(this.form.controls['email']?.value)
+        .subscribe((res: any) => {
+          if (res && res.length) {
+            this.form.controls['email'].setErrors({ inuse: true });
+          } else {
+            this.form.controls['email'].setErrors(null);
+          }
+        });
     }
-
-    this.registerService
-      .checkEmailExists(this.form.controls['email']?.value)
-      .subscribe((res: any) => {
-        if (res && res.length) {
-          this.form.controls['email'].setErrors({ inuse: true });
-        } else {
-          this.form.controls['email'].setErrors(null);
-        }
-      });
   }
 
   removeBirthDateValidation() {
@@ -120,7 +114,6 @@ export class RegistrationComponent implements OnInit {
   }
 
   openDialog(data: DialogData) {
-    console.log(data);
     const dialogRef = this.dialog.open(AcceptDeclineDialogComponent, {
       data: data,
       panelClass: 'accept-reject-dialog-panel',

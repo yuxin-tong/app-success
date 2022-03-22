@@ -1,9 +1,4 @@
-<div
-  fxLayout="row"
-  fxLayoutAlign="center"
-  fxFlexFill
-  style="background-color: black"
->
+<div fxLayout="row" fxLayoutAlign="center" fxFlexFill class="body-container">
   <div
     fxLayout="column"
     fxFlexFill
@@ -11,9 +6,24 @@
     fxFlex.gt-md="80"
     class="main-container"
   >
-    <app-header fxHide fxShow.xs></app-header>
+    <app-header fxHide.gt-xs="true"></app-header>
     <div fxFlex style="overflow: auto">
-      <router-outlet></router-outlet>
+      <app-public-sidebar
+        [showMySatacInfo]="!authArea"
+        [fxFlexOrder]="authArea ? 2 : 0"
+        fxFlex="36"
+        fxHide.xs
+      ></app-public-sidebar>
+      <div fxFlex.gt-xs="64" fxLayout="row" fxLayoutAlign="center center">
+        <div
+          fxFlex.gt-sm="70"
+          fxFlex.sm="80"
+          fxFlex.xs="90"
+          class="main-content"
+        >
+          <router-outlet></router-outlet>
+        </div>
+      </div>
     </div>
     <app-mobile-footer fxHide.gt-xs="true"></app-mobile-footer>
   </div>

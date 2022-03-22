@@ -11,6 +11,7 @@ import {
 } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthenticationService } from 'src/app/modules/authentication/authentication.service';
+import { RoutingConstants } from '../constants/routing.constants';
 
 @Injectable({
   providedIn: 'root',
@@ -28,17 +29,17 @@ export class AuthGuard implements CanLoad {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (route.path == 'auth') {
+    if (route.path == RoutingConstants.AUTH) {
       // authenticated but wants to access login/forgot-password
       if (this.authService.isAuthenticated()) {
-        this.router.navigate(['dashboard']);
+        this.router.navigate([RoutingConstants.DASHBOARD]);
         return false;
       } else {
         return true;
       }
     } else {
       if (!this.authService.isAuthenticated()) {
-        this.router.navigate(['auth/login']);
+        this.router.navigate([RoutingConstants.LOGIN]);
         return false;
       } else {
         return true;

@@ -7,6 +7,7 @@
 
   // Get the primary color palette from the color-config.
   $primary-palette: map.get($color-config, "primary");
+  $warn-palette: map.get($color-config, "warn");
 
   $dark-text-color: mat.get-color-from-palette(
     $primary-palette,
@@ -17,6 +18,7 @@
     "900-contrast"
   );
   $dark-background-color: mat.get-color-from-palette($primary-palette, 800);
+  $black: mat.get-color-from-palette($primary-palette, 900);
 
   $light-text-color: mat.get-color-from-palette(
     $primary-palette,
@@ -28,11 +30,31 @@
   );
   $light-background-color: mat.get-color-from-palette($primary-palette, 50);
 
+  $warn-color: mat.get-color-from-palette($warn-palette);
+  $warn-color-hover: mat.get-color-from-palette($warn-palette, 300);
+
   .accept-reject-dialog-panel mat-dialog-container {
     background-color: $light-background-color;
 
     mat-dialog-content {
       background-color: white;
+    }
+  }
+
+  .body-container {
+    background-color: $black;
+  }
+
+  .dark-bg {
+    color: $dark-text-color;
+    background-color: $dark-background-color;
+
+    a {
+      color: $dark-text-color;
+
+      &:hover {
+        color: $dark-link-color;
+      }
     }
   }
 
@@ -50,20 +72,20 @@
 
     app-user-sidebar,
     app-public-sidebar,
-    app-mobile-footer,
-    app-mobile-public-drawer > div {
-      // Read the 500 hue from the primary color palette.
-      color: $dark-text-color;
-      background-color: $dark-background-color;
+    app-mobile-footer {
+      @extend .dark-bg;
+    }
 
-      a {
-        color: $dark-text-color;
-
-        &:hover {
-          color: $dark-link-color;
-        }
+    mat-error a {
+      color: $warn-color;
+      &:hover {
+        color: $warn-color-hover;
       }
     }
+  }
+
+  app-mobile-public-drawer > div {
+    @extend .dark-bg;
   }
 
   .user-top-dropdown-menu::before {

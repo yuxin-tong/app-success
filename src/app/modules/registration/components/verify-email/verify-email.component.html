@@ -1,0 +1,25 @@
+<h1>Registration Verification</h1>
+
+<div fxLayoutAlign="center center">
+  <div *ngIf="verified === undefined">
+    Verifying your email address..
+    <mat-spinner
+      *ngIf="spinnerService.visibility | async"
+      fxFlex="0 0 auto"
+      color="accent"
+      [diameter]="25"
+    ></mat-spinner>
+  </div>
+  <div *ngIf="verified === false">
+    <mat-error>
+      <p>Sorry, the email verification link invalid or expired.</p>
+      <p>
+        Please
+        <a [routerLink]="resendVerificationEmailPath">
+          resend the verification email
+        </a>
+        or <app-contact-us></app-contact-us>.
+      </p>
+    </mat-error>
+  </div>
+</div>

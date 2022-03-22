@@ -30,4 +30,13 @@ export class RegistrationService {
   checkEmailExists(email: string) {
     return this.http.get('/api/users?email=' + email);
   }
+
+  verifyEmail(verificationId: string) {
+    return this.http.post('/api/verify-email', { verificationId });
+  }
+
+  resendVerificationEmail(email: string) {
+    const applicationId = environment.registrationApplicationId;
+    return this.http.put<any>('/api/verify-email', { applicationId, email });
+  }
 }

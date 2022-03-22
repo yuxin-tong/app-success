@@ -31,6 +31,8 @@ import { AcceptDeclineDialogComponent } from './components/accept-decline-dialog
 import { MatNativeDateModule } from '@angular/material/core';
 import { MysatacInfoComponent } from './components/mysatac-info/mysatac-info.component';
 import { PasswordPolicyComponent } from './components/password-policy/password-policy.component';
+import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     NeedHelpComponent,
@@ -44,6 +46,7 @@ import { PasswordPolicyComponent } from './components/password-policy/password-p
     AcceptDeclineDialogComponent,
     MysatacInfoComponent,
     PasswordPolicyComponent,
+    ContactUsComponent,
   ],
   imports: [
     CommonModule,
@@ -63,6 +66,7 @@ import { PasswordPolicyComponent } from './components/password-policy/password-p
     MatDividerModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    RouterModule,
   ],
   exports: [
     PublicSidebarComponent,
@@ -79,6 +83,7 @@ import { PasswordPolicyComponent } from './components/password-policy/password-p
     MobileFooterComponent,
     HeaderComponent,
     MysatacLogoComponent,
+    ContactUsComponent,
     UserTopDropdownMenuComponent,
     PasswordPolicyComponent,
     ReactiveFormsModule,
