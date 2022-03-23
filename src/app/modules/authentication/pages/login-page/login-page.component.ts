@@ -6,6 +6,7 @@ import {
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
+import { AppConstants } from 'src/app/core/constants/app.constants';
 import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
 import { AuthenticationService } from '../../authentication.service';
@@ -14,6 +15,7 @@ import { AuthenticationService } from '../../authentication.service';
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
   styleUrls: ['./login-page.component.scss'],
+  animations: AppConstants.IN_OUT_ANIMATION,
 })
 export class LoginPageComponent implements OnInit {
   loginForm = this.formBuilder.group({
@@ -23,6 +25,8 @@ export class LoginPageComponent implements OnInit {
 
   registrationPath = `/${RoutingConstants.REGISTRATION}`;
   forgotPasswordPath = `/${RoutingConstants.FORGOT_PASSWORD}`;
+
+  redirectMessage = '';
 
   constructor(
     private service: AuthenticationService,
@@ -34,16 +38,12 @@ export class LoginPageComponent implements OnInit {
 
   ngOnInit(): void {
     if (history && history.state && history.state.redirectMessage) {
-      this.snackBar.open(history.state.redirectMessage, 'Close', {
-        horizontalPosition: 'right' as MatSnackBarHorizontalPosition,
-        verticalPosition: 'top' as MatSnackBarVerticalPosition,
-        panelClass: 'snackbar-panel',
-      });
+      this.redirectMessage = history.state.redirectMessage;
     }
   }
 
   login() {
-    this.snackBar.dismiss();
+    this.redirectMessage = '';
 
     if (this.loginForm.valid) {
       this.spinnerService.show();

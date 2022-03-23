@@ -37,7 +37,9 @@ export class VerifyEmailComponent {
     if (resp.statusCode == 200 || true) {
       this.verified = true;
       this.router.navigate([RoutingConstants.LOGIN], {
-        state: { redirectMessage: 'Email address is verified! Login Now.' },
+        state: {
+          redirectMessage: 'Your email address is verified! You can login now.',
+        },
       });
     } else {
       this.verified = false;

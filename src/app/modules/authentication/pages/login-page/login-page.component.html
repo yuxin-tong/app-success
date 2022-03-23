@@ -1,4 +1,8 @@
 <h1>Login</h1>
+
+<mat-card *ngIf="redirectMessage" [@inOutAnimation] class="success-panel">{{
+  redirectMessage
+}}</mat-card>
 <form fxLayout="column" [formGroup]="loginForm">
   <mat-form-field appearance="fill" fxFlexFill>
     <mat-label>Email</mat-label>

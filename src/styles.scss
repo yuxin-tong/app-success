@@ -45,7 +45,7 @@ $mysatac-palette: (
     200: #656565,
     100: #464646,
     50: #252525
-      // ... continues to 900,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      // ... continues to 900,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
 );
 
@@ -160,6 +160,7 @@ mat-checkbox {
   margin-bottom: auto;
 }
 
-.snackbar-panel {
-  margin-top: 60px !important;
+.success-panel {
+  background-color: #d4edda;
+  margin-bottom: 20px;
 }
