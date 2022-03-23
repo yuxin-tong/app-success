@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { AppConstants } from 'src/app/core/constants/app.constants';
 import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
 import { Utils } from 'src/app/core/utils/utils';
+import { AuthenticationService } from '../../authentication.service';
 
 @Component({
   selector: 'app-reset-password',
@@ -13,15 +15,9 @@ import { Utils } from 'src/app/core/utils/utils';
 })
 export class ResetPasswordComponent implements OnInit {
   registrationPath = `/${RoutingConstants.REGISTRATION}`;
-  passwordRegex = [
-    /(?=.*[a-z])/,
-    /(?=.*[A-Z])/,
-    /(?=.*\d)/,
-    /(?=.*[@$!%*?&])/,
-    /[A-Za-z\d@$!%*?&]{8,}/,
-  ];
-  showPasswordPolicy = false;
+
   passwordValid = Utils.getPasswordValidity;
+  changePasswordId = '';
 
   form = this.formBuilder.group({
     password: AppConstants.PASSWORD_FORM_CONTROL(AppConstants.PASSWORD_REGEX),
@@ -29,10 +25,24 @@ export class ResetPasswordComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    public spinnerService: SpinnerService
-  ) {}
+    public spinnerService: SpinnerService,
+    private authService: AuthenticationService,
+    private route: ActivatedRoute
+  ) {
+    this.route.params.subscribe((params) => {
+      this.changePasswordId = params['changePasswordId'];
+    });
+  }
 
   ngOnInit(): void {}
 
-  submit() {}
+  submit() {
+    console.log(this.changePasswordId);
+    this.authService
+      .resetPassword(
+        this.changePasswordId,
+        this.form.controls['password']?.value
+      )
+      .subscribe();
+  }
 }

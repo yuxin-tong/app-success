@@ -45,6 +45,19 @@ export class AuthenticationService {
     this.router.navigate(['/']);
   }
 
+  forgotPassword(username: string) {
+    return this.http.post(environment.apiBaseUrl + 'forgot-password', {
+      username,
+    });
+  }
+
+  resetPassword(changePasswordId: string, password: string) {
+    return this.http.post(environment.apiBaseUrl + 'change-password', {
+      id: changePasswordId,
+      newPassword: password,
+    });
+  }
+
   public isAuthenticated(): boolean {
     return !this.jwtHelper.isTokenExpired(this.authRepo.getToken());
   }

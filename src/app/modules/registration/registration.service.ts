@@ -27,8 +27,10 @@ export class RegistrationService {
     );
   }
 
-  checkEmailExists(email: string) {
-    return this.http.get('/api/users?email=' + email);
+  checkEmailExists(username: string) {
+    return this.http.post(environment.apiBaseUrl + 'user/exists', {
+      username,
+    });
   }
 
   verifyEmail(verificationId: string) {

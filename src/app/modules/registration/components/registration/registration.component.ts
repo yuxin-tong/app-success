@@ -90,7 +90,8 @@ export class RegistrationComponent implements OnInit {
       this.registerService
         .checkEmailExists(this.form.controls['email']?.value)
         .subscribe((res: any) => {
-          if (res && res.length) {
+          console.log(res);
+          if (res && res.exists) {
             this.form.controls['email'].setErrors({ inuse: true });
           } else {
             this.form.controls['email'].setErrors(null);

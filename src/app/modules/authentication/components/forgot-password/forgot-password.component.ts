@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
+import { AuthenticationService } from '../../authentication.service';
 
 @Component({
   selector: 'app-forgot-password',
@@ -11,7 +12,8 @@ import { SpinnerService } from 'src/app/core/services/spinner.service';
 export class ForgotPasswordComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
-    public spinnerService: SpinnerService
+    public spinnerService: SpinnerService,
+    private authService: AuthenticationService
   ) {}
 
   registrationPath = `/${RoutingConstants.REGISTRATION}`;
@@ -23,5 +25,9 @@ export class ForgotPasswordComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  submit() {}
+  submit() {
+    this.authService
+      .forgotPassword(this.form.controls['email']?.value)
+      .subscribe();
+  }
 }
