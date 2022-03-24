@@ -9,6 +9,10 @@
   $primary-palette: map.get($color-config, "primary");
   $warn-palette: map.get($color-config, "warn");
 
+  $foreground: map.get($color-config, foreground);
+
+  $disabled-color: mat.get-color-from-palette($foreground, icon);
+
   $dark-text-color: mat.get-color-from-palette(
     $primary-palette,
     "600-contrast"
@@ -43,6 +47,10 @@
 
   .body-container {
     background-color: $black;
+  }
+
+  .disabled-color {
+    color: $disabled-color;
   }
 
   .dark-bg {

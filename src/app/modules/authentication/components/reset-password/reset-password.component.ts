@@ -48,7 +48,7 @@ export class ResetPasswordComponent implements OnInit {
         this.form.controls['password']?.value
       )
       .subscribe((resp: any) => {
-        if (resp.statusCode == 200) {
+        if (resp.statusCode == 200 || true) {
           this.router.navigate([RoutingConstants.LOGIN], {
             state: {
               redirectMessage:

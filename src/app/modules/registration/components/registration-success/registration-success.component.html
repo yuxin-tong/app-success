@@ -10,10 +10,12 @@
   You may need to check your spam or junk mail folders in case the message was
   blocked by your email service.
 </p>
-<mat-divider class="mb-1"></mat-divider>
-<p>
-  If you have not received the email and want us to resend
-  <a [routerLink]="resendRegistrationEmailPath" [state]="{ email }"
-    >click here</a
-  >
-</p>
+<div *ngIf="showResendLink" [@inOutAnimation]>
+  <mat-divider class="mb-1"></mat-divider>
+  <p>
+    If you have not received the email and want us to resend
+    <a [routerLink]="resendRegistrationEmailPath" [state]="{ email }"
+      >click here</a
+    >
+  </p>
+</div>

@@ -36,9 +36,13 @@
       #trigger="cdkOverlayOrigin"
     -->
 
-    <mat-icon matSuffix (click)="switchPasswordVisibility()">{{
-      hidePassword ? "visibility_off" : "visibility"
-    }}</mat-icon>
+    <mat-icon
+      *ngIf="showPasswordPolicy && form.get('password')?.value"
+      class="disabled-color"
+      matSuffix
+      (click)="switchPasswordVisibility()"
+      >{{ hidePassword ? "visibility_off" : "visibility" }}</mat-icon
+    >
     <mat-error *ngIf="form.get('password')?.hasError('required')">
       Password is required
     </mat-error>

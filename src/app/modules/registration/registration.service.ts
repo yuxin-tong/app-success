@@ -39,6 +39,6 @@ export class RegistrationService {
 
   resendVerificationEmail(email: string) {
     const applicationId = environment.registrationApplicationId;
-    return this.http.put<any>('/api/verify-email', { applicationId, email });
+    return this.http.post<any>('/api/verify-email', { applicationId, email });
   }
 }

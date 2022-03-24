@@ -7,7 +7,7 @@
   </p>
 
   <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
-    <app-server-error *ngIf="serverError"></app-server-error>
+    <app-server-error [@inOutAnimation] *ngIf="serverError"></app-server-error>
     <button
       mat-raised-button
       color="primary"
@@ -15,7 +15,7 @@
       class="primary-button"
     >
       <span fxLayoutAlign="center center">
-        Send Reset Link
+        Send Registration Email
         <mat-spinner
           *ngIf="spinnerService.visibility | async"
           fxFlex="0 0 auto"

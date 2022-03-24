@@ -55,13 +55,9 @@ export class RegistrationComponent implements OnInit {
   showPasswordPolicy = false;
   passwordValid = Utils.getPasswordValidity;
 
-  currentDate = new Date();
-  maxDate = new Date(
-    this.currentDate.setFullYear(this.currentDate.getFullYear() - 16)
-  );
-  minDate = new Date(
-    this.currentDate.setFullYear(this.currentDate.getFullYear() - 85)
-  );
+  maxDate = new Date(new Date().setFullYear(new Date().getFullYear() - 16));
+  minDate = new Date(new Date().setFullYear(new Date().getFullYear() - 85));
+
   hidePassword = true;
   passwordVisibilityBtnClicked = false;
 
@@ -73,7 +69,9 @@ export class RegistrationComponent implements OnInit {
     private registerService: RegistrationService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) {
+    console.log(this.minDate);
+  }
 
   ngOnInit(): void {
     this.genders = this.metadataService.getValueDescriptionList('genders');

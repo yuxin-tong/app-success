@@ -38,7 +38,8 @@ export class AuthenticationService {
     const user = response.user;
     this.authRepo.setUser({
       email: user.email,
-      fullName: user.fullName,
+      firstName: user.firstName,
+      lastName: user.lastName,
     });
     this.authRepo.setToken(response.token);
 

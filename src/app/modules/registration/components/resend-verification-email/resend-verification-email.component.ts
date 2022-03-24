@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppConstants } from 'src/app/core/constants/app.constants';
 import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
 import { RegistrationService } from '../../registration.service';
@@ -8,6 +9,7 @@ import { RegistrationService } from '../../registration.service';
   selector: 'app-resend-verification-email',
   templateUrl: './resend-verification-email.component.html',
   styleUrls: ['./resend-verification-email.component.scss'],
+  animations: AppConstants.IN_OUT_ANIMATION,
 })
 export class ResendVerificationEmailComponent implements OnInit {
   email = '';

@@ -5,7 +5,8 @@ import { persistState, localStorageStrategy } from '@ngneat/elf-persist-state';
 
 interface User {
   email: string;
-  fullName: string;
+  firstName: string;
+  lastName: string;
 }
 
 interface AuthProps {
