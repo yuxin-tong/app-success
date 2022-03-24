@@ -62,6 +62,8 @@ export class RegistrationComponent implements OnInit {
   minDate = new Date(
     this.currentDate.setFullYear(this.currentDate.getFullYear() - 85)
   );
+  hidePassword = true;
+  passwordVisibilityBtnClicked = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -97,6 +99,24 @@ export class RegistrationComponent implements OnInit {
           }
         });
     }
+  }
+
+  switchPasswordVisibility() {
+    console.log('click password visible');
+    this.hidePassword = !this.hidePassword;
+    this.passwordVisibilityBtnClicked = true;
+    setTimeout(() => {
+      this.passwordVisibilityBtnClicked = false;
+    }, 500);
+  }
+
+  switchShowPasswordPolicy() {
+    // now focused - need to do focus out, will do this little later
+    setTimeout(() => {
+      if (!this.passwordVisibilityBtnClicked) {
+        this.showPasswordPolicy = !this.showPasswordPolicy;
+      }
+    }, 100);
   }
 
   removeBirthDateValidation() {

@@ -44,7 +44,17 @@
   </mat-form-field>
 
   <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
-    <div class="fixed-height-15">
+    <div class="fixed-height-45">
+      <mat-error class="mat-small" *ngIf="loginForm.hasError('notVerified')">
+        Your registration is not verified.<br />Please click the verification
+        link from your email or
+        <a
+          [routerLink]="resendRegistrationEmailPath"
+          [state]="{ email: loginForm.get('email')?.value }"
+        >
+          resend the email
+        </a>
+      </mat-error>
       <mat-error class="mat-small" *ngIf="loginForm.hasError('notFound')">
         Sorry, email address or password is incorrect
       </mat-error>

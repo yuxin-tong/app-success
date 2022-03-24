@@ -5,7 +5,7 @@ import {
   MatSnackBarHorizontalPosition,
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AppConstants } from 'src/app/core/constants/app.constants';
 import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
@@ -28,12 +28,15 @@ export class LoginPageComponent implements OnInit {
 
   redirectMessage = '';
 
+  resendRegistrationEmailPath = `/${RoutingConstants.REGISTRATION}/${RoutingConstants.RESEND_VERIFICATION_EMAIL}`;
+
   constructor(
     private service: AuthenticationService,
     private formBuilder: FormBuilder,
     public spinnerService: SpinnerService,
     private snackBar: MatSnackBar,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -58,11 +61,13 @@ export class LoginPageComponent implements OnInit {
   }
 
   private processLogin(res: any) {
-    if (res.statusCode != 200) {
+    if (res.statusCode == 200) {
+      this.service.processLoginSuccess(res.response);
+    } else if (res.statusCode == 213) {
+      this.loginForm.setErrors({ notVerified: true });
+    } else {
       this.loginForm.setErrors({ notFound: true });
       return;
     }
-
-    this.service.processLoginSuccess(res.response);
   }
 }

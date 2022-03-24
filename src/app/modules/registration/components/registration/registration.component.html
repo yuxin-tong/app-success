@@ -24,18 +24,21 @@
   <mat-form-field appearance="fill" fxFlexFill>
     <mat-label>Password</mat-label>
     <input
-      type="password"
+      [type]="hidePassword ? 'password' : 'text'"
       matInput
       formControlName="password"
       autocomplete="false"
-      (focus)="showPasswordPolicy = true"
-      (focusout)="showPasswordPolicy = false"
+      (focus)="switchShowPasswordPolicy()"
+      (focusout)="switchShowPasswordPolicy()"
     />
-    <!-- cdkOverlayOrigin
-      (focus)="isOpen = true"
-      (focusout)="isOpen = false"
-      #trigger="cdkOverlayOrigin"-->
+    <!-- 
+      cdkOverlayOrigin (focus)="isOpen = true" (focusout)="isOpen = false"
+      #trigger="cdkOverlayOrigin"
+    -->
 
+    <mat-icon matSuffix (click)="switchPasswordVisibility()">{{
+      hidePassword ? "visibility_off" : "visibility"
+    }}</mat-icon>
     <mat-error *ngIf="form.get('password')?.hasError('required')">
       Password is required
     </mat-error>

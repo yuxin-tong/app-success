@@ -14,15 +14,9 @@ export class RegistrationSuccessComponent implements OnInit {
 
   ngOnInit(): void {
     if (!history.state || !history.state.email) {
-      //  this.router.navigate([RoutingConstants.REGISTRATION]);
+      this.router.navigate([RoutingConstants.REGISTRATION]);
     } else {
       this.email = history.state.email;
     }
-  }
-
-  navigateToResend() {
-    this.router.navigate([this.resendRegistrationEmailPath], {
-      state: { email: 'test' },
-    });
   }
 }

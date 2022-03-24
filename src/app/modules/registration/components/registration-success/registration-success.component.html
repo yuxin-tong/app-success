@@ -1,7 +1,7 @@
 <h1>Registration Success</h1>
 <p>
   A verification email has been sent to
-  <span class="mat-body-2">{{ email }}</span
+  <span class="fwb">{{ email }}</span
   >.
 </p>
 <p>Click the link in the email to activate your account.</p>
@@ -13,11 +13,7 @@
 <mat-divider class="mb-1"></mat-divider>
 <p>
   If you have not received the email and want us to resend
-  <a
-    mat-button
-    (click)="navigateToResend()"
-    (keyup)="navigateToResend()"
-    target="_blank"
+  <a [routerLink]="resendRegistrationEmailPath" [state]="{ email }"
     >click here</a
   >
 </p>
