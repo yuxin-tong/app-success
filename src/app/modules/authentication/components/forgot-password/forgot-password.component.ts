@@ -18,6 +18,7 @@ export class ForgotPasswordComponent implements OnInit {
 
   registrationPath = `/${RoutingConstants.REGISTRATION}`;
   loginPath = `/${RoutingConstants.LOGIN}`;
+  submitted = false;
 
   form = this.formBuilder.group({
     email: ['', [Validators.required, Validators.email]],
@@ -26,8 +27,18 @@ export class ForgotPasswordComponent implements OnInit {
   ngOnInit(): void {}
 
   submit() {
+    if (!this.form.valid) {
+      return;
+    }
+
     this.authService
       .forgotPassword(this.form.controls['email']?.value)
-      .subscribe();
+      .subscribe((resp: any) => {
+        if (resp.statusCode == 200) {
+          this.submitted = true;
+        } else {
+          this.form.setErrors({ server: true });
+        }
+      });
   }
 }

@@ -188,17 +188,7 @@
       <a [routerLink]="loginPath">Login</a> or
       <a [routerLink]="forgotPasswordPath">reset your password</a>
     </mat-error>
-    <mat-error
-      class="mat-small fixed-height"
-      *ngIf="form.hasError('serverError')"
-    >
-      Sorry, an error occurred while processing the registration.<br />
-
-      Please try later or
-      <a href="http://www.satac.edu.au/enquiries" target="blank"
-        >contact SATAC</a
-      >.
-    </mat-error>
+    <app-server-error *ngIf="form.hasError('server')"></app-server-error>
   </div>
   <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
     <button

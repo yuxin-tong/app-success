@@ -34,6 +34,7 @@ import { MysatacInfoComponent } from './components/mysatac-info/mysatac-info.com
 import { PasswordPolicyComponent } from './components/password-policy/password-policy.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { RouterModule } from '@angular/router';
+import { ServerErrorComponent } from './components/server-error/server-error.component';
 @NgModule({
   declarations: [
     NeedHelpComponent,
@@ -48,6 +49,7 @@ import { RouterModule } from '@angular/router';
     MysatacInfoComponent,
     PasswordPolicyComponent,
     ContactUsComponent,
+    ServerErrorComponent,
   ],
   imports: [
     CommonModule,
@@ -99,6 +101,7 @@ import { RouterModule } from '@angular/router';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSnackBarModule,
+    ServerErrorComponent,
   ],
 })
 export class SharedModule {}

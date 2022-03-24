@@ -90,7 +90,6 @@ export class RegistrationComponent implements OnInit {
       this.registerService
         .checkEmailExists(this.form.controls['email']?.value)
         .subscribe((res: any) => {
-          console.log(res);
           if (res && res.exists) {
             this.form.controls['email'].setErrors({ inuse: true });
           } else {
@@ -186,7 +185,7 @@ export class RegistrationComponent implements OnInit {
       ) {
         this.form.setErrors({ duplicate: true });
       } else {
-        this.form.setErrors({ serverError: true });
+        this.form.setErrors({ server: true });
       }
     });
   }

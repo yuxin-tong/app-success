@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AppConstants } from 'src/app/core/constants/app.constants';
 import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
@@ -27,7 +27,8 @@ export class ResetPasswordComponent implements OnInit {
     private formBuilder: FormBuilder,
     public spinnerService: SpinnerService,
     private authService: AuthenticationService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {
     this.route.params.subscribe((params) => {
       this.changePasswordId = params['changePasswordId'];
@@ -37,12 +38,26 @@ export class ResetPasswordComponent implements OnInit {
   ngOnInit(): void {}
 
   submit() {
-    console.log(this.changePasswordId);
+    if (!this.form.valid) {
+      return;
+    }
+
     this.authService
       .resetPassword(
         this.changePasswordId,
         this.form.controls['password']?.value
       )
-      .subscribe();
+      .subscribe((resp: any) => {
+        if (resp.statusCode == 200) {
+          this.router.navigate([RoutingConstants.LOGIN], {
+            state: {
+              redirectMessage:
+                'Password change is successful. You can login now.',
+            },
+          });
+        } else {
+          this.form.setErrors({ server: true });
+        }
+      });
   }
 }
