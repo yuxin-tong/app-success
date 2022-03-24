@@ -1,1 +1,37 @@
-RESEND
+<h1>Resend Registration Email</h1>
+<div fxLayout="column" fxLayoutAlign="center center" *ngIf="!submitted">
+  <p>
+    We will resend registration email to your email address
+    <span class="mat-body-2">{{ email }}</span
+    >.
+  </p>
+
+  <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
+    <app-server-error *ngIf="serverError"></app-server-error>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="submit()"
+      class="primary-button"
+    >
+      <span fxLayoutAlign="center center">
+        Send Reset Link
+        <mat-spinner
+          *ngIf="spinnerService.visibility | async"
+          fxFlex="0 0 auto"
+          color="accent"
+          [diameter]="20"
+        ></mat-spinner>
+      </span>
+    </button>
+  </div>
+</div>
+<div *ngIf="submitted">
+  <p>A verification email has been sent to {{ email }}.</p>
+  <p>Click the link in the email to activate your account.</p>
+  <mat-divider class="mb-1"></mat-divider>
+  <p>
+    You may need to check your spam or junk mail folders in case the message was
+    blocked by your email service.
+  </p>
+</div>

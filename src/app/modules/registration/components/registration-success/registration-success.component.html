@@ -1,8 +1,23 @@
 <h1>Registration Success</h1>
-<p>A verification email has been sent to {{ email }}.</p>
+<p>
+  A verification email has been sent to
+  <span class="mat-body-2">{{ email }}</span
+  >.
+</p>
 <p>Click the link in the email to activate your account.</p>
 
 <p>
   You may need to check your spam or junk mail folders in case the message was
   blocked by your email service.
+</p>
+<mat-divider class="mb-1"></mat-divider>
+<p>
+  If you have not received the email and want us to resend
+  <a
+    mat-button
+    (click)="navigateToResend()"
+    (keyup)="navigateToResend()"
+    target="_blank"
+    >click here</a
+  >
 </p>
