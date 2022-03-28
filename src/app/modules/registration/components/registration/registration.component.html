@@ -16,9 +16,9 @@
       Email is <strong>required</strong>
     </mat-error>
     <mat-error *ngIf="form.get('email')?.hasError('inuse')">
-      This email is already be in use. Please
+      This email is already in use. Please
       <a [routerLink]="loginPath">Login</a> or
-      <a [routerLink]="forgotPasswordPath">reset your password</a>
+      <a [routerLink]="forgotPasswordPath">Reset your password</a>
     </mat-error>
   </mat-form-field>
   <mat-form-field appearance="fill" fxFlexFill *ngIf="true">
@@ -217,9 +217,9 @@
   </mat-checkbox>
   <div fxLayout="column" class="fixed-height-45" fxLayoutAlign="center center">
     <mat-error class="mat-small" *ngIf="form.hasError('duplicate')">
-      This email is already be in use. Please
+      This email is already in use. Please
       <a [routerLink]="loginPath">Login</a> or
-      <a [routerLink]="forgotPasswordPath">reset your password</a>
+      <a [routerLink]="forgotPasswordPath">Reset your password</a>
     </mat-error>
     <app-server-error *ngIf="form.hasError('server')"></app-server-error>
   </div>

@@ -33,12 +33,20 @@ export class RegistrationService {
     });
   }
 
-  verifyEmail(verificationId: string) {
-    return this.http.post('/api/verify-email', { verificationId });
+  verifyRegistration(verificationId: string) {
+    return this.http.post(environment.apiBaseUrl + 'verify-registration', {
+      verificationId,
+    });
   }
 
   resendVerificationEmail(email: string) {
     const applicationId = environment.registrationApplicationId;
-    return this.http.post<any>('/api/verify-email', { applicationId, email });
+    return this.http.put<any>(
+      environment.apiBaseUrl + 'resend-verification-check',
+      {
+        applicationId,
+        email,
+      }
+    );
   }
 }

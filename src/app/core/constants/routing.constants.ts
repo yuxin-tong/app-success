@@ -6,7 +6,7 @@ export const RoutingConstants = {
 
   REGISTRATION: 'registration',
   REGISTRATION_SUCCESS: 'success',
-  VERIFY_EMAIL: 'verify-email/:verificationId',
+  VERIFY_EMAIL: 'verify-registration/:verificationId',
   RESEND_VERIFICATION_EMAIL: 'resend-verification-email',
 
   DASHBOARD: 'dashboard',
