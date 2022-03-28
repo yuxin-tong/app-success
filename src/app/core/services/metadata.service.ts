@@ -1,7 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { PrivacyPolicy } from '../interfaces/privacyPolicy';
 import { TermsConditions } from '../interfaces/termsCondition';
 import { ValueDescription } from '../interfaces/valueDescription';

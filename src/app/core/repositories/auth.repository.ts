@@ -1,4 +1,3 @@
-// books.repository.ts
 import { Injectable } from '@angular/core';
 import { createStore, select, getStoresSnapshot, withProps } from '@ngneat/elf';
 import { persistState, localStorageStrategy } from '@ngneat/elf-persist-state';

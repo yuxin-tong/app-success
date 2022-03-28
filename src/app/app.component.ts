@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { RoutingConstants } from './core/constants/routing.constants';
 import { AuthenticationService } from './modules/authentication/authentication.service';
 

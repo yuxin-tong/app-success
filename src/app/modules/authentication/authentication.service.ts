@@ -1,10 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { first, Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import { environment } from '../../../environments/environment';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { AuthRepository } from 'src/app/core/repositories/auth.repository';
+import { environment } from '../../../environments/environment';
 interface Course {
   code: string;
   name: string;

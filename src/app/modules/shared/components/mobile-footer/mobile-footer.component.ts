@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  MatBottomSheet,
-  MatBottomSheetRef,
-} from '@angular/material/bottom-sheet';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 import { MobilePublicDrawerComponent } from '../mobile-public-drawer/mobile-public-drawer.component';
 
 @Component({

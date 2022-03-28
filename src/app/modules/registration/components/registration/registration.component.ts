@@ -1,29 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, ValidationErrors, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { AppConstants } from 'src/app/core/constants/app.constants';
 import { RoutingConstants } from 'src/app/core/constants/routing.constants';
-import { TermsConditions } from 'src/app/core/interfaces/termsCondition';
-import { DialogData } from 'src/app/core/interfaces/ui/dialogData';
 import {
   RegistrationUser,
   RegistrationUserData,
 } from 'src/app/core/interfaces/registrationPostData';
+import { DialogData } from 'src/app/core/interfaces/ui/dialogData';
 import { ValueDescription } from 'src/app/core/interfaces/valueDescription';
 import { MetadataService } from 'src/app/core/services/metadata.service';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
+import { Utils } from 'src/app/core/utils/utils';
 import { AcceptDeclineDialogComponent } from 'src/app/modules/shared/components/accept-decline-dialog/accept-decline-dialog.component';
 import { RegistrationService } from '../../registration.service';
-import { ActivatedRoute, Router } from '@angular/router';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-} from '@angular/animations';
-import { Utils } from 'src/app/core/utils/utils';
-import { AppConstants } from 'src/app/core/constants/app.constants';
 
 @Component({
   selector: 'app-registration',

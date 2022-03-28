@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import {
-  MatSnackBar,
-  MatSnackBarHorizontalPosition,
-  MatSnackBarVerticalPosition,
-} from '@angular/material/snack-bar';
+import { FormBuilder, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AppConstants } from 'src/app/core/constants/app.constants';
 import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
 import { AuthenticationService } from '../../authentication.service';

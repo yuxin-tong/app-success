@@ -1,7 +1,5 @@
-import { HttpErrorResponse } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { catchError, throwError } from 'rxjs';
 import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
 import { RegistrationService } from '../../registration.service';
