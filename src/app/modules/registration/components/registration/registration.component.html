@@ -21,31 +21,8 @@
       <a [routerLink]="forgotPasswordPath">Reset your password</a>
     </mat-error>
   </mat-form-field>
-  <mat-form-field appearance="fill" fxFlexFill *ngIf="true">
-    <mat-label>Password</mat-label>
-    <input
-      [type]="hidePassword ? 'password' : 'text'"
-      matInput
-      formControlName="password"
-      autocomplete="false"
-      (focus)="switchShowPasswordPolicy()"
-      (focusout)="switchShowPasswordPolicy()"
-    />
-    <!-- mat-icon
-      *ngIf="showPasswordPolicy && form.get('password')?.value"
-      class="disabled-color cursor-pointer"
-      matSuffix
-      (click)="switchPasswordVisibility()"
-      >{{ hidePassword ? "visibility_off" : "visibility" }}</mat-icon
-    -->
-    <mat-error *ngIf="form.get('password')?.hasError('required')">
-      Password is required
-    </mat-error>
-    <mat-error *ngIf="form.get('password')?.hasError('pattern')">
-      Password policy is not met
-    </mat-error>
-  </mat-form-field>
-  <mat-form-field appearance="fill" fxFlexFill *ngIf="false">
+
+  <mat-form-field appearance="fill" fxFlexFill>
     <mat-label>Password</mat-label>
     <input
       [type]="hidePassword ? 'password' : 'text'"
@@ -86,12 +63,6 @@
     </ng-template>
   </mat-form-field>
 
-  <app-password-policy
-    *ngIf="showPasswordPolicy"
-    [@inOutAnimation]
-    [valid]="passwordValid(form.get('password')?.value)"
-    fxFlexFill
-  ></app-password-policy>
   <div
     fxFlexFill
     fxLayoutAlign.gt-sm="space-between center"
