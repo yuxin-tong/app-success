@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AppConstants } from 'src/app/core/constants/app.constants';
 import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
 import { AuthenticationService } from '../../authentication.service';
@@ -10,6 +11,7 @@ import { AuthenticationService } from '../../authentication.service';
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
+  animations: AppConstants.IN_OUT_ANIMATION,
 })
 export class LoginComponent implements OnInit {
   form = this.formBuilder.group({
@@ -34,7 +36,7 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    if (history && history.state && history.state.redirectMessage) {
+    if (true || (history && history.state && history.state.redirectMessage)) {
       this.redirectMessage = history.state.redirectMessage;
     }
   }
