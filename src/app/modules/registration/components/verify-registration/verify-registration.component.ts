@@ -5,11 +5,11 @@ import { SpinnerService } from 'src/app/core/services/spinner.service';
 import { RegistrationService } from '../../registration.service';
 
 @Component({
-  selector: 'app-verify-email',
-  templateUrl: './verify-email.component.html',
-  styleUrls: ['./verify-email.component.scss'],
+  selector: 'app-verify-registration',
+  templateUrl: './verify-registration.component.html',
+  styleUrls: ['./verify-registration.component.scss'],
 })
-export class VerifyEmailComponent {
+export class VerifyRegistrationComponent {
   verified?: boolean = undefined;
   resendVerificationEmailPath = `/${RoutingConstants.REGISTRATION}/${RoutingConstants.RESEND_VERIFICATION_EMAIL}`;
 
