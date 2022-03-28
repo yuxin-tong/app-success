@@ -12,7 +12,7 @@ import { AuthenticationService } from '../../authentication.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  loginForm = this.formBuilder.group({
+  form = this.formBuilder.group({
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required]],
   });
@@ -42,13 +42,13 @@ export class LoginComponent implements OnInit {
   login() {
     this.redirectMessage = '';
 
-    if (this.loginForm.valid) {
+    if (this.form.valid) {
       this.spinnerService.show();
 
       this.service
         .login(
-          this.loginForm.controls['email'].value,
-          this.loginForm.controls['password'].value
+          this.form.controls['email'].value,
+          this.form.controls['password'].value
         )
         .subscribe((res) => this.processLogin(res));
     }
@@ -58,9 +58,9 @@ export class LoginComponent implements OnInit {
     if (res.statusCode == 200) {
       this.service.processLoginSuccess(res.response);
     } else if (res.statusCode == 213) {
-      this.loginForm.setErrors({ notVerified: true });
+      this.form.setErrors({ notVerified: true });
     } else {
-      this.loginForm.setErrors({ notFound: true });
+      this.form.setErrors({ notFound: true });
       return;
     }
   }

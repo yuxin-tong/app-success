@@ -3,7 +3,7 @@
 <mat-card *ngIf="redirectMessage" [@inOutAnimation] class="success-panel">{{
   redirectMessage
 }}</mat-card>
-<form fxLayout="column" [formGroup]="loginForm">
+<form fxLayout="column" [formGroup]="form">
   <mat-form-field appearance="fill" fxFlexFill>
     <mat-label>Email</mat-label>
     <input
@@ -12,10 +12,10 @@
       formControlName="email"
       placeholder="email.address@domain.com"
     />
-    <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+    <mat-error *ngIf="form.get('email')?.hasError('email')">
       Please enter a valid email address
     </mat-error>
-    <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+    <mat-error *ngIf="form.get('email')?.hasError('required')">
       Email is <strong>required</strong>
     </mat-error>
   </mat-form-field>
@@ -28,14 +28,14 @@
       autocomplete="false"
     />
     <mat-error
-      *ngIf="loginForm.get('password')?.hasError('required')"
+      *ngIf="form.get('password')?.hasError('required')"
       fxLayoutAlign="space-between"
     >
       Password is required
       <mat-hint
         ><a
           [routerLink]="forgotPasswordPath"
-          [state]="{ email: loginForm.get('email')?.value }"
+          [state]="{ email: form.get('email')?.value }"
           >Forgot your password?</a
         ></mat-hint
       >
@@ -43,7 +43,7 @@
     <mat-hint align="end"
       ><a
         [routerLink]="forgotPasswordPath"
-        [state]="{ email: loginForm.get('email')?.value }"
+        [state]="{ email: form.get('email')?.value }"
         >Forgot your password?</a
       ></mat-hint
     >
@@ -51,17 +51,17 @@
 
   <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
     <div class="fixed-height-45">
-      <mat-error class="mat-small" *ngIf="loginForm.hasError('notVerified')">
+      <mat-error class="mat-small" *ngIf="form.hasError('notVerified')">
         Your registration is not verified.<br />Please click the verification
         link from your email or
         <a
           [routerLink]="resendRegistrationEmailPath"
-          [state]="{ email: loginForm.get('email')?.value }"
+          [state]="{ email: form.get('email')?.value }"
         >
           resend the email
         </a>
       </mat-error>
-      <mat-error class="mat-small" *ngIf="loginForm.hasError('notFound')">
+      <mat-error class="mat-small" *ngIf="form.hasError('notFound')">
         Sorry, email address or password is incorrect
       </mat-error>
     </div>
