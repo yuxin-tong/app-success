@@ -34,9 +34,13 @@ export class RegistrationService {
   }
 
   verifyRegistration(verificationId: string) {
-    return this.http.post(environment.apiBaseUrl + 'verify-registration', {
-      verificationId,
-    });
+    return this.http.post(
+      environment.apiBaseUrl + 'verify-registration',
+      {
+        verificationId,
+      },
+      { observe: 'response' }
+    );
   }
 
   resendVerificationEmail(email: string) {
@@ -44,9 +48,9 @@ export class RegistrationService {
     return this.http.put<any>(
       environment.apiBaseUrl + 'resend-verification-check',
       {
-        applicationId,
         email,
-      }
+      },
+      { observe: 'response' }
     );
   }
 }
