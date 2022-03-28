@@ -14,7 +14,12 @@ export class ForgotPasswordComponent implements OnInit {
     private formBuilder: FormBuilder,
     public spinnerService: SpinnerService,
     private authService: AuthenticationService
-  ) {}
+  ) {
+    console.log(history.state);
+    if (history?.state?.email) {
+      this.form.controls['email']?.setValue(history.state.email);
+    }
+  }
 
   registrationPath = `/${RoutingConstants.REGISTRATION}`;
   loginPath = `/${RoutingConstants.LOGIN}`;

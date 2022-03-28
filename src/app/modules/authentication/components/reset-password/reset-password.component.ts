@@ -18,6 +18,7 @@ export class ResetPasswordComponent implements OnInit {
 
   passwordValid = Utils.getPasswordValidity;
   changePasswordId = '';
+  hidePassword = true;
 
   form = this.formBuilder.group({
     password: AppConstants.PASSWORD_FORM_CONTROL(AppConstants.PASSWORD_REGEX),

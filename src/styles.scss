@@ -45,7 +45,7 @@ $mysatac-palette: (
     200: #656565,
     100: #464646,
     50: #252525
-      // ... continues to 900,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+      // ... continues to 900,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
 );
 
@@ -171,4 +171,15 @@ mat-divider.mb-1 {
 
 .fwb {
   font-weight: bold;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.overlay-bg {
+  background-color: white;
+  padding: 15px;
+  margin-top: 10px;
+  width: 400px;
 }

@@ -33,13 +33,19 @@
     >
       Password is required
       <mat-hint
-        ><a [routerLink]="forgotPasswordPath"
+        ><a
+          [routerLink]="forgotPasswordPath"
+          [state]="{ email: loginForm.get('email')?.value }"
           >Forgot your password?</a
         ></mat-hint
       >
     </mat-error>
     <mat-hint align="end"
-      ><a [routerLink]="forgotPasswordPath">Forgot your password?</a></mat-hint
+      ><a
+        [routerLink]="forgotPasswordPath"
+        [state]="{ email: loginForm.get('email')?.value }"
+        >Forgot your password?</a
+      ></mat-hint
     >
   </mat-form-field>
 

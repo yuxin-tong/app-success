@@ -21,7 +21,7 @@
       <a [routerLink]="forgotPasswordPath">reset your password</a>
     </mat-error>
   </mat-form-field>
-  <mat-form-field appearance="fill" fxFlexFill>
+  <mat-form-field appearance="fill" fxFlexFill *ngIf="true">
     <mat-label>Password</mat-label>
     <input
       [type]="hidePassword ? 'password' : 'text'"
@@ -31,10 +31,32 @@
       (focus)="switchShowPasswordPolicy()"
       (focusout)="switchShowPasswordPolicy()"
     />
-    <!-- 
-      cdkOverlayOrigin (focus)="isOpen = true" (focusout)="isOpen = false"
-      #trigger="cdkOverlayOrigin"
+    <!-- mat-icon
+      *ngIf="showPasswordPolicy && form.get('password')?.value"
+      class="disabled-color cursor-pointer"
+      matSuffix
+      (click)="switchPasswordVisibility()"
+      >{{ hidePassword ? "visibility_off" : "visibility" }}</mat-icon
     -->
+    <mat-error *ngIf="form.get('password')?.hasError('required')">
+      Password is required
+    </mat-error>
+    <mat-error *ngIf="form.get('password')?.hasError('pattern')">
+      Password policy is not met
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="fill" fxFlexFill *ngIf="false">
+    <mat-label>Password</mat-label>
+    <input
+      [type]="hidePassword ? 'password' : 'text'"
+      matInput
+      formControlName="password"
+      autocomplete="false"
+      cdkOverlayOrigin
+      (focus)="isOpen = true"
+      (focusout)="isOpen = false"
+      #trigger="cdkOverlayOrigin"
+    />
 
     <mat-icon
       *ngIf="showPasswordPolicy && form.get('password')?.value"
@@ -49,15 +71,19 @@
     <mat-error *ngIf="form.get('password')?.hasError('pattern')">
       Password policy is not met
     </mat-error>
-    <!--ng-template
+    <ng-template
       cdkConnectedOverlay
+      cdkConnectedOverlayPanelClass="overlay-bg"
       [cdkConnectedOverlayOrigin]="trigger"
       [cdkConnectedOverlayOpen]="
         (isOpen && !form.get('password')?.value) ||
         (isOpen && (form.get('password')?.hasError('pattern') ?? false))
       "
-      >Hello
-    </ng-template-->
+      ><app-password-policy
+        [valid]="passwordValid(form.get('password')?.value)"
+        fxFlexFill
+      ></app-password-policy>
+    </ng-template>
   </mat-form-field>
 
   <app-password-policy

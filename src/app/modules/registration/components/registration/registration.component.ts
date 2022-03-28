@@ -109,10 +109,10 @@ export class RegistrationComponent implements OnInit {
   }
 
   switchShowPasswordPolicy() {
-    // now focused - need to do focus out, will do this little later
+    this.showPasswordPolicy = !this.showPasswordPolicy;
+
     setTimeout(() => {
       if (!this.passwordVisibilityBtnClicked) {
-        this.showPasswordPolicy = !this.showPasswordPolicy;
       }
     }, 100);
   }
