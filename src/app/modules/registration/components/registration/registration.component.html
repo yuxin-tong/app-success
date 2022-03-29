@@ -41,7 +41,7 @@
 
     <mat-icon
       *ngIf="form.get('password')?.value"
-      class="disabled-color"
+      class="disabled-color cursor-pointer"
       matSuffix
       (click)="this.hidePassword = !this.hidePassword"
       >{{ hidePassword ? "visibility_off" : "visibility" }}</mat-icon
@@ -204,6 +204,7 @@
       mat-raised-button
       color="primary"
       (click)="submit()"
+      (keyup.enter)="submit()"
       class="primary-button"
     >
       <span fxLayoutAlign="center center">

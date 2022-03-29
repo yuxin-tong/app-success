@@ -160,13 +160,8 @@ export class RegistrationComponent implements OnInit {
         });
       } else if (
         res.statusCode == 400 &&
-        res.exception &&
-        res.exception.fieldErrors &&
-        res.exception.fieldErrors['user.email'] &&
-        res.exception.fieldErrors['user.email'] &&
-        res.exception.fieldErrors['user.email'].length &&
-        res.exception.fieldErrors['user.email'][0].code &&
-        res.exception.fieldErrors['user.email'][0].code.includes(
+        res.exception?.fieldErrors['user.email']?.length &&
+        res.exception?.fieldErrors['user.email'][0].code?.includes(
           '[duplicate]user.email'
         )
       ) {
