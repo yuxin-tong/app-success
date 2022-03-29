@@ -34,16 +34,16 @@
       formControlName="password"
       autocomplete="false"
       cdkOverlayOrigin
-      (focus)="isOpen = true"
-      (focusout)="isOpen = false"
+      (focus)="showPasswordPolicy = !showPasswordPolicy"
+      (focusout)="showPasswordPolicy = !showPasswordPolicy"
       #trigger="cdkOverlayOrigin"
     />
 
     <mat-icon
-      *ngIf="showPasswordPolicy && form.get('password')?.value"
+      *ngIf="form.get('password')?.value"
       class="disabled-color"
       matSuffix
-      (click)="switchPasswordVisibility()"
+      (click)="this.hidePassword = !this.hidePassword"
       >{{ hidePassword ? "visibility_off" : "visibility" }}</mat-icon
     >
     <mat-error *ngIf="form.get('password')?.hasError('required')">
@@ -54,11 +54,12 @@
     </mat-error>
     <ng-template
       cdkConnectedOverlay
-      cdkConnectedOverlayPanelClass="overlay-bg"
+      cdkConnectedOverlayPanelClass="password-policy-overlay"
       [cdkConnectedOverlayOrigin]="trigger"
       [cdkConnectedOverlayOpen]="
-        (isOpen && !form.get('password')?.value) ||
-        (isOpen && (form.get('password')?.hasError('pattern') ?? false))
+        (showPasswordPolicy && !form.get('password')?.value) ||
+        (showPasswordPolicy &&
+          (form.get('password')?.hasError('pattern') ?? false))
       "
       ><app-password-policy
         [valid]="passwordValid(form.get('password')?.value)"

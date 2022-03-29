@@ -15,6 +15,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatCardModule } from '@angular/material/card';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatNativeDateModule } from '@angular/material/core';
 import { NgModule } from '@angular/core';
 
@@ -36,6 +37,7 @@ import { NgModule } from '@angular/core';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSnackBarModule,
+    ScrollingModule,
   ],
   exports: [
     MatBottomSheetModule,
@@ -56,6 +58,7 @@ import { NgModule } from '@angular/core';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSnackBarModule,
+    ScrollingModule,
   ],
 })
 export class MaterialModule {}

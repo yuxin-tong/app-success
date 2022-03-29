@@ -1,3 +1,4 @@
+import { ScrollStrategy, ScrollStrategyOptions } from '@angular/cdk/overlay';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
@@ -21,7 +22,6 @@ import { RegistrationService } from '../../registration.service';
   selector: 'app-registration',
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss'],
-  animations: AppConstants.IN_OUT_ANIMATION,
 })
 export class RegistrationComponent implements OnInit {
   form = this.formBuilder.group({
@@ -39,19 +39,17 @@ export class RegistrationComponent implements OnInit {
 
   loginPath = `/${RoutingConstants.LOGIN}`;
   forgotPasswordPath = `/${RoutingConstants.FORGOT_PASSWORD}`;
-  isOpen = false;
   genders = new Observable<ValueDescription[]>();
   citizenships = new Observable<ValueDescription[]>();
   termsConditions = '';
   privacyPolicy = '';
   showPasswordPolicy = false;
+  hidePassword = true;
+
   passwordValid = Utils.getPasswordValidity;
 
   maxDate = new Date(new Date().setFullYear(new Date().getFullYear() - 16));
   minDate = new Date(new Date().setFullYear(new Date().getFullYear() - 85));
-
-  hidePassword = true;
-  passwordVisibilityBtnClicked = false;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -60,10 +58,9 @@ export class RegistrationComponent implements OnInit {
     public dialog: MatDialog,
     private registerService: RegistrationService,
     private router: Router,
-    private route: ActivatedRoute
-  ) {
-    console.log(this.minDate);
-  }
+    private route: ActivatedRoute,
+    private scrollStrategyOptions: ScrollStrategyOptions
+  ) {}
 
   ngOnInit(): void {
     this.genders = this.metadataService.getValueDescriptionList('genders');
@@ -89,24 +86,6 @@ export class RegistrationComponent implements OnInit {
           }
         });
     }
-  }
-
-  switchPasswordVisibility() {
-    console.log('click password visible');
-    this.hidePassword = !this.hidePassword;
-    this.passwordVisibilityBtnClicked = true;
-    setTimeout(() => {
-      this.passwordVisibilityBtnClicked = false;
-    }, 500);
-  }
-
-  switchShowPasswordPolicy() {
-    this.showPasswordPolicy = !this.showPasswordPolicy;
-
-    setTimeout(() => {
-      if (!this.passwordVisibilityBtnClicked) {
-      }
-    }, 100);
   }
 
   removeBirthDateValidation() {
