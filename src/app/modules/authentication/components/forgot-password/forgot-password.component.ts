@@ -15,7 +15,6 @@ export class ForgotPasswordComponent implements OnInit {
     public spinnerService: SpinnerService,
     private authService: AuthenticationService
   ) {
-    console.log(history.state);
     if (history?.state?.email) {
       this.form.controls['email']?.setValue(history.state.email);
     }

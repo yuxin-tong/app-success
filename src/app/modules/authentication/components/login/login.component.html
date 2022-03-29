@@ -19,35 +19,12 @@
       Email is <strong>required</strong>
     </mat-error>
   </mat-form-field>
-  <mat-form-field appearance="fill" fxFlexFill>
-    <mat-label>Password</mat-label>
-    <input
-      type="password"
-      matInput
-      formControlName="password"
-      autocomplete="false"
-    />
-    <mat-error
-      *ngIf="form.get('password')?.hasError('required')"
-      fxLayoutAlign="space-between"
-    >
-      Password is required
-      <mat-hint
-        ><a
-          [routerLink]="forgotPasswordPath"
-          [state]="{ email: form.get('email')?.value }"
-          >Forgot your password?</a
-        ></mat-hint
-      >
-    </mat-error>
-    <mat-hint align="end"
-      ><a
-        [routerLink]="forgotPasswordPath"
-        [state]="{ email: form.get('email')?.value }"
-        >Forgot your password?</a
-      ></mat-hint
-    >
-  </mat-form-field>
+  <app-password
+    fxFlexFill
+    [control]="$any(form).get('password')"
+    [showHint]="true"
+    [email]="form.get('email')?.value"
+  ></app-password>
 
   <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center">
     <div class="fixed-height-45">

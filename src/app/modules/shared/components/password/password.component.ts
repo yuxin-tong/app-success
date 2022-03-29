@@ -14,6 +14,7 @@ import {
   FormGroup,
   NgControl,
 } from '@angular/forms';
+import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { Utils } from 'src/app/core/utils/utils';
 
 @Component({
@@ -28,8 +29,16 @@ export class PasswordComponent {
   @Input()
   showPolicyAlways = false;
 
+  @Input()
+  email = '';
+
+  @Input()
+  showHint = false;
+  forgotPasswordPath = `/${RoutingConstants.FORGOT_PASSWORD}`;
+
   showPasswordPolicy = false;
   hidePassword = true;
   passwordValid = Utils.getPasswordValidity;
+
   constructor() {}
 }

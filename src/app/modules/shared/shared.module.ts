@@ -20,6 +20,7 @@ import { ServerErrorComponent } from './components/server-error/server-error.com
 import { MaterialModule } from './material.module';
 import { PasswordComponent } from './components/password/password.component';
 import { EmailComponent } from './components/email/email.component';
+
 @NgModule({
   declarations: [
     NeedHelpComponent,
