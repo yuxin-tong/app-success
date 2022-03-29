@@ -48,17 +48,22 @@ export class ResetPasswordComponent implements OnInit {
         this.changePasswordId,
         this.form.controls['password']?.value
       )
-      .subscribe((resp: any) => {
-        if (resp.statusCode == 200 || true) {
-          this.router.navigate([RoutingConstants.LOGIN], {
-            state: {
-              redirectMessage:
-                'Password change is successful. You can login now.',
-            },
-          });
-        } else {
+      .subscribe({
+        next: (resp: any) => {
+          if (resp && resp.status == 200) {
+            this.router.navigate([RoutingConstants.LOGIN], {
+              state: {
+                redirectMessage:
+                  'Password change is successful. You can login now.',
+              },
+            });
+          } else {
+            this.form.setErrors({ server: true });
+          }
+        },
+        error: () => {
           this.form.setErrors({ server: true });
-        }
+        },
       });
   }
 }

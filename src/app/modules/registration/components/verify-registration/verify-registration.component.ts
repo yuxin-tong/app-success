@@ -26,16 +26,16 @@ export class VerifyRegistrationComponent {
 
   postEmailVerification(verificationId: string) {
     this.spinnerService.show();
-    this.registrationService.verifyRegistration(verificationId).subscribe(
-      (resp) => this.processEmailVerifiction(resp),
-      (err) => {
+    this.registrationService.verifyRegistration(verificationId).subscribe({
+      next: (resp) => this.processEmailVerifiction(resp),
+      error: (err) => {
         this.verified = false;
-      }
-    );
+      },
+    });
   }
 
   processEmailVerifiction(resp: any): void {
-    if (resp.status == 200) {
+    if (resp && resp.status == 200) {
       this.verified = true;
       this.router.navigate([RoutingConstants.LOGIN], {
         state: {

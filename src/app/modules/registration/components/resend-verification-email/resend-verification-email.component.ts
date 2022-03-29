@@ -42,9 +42,7 @@ export class ResendVerificationEmailComponent implements OnInit {
     this.registrationService
       .resendVerificationEmail(this.form.controls['email']?.value)
       .subscribe((resp) => {
-        console.log(resp);
-
-        if (resp.status == 200) {
+        if (resp && resp.status == 200) {
           this.submitted = true;
         } else {
           this.serverError = true;

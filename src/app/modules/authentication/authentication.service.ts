@@ -52,10 +52,14 @@ export class AuthenticationService {
   }
 
   resetPassword(changePasswordId: string, password: string) {
-    return this.http.post(environment.apiBaseUrl + 'change-password', {
-      id: changePasswordId,
-      newPassword: password,
-    });
+    return this.http.post(
+      environment.apiBaseUrl + 'change-password',
+      {
+        id: changePasswordId,
+        newPassword: password,
+      },
+      { observe: 'response' }
+    );
   }
 
   public isAuthenticated(): boolean {
