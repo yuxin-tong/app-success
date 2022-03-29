@@ -19,6 +19,7 @@ import { RouterModule } from '@angular/router';
 import { ServerErrorComponent } from './components/server-error/server-error.component';
 import { MaterialModule } from './material.module';
 import { PasswordComponent } from './components/password/password.component';
+import { EmailComponent } from './components/email/email.component';
 @NgModule({
   declarations: [
     NeedHelpComponent,
@@ -35,6 +36,7 @@ import { PasswordComponent } from './components/password/password.component';
     ContactUsComponent,
     ServerErrorComponent,
     PasswordComponent,
+    EmailComponent,
   ],
   imports: [
     CommonModule,
@@ -47,6 +49,7 @@ import { PasswordComponent } from './components/password/password.component';
     MaterialModule,
     PublicSidebarComponent,
     FlexLayoutModule,
+    EmailComponent,
     PasswordComponent,
     MobileFooterComponent,
     HeaderComponent,

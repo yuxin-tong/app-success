@@ -33,7 +33,6 @@ export class CustomHttpInterceptor implements HttpInterceptor {
         return res;
       }),
       catchError((error: HttpErrorResponse) => {
-        console.log(error);
         this.spinnerService.hide();
         return throwError(() => new Error());
       })
