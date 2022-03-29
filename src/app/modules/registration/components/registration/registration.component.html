@@ -1,5 +1,9 @@
 <h1>Register</h1>
-<form fxLayout="column" [formGroup]="form">
+<form
+  fxLayout="column"
+  [formGroup]="form"
+  (keydown.enter)="$event.preventDefault()"
+>
   <mat-form-field appearance="fill" fxFlexFill>
     <mat-label>Email</mat-label>
     <input
@@ -144,8 +148,8 @@
     #tc
     formControlName="termsConditions"
     fxFlexAlign="start"
-    (keyup.space)="showTermsConditions(tc.checked)"
-    (click)="showTermsConditions(tc.checked)"
+    (keyup.space)="showTermsConditions($event, tc.checked)"
+    (click)="showTermsConditions($event, tc.checked)"
   >
     I have read and accept SATAC's Terms and Conditions
   </mat-checkbox>
@@ -163,8 +167,8 @@
     #pp
     formControlName="privacyPolicy"
     fxFlexAlign="start"
-    (keyup.space)="showPrivacyPolicy(pp.checked)"
-    (click)="showPrivacyPolicy(pp.checked)"
+    (keyup.space)="showPrivacyPolicy($event, pp.checked)"
+    (click)="showPrivacyPolicy($event, pp.checked)"
   >
     I have read and accept SATAC's Privacy Policy
   </mat-checkbox>

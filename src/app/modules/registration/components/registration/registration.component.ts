@@ -32,9 +32,9 @@ export class RegistrationComponent implements OnInit {
     birthDate: ['', [Validators.required]],
     gender: ['', [Validators.required]],
     citizenship: ['', [Validators.required]],
-    termsConditions: ['', [Validators.requiredTrue]],
-    privacyPolicy: ['', [Validators.requiredTrue]],
-    subscription: ['', []],
+    termsConditions: [false, [Validators.requiredTrue]],
+    privacyPolicy: [false, [Validators.requiredTrue]],
+    subscription: [false, []],
   });
 
   loginPath = `/${RoutingConstants.LOGIN}`;
@@ -134,28 +134,26 @@ export class RegistrationComponent implements OnInit {
     });
   }
 
-  showTermsConditions(currentVal: boolean) {
-    if (currentVal) {
-      return;
+  showTermsConditions(e: Event, currentVal: boolean) {
+    if (!currentVal) {
+      e.preventDefault();
+      this.openDialog({
+        header: 'Terms and Conditions',
+        body: this.termsConditions,
+        formControlName: 'termsConditions',
+      });
     }
-
-    this.openDialog({
-      header: 'Terms and Conditions',
-      body: this.termsConditions,
-      formControlName: 'termsConditions',
-    });
   }
 
-  showPrivacyPolicy(currentVal: boolean) {
-    if (currentVal) {
-      return;
+  showPrivacyPolicy(e: Event, currentVal: boolean) {
+    if (!currentVal) {
+      e.preventDefault();
+      this.openDialog({
+        header: 'Privacy Policy',
+        body: this.privacyPolicy,
+        formControlName: 'privacyPolicy',
+      });
     }
-
-    this.openDialog({
-      header: 'Privacy Policy',
-      body: this.privacyPolicy,
-      formControlName: 'privacyPolicy',
-    });
   }
 
   submit() {
