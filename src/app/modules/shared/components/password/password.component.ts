@@ -25,6 +25,9 @@ export class PasswordComponent {
   @Input()
   control: FormControl = new FormControl();
 
+  @Input()
+  showPolicyAlways = false;
+
   showPasswordPolicy = false;
   hidePassword = true;
   passwordValid = Utils.getPasswordValidity;

@@ -26,7 +26,10 @@
     </mat-error>
   </mat-form-field>
 
-  <app-password [control]="$any(form).controls['password']"></app-password>
+  <app-password
+    fxFlexFill
+    [control]="$any(form).controls['password']"
+  ></app-password>
 
   <div
     fxFlexFill
