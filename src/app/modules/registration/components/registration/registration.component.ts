@@ -1,4 +1,3 @@
-import { ScrollStrategy, ScrollStrategyOptions } from '@angular/cdk/overlay';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
@@ -43,10 +42,6 @@ export class RegistrationComponent implements OnInit {
   citizenships = new Observable<ValueDescription[]>();
   termsConditions = '';
   privacyPolicy = '';
-  showPasswordPolicy = false;
-  hidePassword = true;
-
-  passwordValid = Utils.getPasswordValidity;
 
   maxDate = new Date(new Date().setFullYear(new Date().getFullYear() - 16));
   minDate = new Date(new Date().setFullYear(new Date().getFullYear() - 85));
@@ -58,8 +53,7 @@ export class RegistrationComponent implements OnInit {
     public dialog: MatDialog,
     private registerService: RegistrationService,
     private router: Router,
-    private route: ActivatedRoute,
-    private scrollStrategyOptions: ScrollStrategyOptions
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {

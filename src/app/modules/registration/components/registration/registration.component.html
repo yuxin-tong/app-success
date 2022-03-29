@@ -26,47 +26,7 @@
     </mat-error>
   </mat-form-field>
 
-  <mat-form-field appearance="fill" fxFlexFill>
-    <mat-label>Password</mat-label>
-    <input
-      [type]="hidePassword ? 'password' : 'text'"
-      matInput
-      formControlName="password"
-      autocomplete="false"
-      cdkOverlayOrigin
-      (focus)="showPasswordPolicy = !showPasswordPolicy"
-      (focusout)="showPasswordPolicy = !showPasswordPolicy"
-      #trigger="cdkOverlayOrigin"
-    />
-
-    <mat-icon
-      *ngIf="form.get('password')?.value"
-      class="disabled-color cursor-pointer"
-      matSuffix
-      (click)="this.hidePassword = !this.hidePassword"
-      >{{ hidePassword ? "visibility_off" : "visibility" }}</mat-icon
-    >
-    <mat-error *ngIf="form.get('password')?.hasError('required')">
-      Password is required
-    </mat-error>
-    <mat-error *ngIf="form.get('password')?.hasError('pattern')">
-      Password policy is not met
-    </mat-error>
-    <ng-template
-      cdkConnectedOverlay
-      cdkConnectedOverlayPanelClass="password-policy-overlay"
-      [cdkConnectedOverlayOrigin]="trigger"
-      [cdkConnectedOverlayOpen]="
-        (showPasswordPolicy && !form.get('password')?.value) ||
-        (showPasswordPolicy &&
-          (form.get('password')?.hasError('pattern') ?? false))
-      "
-      ><app-password-policy
-        [valid]="passwordValid(form.get('password')?.value)"
-        fxFlexFill
-      ></app-password-policy>
-    </ng-template>
-  </mat-form-field>
+  <app-password [control]="$any(form).controls['password']"></app-password>
 
   <div
     fxFlexFill

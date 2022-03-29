@@ -18,6 +18,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { RouterModule } from '@angular/router';
 import { ServerErrorComponent } from './components/server-error/server-error.component';
 import { MaterialModule } from './material.module';
+import { PasswordComponent } from './components/password/password.component';
 @NgModule({
   declarations: [
     NeedHelpComponent,
@@ -33,13 +34,20 @@ import { MaterialModule } from './material.module';
     PasswordPolicyComponent,
     ContactUsComponent,
     ServerErrorComponent,
+    PasswordComponent,
   ],
-  imports: [CommonModule, FlexLayoutModule, RouterModule, MaterialModule],
+  imports: [
+    CommonModule,
+    FlexLayoutModule,
+    RouterModule,
+    MaterialModule,
+    ReactiveFormsModule,
+  ],
   exports: [
     MaterialModule,
     PublicSidebarComponent,
     FlexLayoutModule,
-
+    PasswordComponent,
     MobileFooterComponent,
     HeaderComponent,
     MysatacLogoComponent,
