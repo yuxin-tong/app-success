@@ -1,15 +1,9 @@
-import {
-  animate,
-  animateChild,
-  group,
-  query,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
+import { animate, style, transition, trigger } from '@angular/animations';
 import { Validators } from '@angular/forms';
 
 export const AppConstants = {
+  cookieConsentSessionKey: 'cookieConsent',
+
   PASSWORD_REGEX: [
     /(?=.*[a-z])/,
     /(?=.*[A-Z])/,

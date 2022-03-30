@@ -24,6 +24,9 @@
   $dark-background-color: mat.get-color-from-palette($primary-palette, 800);
   $black: mat.get-color-from-palette($primary-palette, 900);
 
+  $medium-background-color: mat.get-color-from-palette($primary-palette, 300);
+  $medium-grey: mat.get-color-from-palette($primary-palette, "100-contrast");
+
   $light-text-color: mat.get-color-from-palette(
     $primary-palette,
     "50-contrast"
@@ -110,6 +113,23 @@
     background-color: $light-background-color;
 
     @include mat.elevation(8);
+  }
+
+  .cookie-consent-alert {
+    background-color: $medium-background-color;
+    color: $light-text-color;
+    margin-top: 60px !important;
+
+    a {
+      background-color: $medium-background-color;
+      color: $light-text-color;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $light-link-color;
+      }
+    }
   }
 }
 
