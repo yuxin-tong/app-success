@@ -68,20 +68,6 @@ export class RegistrationComponent implements OnInit {
       .subscribe((res) => (this.privacyPolicy = res.text));
   }
 
-  emailExistenceCheck() {
-    if (!this.form.get('email')?.errors) {
-      this.registerService
-        .checkEmailExists(this.form.controls['email']?.value)
-        .subscribe((res: any) => {
-          if (res && res.exists) {
-            this.form.controls['email'].setErrors({ inuse: true });
-          } else {
-            this.form.controls['email'].setErrors(null);
-          }
-        });
-    }
-  }
-
   removeBirthDateValidation() {
     this.form.controls['birthDate'].clearValidators();
     this.form.controls['birthDate'].updateValueAndValidity();
@@ -134,7 +120,7 @@ export class RegistrationComponent implements OnInit {
       return;
     }
     let user = {} as RegistrationUser;
-    user.email = this.form.controls['email'].value;
+    user.email = user.username = this.form.controls['email'].value;
     user.password = this.form.controls['password'].value;
     user.firstName = this.form.controls['firstName'].value;
     user.lastName = this.form.controls['lastName'].value;

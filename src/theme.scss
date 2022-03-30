@@ -60,7 +60,9 @@
     a {
       color: $dark-text-color;
 
-      &:hover {
+      &:hover,
+      &:active,
+      &:focus {
         color: $dark-link-color;
       }
     }
@@ -73,7 +75,9 @@
     a {
       color: $light-text-color;
 
-      &:hover {
+      &:hover,
+      &:active,
+      &:focus {
         color: $light-link-color;
       }
     }
@@ -86,7 +90,9 @@
 
     mat-error a {
       color: $warn-color;
-      &:hover {
+      &:hover,
+      &:active,
+      &:focus {
         color: $warn-color-hover;
       }
     }

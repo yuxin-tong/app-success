@@ -11,6 +11,7 @@ export interface RegistrationApplication {
 export interface RegistrationUser {
   birthDate: string;
   email: string;
+  username: string;
   firstName: string;
   lastName: string;
   password: string;

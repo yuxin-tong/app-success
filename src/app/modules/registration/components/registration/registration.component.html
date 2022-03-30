@@ -4,31 +4,16 @@
   [formGroup]="form"
   (keydown.enter)="$event.preventDefault()"
 >
-  <mat-form-field appearance="fill" fxFlexFill>
-    <mat-label>Email</mat-label>
-    <input
-      type="email"
-      matInput
-      formControlName="email"
-      (focusout)="emailExistenceCheck()"
-      autocomplete="new-email"
-    />
-    <mat-error *ngIf="form.get('email')?.hasError('email')">
-      Please enter a valid email address
-    </mat-error>
-    <mat-error *ngIf="form.get('email')?.hasError('required')">
-      Email is <strong>required</strong>
-    </mat-error>
-    <mat-error *ngIf="form.get('email')?.hasError('inuse')">
-      This email is already in use. Please
-      <a [routerLink]="loginPath">Login</a> or
-      <a [routerLink]="forgotPasswordPath">Reset your password</a>
-    </mat-error>
-  </mat-form-field>
+  <app-email
+    fxFlexFill
+    [control]="$any(form).controls['email']"
+    [checkExists]="true"
+  ></app-email>
 
   <app-password
     fxFlexFill
     [control]="$any(form).controls['password']"
+    [showPolicyNever]="false"
   ></app-password>
 
   <div

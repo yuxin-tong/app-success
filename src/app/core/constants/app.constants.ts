@@ -1,4 +1,12 @@
-import { animate, style, transition, trigger } from '@angular/animations';
+import {
+  animate,
+  animateChild,
+  group,
+  query,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 import { Validators } from '@angular/forms';
 
 export const AppConstants = {
@@ -31,6 +39,15 @@ export const AppConstants = {
       transition(':leave', [
         style({ height: '80px', opacity: 1 }),
         animate('0.1s ease-in', style({ height: 0, opacity: 0 })),
+      ]),
+    ]),
+  ],
+
+  FADE_ANIMATION: [
+    trigger('fade', [
+      transition('* => *', [
+        style({ opacity: 0 }),
+        animate(500, style({ opacity: 1 })),
       ]),
     ]),
   ],

@@ -30,6 +30,9 @@ export class PasswordComponent {
   showPolicyAlways = false;
 
   @Input()
+  showPolicyNever = true;
+
+  @Input()
   email = '';
 
   @Input()

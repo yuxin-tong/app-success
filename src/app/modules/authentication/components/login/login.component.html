@@ -4,25 +4,12 @@
   redirectMessage
 }}</mat-card>
 <form fxLayout="column" [formGroup]="form">
-  <mat-form-field appearance="fill" fxFlexFill>
-    <mat-label>Email</mat-label>
-    <input
-      type="email"
-      matInput
-      formControlName="email"
-      placeholder="email.address@domain.com"
-    />
-    <mat-error *ngIf="form.get('email')?.hasError('email')">
-      Please enter a valid email address
-    </mat-error>
-    <mat-error *ngIf="form.get('email')?.hasError('required')">
-      Email is <strong>required</strong>
-    </mat-error>
-  </mat-form-field>
+  <app-email fxFlexFill [control]="$any(form).get('email')"></app-email>
   <app-password
     fxFlexFill
     [control]="$any(form).get('password')"
     [showHint]="true"
+    [showPolicyNever]="true"
     [email]="form.get('email')?.value"
   ></app-password>
 

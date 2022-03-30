@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import { ChildrenOutletContexts, NavigationEnd, Router } from '@angular/router';
 import { RoutingConstants } from './core/constants/routing.constants';
 import { AuthenticationService } from './modules/authentication/authentication.service';
 
@@ -13,9 +13,11 @@ export class AppComponent {
   authArea = false;
   registrationArea = false;
   publicArea = false;
+
   constructor(
     private router: Router,
-    public authService: AuthenticationService
+    public authService: AuthenticationService,
+    private contexts: ChildrenOutletContexts
   ) {
     this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {

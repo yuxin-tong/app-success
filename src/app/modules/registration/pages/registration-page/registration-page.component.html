@@ -13,8 +13,9 @@
           fxFlex.sm="80"
           fxFlex.xs="90"
           class="main-content"
+          [@fade]="o.activatedRoute?.snapshot?.url"
         >
-          <router-outlet></router-outlet>
+          <router-outlet #o="outlet"></router-outlet>
         </div>
       </div>
       <app-public-sidebar
