@@ -22,12 +22,6 @@ export class AppComponent {
   registrationArea = false;
   publicArea = false;
 
-  configSuccess: MatSnackBarConfig = {
-    panelClass: 'cookie-consent-alert',
-    horizontalPosition: 'center',
-    verticalPosition: 'bottom',
-  };
-
   constructor(
     private router: Router,
     public authService: AuthenticationService,
@@ -56,7 +50,9 @@ export class AppComponent {
           'We use cookies to ensure you get the best website experience. By using our website you agree to our <a href="https://www.satac.edu.au/privacy" target="_blank">Privacy Policy</a>',
         btnText: 'Dismiss',
       },
-      ...this.configSuccess,
+      panelClass: 'cookie-consent-alert',
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
     });
   }
 }
