@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ReCaptchaV3Service } from 'ng-recaptcha';
-import { switchMap } from 'rxjs';
+import { catchError, EMPTY, of, switchMap, throwError } from 'rxjs';
 import {
   RegistrationApplication,
   RegistrationPostData,
   RegistrationUser,
 } from 'src/app/core/interfaces/registrationPostData';
+import { SpinnerService } from 'src/app/core/services/spinner.service';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -15,7 +16,8 @@ import { environment } from 'src/environments/environment';
 export class RegistrationService {
   constructor(
     private http: HttpClient,
-    private recaptchaV3Service: ReCaptchaV3Service
+    private recaptchaV3Service: ReCaptchaV3Service,
+    private spinnerService: SpinnerService
   ) {}
 
   register(user: RegistrationUser) {
@@ -26,17 +28,18 @@ export class RegistrationService {
     postData.registration.roles = [environment.registrationUserRole];
     postData.user = user;
 
-    return this.recaptchaV3Service
-      .execute('Register')
-      .pipe(
-        switchMap((token) =>
-          this.http.post(
-            environment.apiBaseUrl + 'registration/add',
-            postData,
-            { headers: { token } }
-          )
-        )
-      );
+    return this.recaptchaV3Service.execute('Register').pipe(
+      switchMap((token) =>
+        this.http.post(environment.apiBaseUrl + 'registration/add', postData, {
+          headers: { token },
+        })
+      ),
+
+      catchError((error) => {
+        this.spinnerService.hide();
+        return of({});
+      })
+    );
   }
 
   checkEmailExists(username: string) {
