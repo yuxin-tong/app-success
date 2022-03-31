@@ -8,6 +8,7 @@ import {
 import { ChildrenOutletContexts, NavigationEnd, Router } from '@angular/router';
 import { AppConstants } from './core/constants/app.constants';
 import { RoutingConstants } from './core/constants/routing.constants';
+import { AppService } from './core/services/app.service';
 import { AuthenticationService } from './modules/authentication/authentication.service';
 import { AlertComponent } from './modules/shared/components/alert/alert.component';
 
@@ -25,9 +26,9 @@ export class AppComponent {
   constructor(
     private router: Router,
     public authService: AuthenticationService,
-    private _snackBar: MatSnackBar
+    private appService: AppService
   ) {
-    this.showCookieConsent();
+    this.appService.showCookieConsent();
 
     this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
@@ -38,21 +39,6 @@ export class AppComponent {
 
         this.publicArea = this.authArea || this.registrationArea;
       }
-    });
-  }
-  showCookieConsent() {
-    if (sessionStorage.getItem(AppConstants.cookieConsentSessionKey)) {
-      return;
-    }
-    this._snackBar.openFromComponent(AlertComponent, {
-      data: {
-        message:
-          'We use cookies to ensure you get the best website experience. By using our website you agree to our <a href="https://www.satac.edu.au/privacy" target="_blank">Privacy Policy</a>',
-        btnText: 'Dismiss',
-      },
-      panelClass: 'cookie-consent-alert',
-      horizontalPosition: 'center',
-      verticalPosition: 'bottom',
     });
   }
 }

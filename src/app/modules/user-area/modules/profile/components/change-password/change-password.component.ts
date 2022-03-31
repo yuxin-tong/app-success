@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { AppConstants } from 'src/app/core/constants/app.constants';
+import { AppService } from 'src/app/core/services/app.service';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
 import { Utils } from 'src/app/core/utils/utils';
-import { AuthenticationService } from 'src/app/modules/authentication/authentication.service';
 import { ProfileService } from '../../profile.service';
 
 @Component({
@@ -26,7 +26,8 @@ export class ChangePasswordComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     public spinnerService: SpinnerService,
-    private profileService: ProfileService
+    private profileService: ProfileService,
+    private appService: AppService
   ) {}
 
   ngOnInit(): void {}
@@ -45,6 +46,7 @@ export class ChangePasswordComponent implements OnInit {
       .subscribe({
         next: (resp: any) => {
           if (resp && resp.status) {
+            this.appService.showAlert(true, 'Password changed successfully');
           } else {
             this.form.setErrors({ server: true });
           }

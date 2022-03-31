@@ -1,7 +1,9 @@
-<div fxFlexFill fxLayout="row" fxLayoutAlign="stretch center">
+<div fxFlexFill fxLayout="row" fxLayoutAlign="space-between center">
   <div [innerHTML]="data.message"></div>
-  <mat-divider vertical class="alert-divider"></mat-divider>
-  <button mat-raised-button fxLayoutAlign="center" (click)="btnClicked()">
-    {{ data.btnText }}
-  </button>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <mat-divider vertical class="alert-divider"></mat-divider>
+    <button mat-raised-button fxLayoutAlign="center" (click)="btnClicked()">
+      {{ data.btnText }}
+    </button>
+  </div>
 </div>
