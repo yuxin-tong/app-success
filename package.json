@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "data": "node api/generate-data.js > api/db.json",
+    "data": "node api/generate-data.js > api/db.json", 
     "api": "json-server --watch api/db.json --routes api/routes.json --no-cors=true"
   },
   "private": true,
