@@ -15,7 +15,7 @@
 
   $dark-text-color: mat.get-color-from-palette(
     $primary-palette,
-    "600-contrast"
+    "500-contrast"
   );
   $dark-link-color: mat.get-color-from-palette(
     $primary-palette,
@@ -61,7 +61,7 @@
     background-color: $dark-background-color;
 
     a {
-      color: $dark-text-color;
+      color: $dark-link-color;
 
       &:hover,
       &:active,
