@@ -10,6 +10,10 @@ export const RoutingConstants = {
   RESEND_VERIFICATION_EMAIL: 'resend-verification-email',
 
   DASHBOARD: 'dashboard',
+
+  PROFILE: 'profile',
+  CHANGE_PASSWORD: 'change-password',
+
   APPLICATION: 'application',
   EMPLOYMENT: 'employment',
 };

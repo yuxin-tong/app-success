@@ -27,6 +27,9 @@ export class PasswordComponent {
   control: FormControl = new FormControl();
 
   @Input()
+  label = 'Password';
+
+  @Input()
   showPolicyAlways = false;
 
   @Input()

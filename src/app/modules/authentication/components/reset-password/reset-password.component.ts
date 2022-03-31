@@ -14,8 +14,6 @@ import { AuthenticationService } from '../../authentication.service';
   animations: AppConstants.IN_OUT_ANIMATION,
 })
 export class ResetPasswordComponent implements OnInit {
-  registrationPath = `/${RoutingConstants.REGISTRATION}`;
-
   passwordValid = Utils.getPasswordValidity;
   changePasswordId = '';
   hidePassword = true;

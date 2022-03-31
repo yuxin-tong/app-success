@@ -20,6 +20,13 @@ const routes: Routes = [
     canLoad: [AuthGuard],
   },
   {
+    path: RoutingConstants.PROFILE,
+    component: UserAreaPageComponent,
+    loadChildren: () =>
+      import('./modules/profile/profile.module').then((m) => m.ProfileModule),
+    canLoad: [AuthGuard],
+  },
+  {
     path: RoutingConstants.APPLICATION,
     component: UserAreaPageComponent,
     loadChildren: () =>
