@@ -10,6 +10,8 @@ import { RegistrationModule } from './modules/registration/registration.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CustomHttpInterceptor } from './core/interceptors/custom-http.interceptor';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { RecaptchaV3Module, RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +23,7 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     SharedModule,
     RegistrationModule,
     UserAreaModule,
+    RecaptchaV3Module,
   ],
   providers: [
     {
@@ -29,6 +32,10 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
       multi: true,
     },
     { provide: MAT_DATE_LOCALE, useValue: 'en-AU' },
+    {
+      provide: RECAPTCHA_V3_SITE_KEY,
+      useValue: environment.recaptchaSiteKey,
+    },
   ],
   bootstrap: [AppComponent],
 })

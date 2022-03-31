@@ -8,6 +8,7 @@ export const environment = {
   apiSubscriptionKey: '978bc8e81b4643c9b22a74a5ecf898bd',
   registrationApplicationId: 'e52cf9c7-167a-4221-b246-ff624b0bbd5b',
   registrationUserRole: 'student',
+  recaptchaSiteKey: '6LfDVi8fAAAAADri-JvYAe7A-_QTqm9lpTrIYlQx',
 };
 
 /*

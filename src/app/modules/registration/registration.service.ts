@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ReCaptchaV3Service } from 'ng-recaptcha';
+import { switchMap } from 'rxjs';
 import {
   RegistrationApplication,
   RegistrationPostData,
@@ -11,7 +13,10 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class RegistrationService {
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private recaptchaV3Service: ReCaptchaV3Service
+  ) {}
 
   register(user: RegistrationUser) {
     const postData = {} as RegistrationPostData;
@@ -21,10 +26,17 @@ export class RegistrationService {
     postData.registration.roles = [environment.registrationUserRole];
     postData.user = user;
 
-    return this.http.post(
-      environment.apiBaseUrl + 'registration/add',
-      postData
-    );
+    return this.recaptchaV3Service
+      .execute('Register')
+      .pipe(
+        switchMap((token) =>
+          this.http.post(
+            environment.apiBaseUrl + 'registration/add',
+            postData,
+            { headers: { token } }
+          )
+        )
+      );
   }
 
   checkEmailExists(username: string) {
