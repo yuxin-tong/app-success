@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { AuthRepository } from 'src/app/core/repositories/auth.repository';
 import { environment } from '../../../environments/environment';
 interface Course {
@@ -42,6 +43,7 @@ export class AuthenticationService {
 
   processLoginSuccess(response: any) {
     const user = response.user;
+
     this.authRepo.setUser({
       email: user.email,
       firstName: user.firstName,
@@ -49,7 +51,13 @@ export class AuthenticationService {
     });
     this.authRepo.setToken(response.token);
 
-    this.router.navigate(['/']);
+    if (!user.data?.isRegistered) {
+      this.router.navigate([RoutingConstants.REGISTRATION], {
+        state: { socialUser: user },
+      });
+    } else {
+      this.router.navigate(['/']);
+    }
   }
 
   forgotPassword(username: string) {

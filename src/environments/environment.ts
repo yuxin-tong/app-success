@@ -11,7 +11,7 @@ export const environment = {
   recaptchaSiteKey: '6LcDTy8fAAAAAKc_Vx3Zok0kojmyPoBaVfWSeZJi', //'6LfDVi8fAAAAADri-JvYAe7A-_QTqm9lpTrIYlQx',
   googleClientId:
     '566934167405-csu6j8s37rjjf9jmi671qrbf76h7s801.apps.googleusercontent.com',
-  facebookAppId: '508645287431266',
+  facebookAppId: '502206098153531',
 };
 
 /*

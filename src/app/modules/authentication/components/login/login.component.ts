@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    if (true || (history && history.state && history.state.redirectMessage)) {
+    if (history?.state?.redirectMessage) {
       this.redirectMessage = history.state.redirectMessage;
     }
   }

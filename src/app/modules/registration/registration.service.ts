@@ -20,13 +20,17 @@ export class RegistrationService {
     private spinnerService: SpinnerService
   ) {}
 
-  register(user: RegistrationUser) {
+  register(user: RegistrationUser, isSocial: false) {
     const postData = {} as RegistrationPostData;
     postData.registration = {} as RegistrationApplication;
 
     postData.registration.applicationId = environment.registrationApplicationId;
     postData.registration.roles = [environment.registrationUserRole];
     postData.user = user;
+
+    if (isSocial) {
+      return this.registerSocial(postData);
+    }
 
     return this.recaptchaV3Service.execute('Register').pipe(
       switchMap((token) =>
@@ -40,6 +44,10 @@ export class RegistrationService {
         return of({});
       })
     );
+  }
+
+  registerSocial(postData: RegistrationPostData) {
+    return this.http.put(environment.apiBaseUrl + 'user/update', postData);
   }
 
   checkEmailExists(username: string) {

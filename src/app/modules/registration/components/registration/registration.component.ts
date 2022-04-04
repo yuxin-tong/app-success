@@ -43,6 +43,8 @@ export class RegistrationComponent implements OnInit {
   termsConditions = '';
   privacyPolicy = '';
 
+  socialUser: any = undefined;
+
   maxDate = new Date(new Date().setFullYear(new Date().getFullYear() - 16));
   minDate = new Date(new Date().setFullYear(new Date().getFullYear() - 85));
 
@@ -54,7 +56,12 @@ export class RegistrationComponent implements OnInit {
     private registerService: RegistrationService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) {
+    this.router.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    };
+    this.router.onSameUrlNavigation = 'reload';
+  }
 
   ngOnInit(): void {
     this.genders = this.metadataService.getValueDescriptionList('genders');
@@ -66,6 +73,19 @@ export class RegistrationComponent implements OnInit {
     this.metadataService
       .getPrivacyPolicy()
       .subscribe((res) => (this.privacyPolicy = res.text));
+
+    console.log(history?.state);
+    if (history?.state.socialUser) {
+      this.socialUser = history.state.socialUser;
+      this.form.controls['email'].setValue(this.socialUser?.email);
+      this.form.controls['email'].disable();
+
+      this.form.controls['firstName'].setValue(this.socialUser?.firstName);
+      this.form.controls['lastName'].setValue(this.socialUser?.lastName);
+
+      this.form.controls['password'].clearValidators();
+      this.form.controls['password'].updateValueAndValidity();
+    }
   }
 
   removeBirthDateValidation() {
@@ -132,23 +152,25 @@ export class RegistrationComponent implements OnInit {
     user.data.subscription = this.form.controls['subscription'].value;
 
     this.spinnerService.show();
-    this.registerService.register(user).subscribe((res: any) => {
-      if (res.statusCode == 200) {
-        this.router.navigate(['./' + RoutingConstants.REGISTRATION_SUCCESS], {
-          relativeTo: this.route,
-          state: { email: user.email },
-        });
-      } else if (
-        res.statusCode == 400 &&
-        res.exception?.fieldErrors['user.email']?.length &&
-        res.exception?.fieldErrors['user.email'][0].code?.includes(
-          '[duplicate]user.email'
-        )
-      ) {
-        this.form.setErrors({ duplicate: true });
-      } else {
-        this.form.setErrors({ server: true });
-      }
-    });
+    this.registerService
+      .register(user, this.socialUser)
+      .subscribe((res: any) => {
+        if (res.statusCode == 200) {
+          this.router.navigate(['./' + RoutingConstants.REGISTRATION_SUCCESS], {
+            relativeTo: this.route,
+            state: { email: user.email },
+          });
+        } else if (
+          res.statusCode == 400 &&
+          res.exception?.fieldErrors['user.email']?.length &&
+          res.exception?.fieldErrors['user.email'][0].code?.includes(
+            '[duplicate]user.email'
+          )
+        ) {
+          this.form.setErrors({ duplicate: true });
+        } else {
+          this.form.setErrors({ server: true });
+        }
+      });
   }
 }

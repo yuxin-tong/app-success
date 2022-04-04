@@ -11,6 +11,7 @@
   ></app-email>
 
   <app-password
+    *ngIf="!socialUser"
     fxFlexFill
     [control]="$any(form).controls['password']"
     [showPolicyNever]="false"
@@ -160,8 +161,8 @@
   </div>
 </form>
 
-<app-social-login></app-social-login>
-<div fxLayoutAlign="center center">
+<app-social-login *ngIf="!socialUser"></app-social-login>
+<div fxLayoutAlign="center center" *ngIf="!socialUser">
   Already have a MySATAC account?
   <a [routerLink]="loginPath">Login</a>
 </div>
