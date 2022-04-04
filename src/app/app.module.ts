@@ -11,6 +11,15 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CustomHttpInterceptor } from './core/interceptors/custom-http.interceptor';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { RecaptchaV3Module, RECAPTCHA_V3_SITE_KEY } from 'ng-recaptcha';
+import {
+  SocialLoginModule,
+  SocialAuthServiceConfig,
+} from 'angularx-social-login';
+import {
+  GoogleLoginProvider,
+  FacebookLoginProvider,
+} from 'angularx-social-login';
+
 import { environment } from 'src/environments/environment';
 
 @NgModule({
@@ -24,6 +33,7 @@ import { environment } from 'src/environments/environment';
     RegistrationModule,
     UserAreaModule,
     RecaptchaV3Module,
+    SocialLoginModule,
   ],
   providers: [
     {
@@ -35,6 +45,23 @@ import { environment } from 'src/environments/environment';
     {
       provide: RECAPTCHA_V3_SITE_KEY,
       useValue: environment.recaptchaSiteKey,
+    },
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '750766681992-52qoo6tdi3qll1mieanh0eshpql0l3lm.apps.googleusercontent.com'
+            ),
+          },
+        ],
+        onError: (err) => {
+          console.error(err);
+        },
+      } as SocialAuthServiceConfig,
     },
   ],
   bootstrap: [AppComponent],

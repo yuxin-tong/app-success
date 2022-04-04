@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import {
+  GoogleLoginProvider,
+  SocialAuthService,
+  SocialUser,
+} from 'angularx-social-login';
+import { first } from 'rxjs';
 import { AppConstants } from 'src/app/core/constants/app.constants';
 import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
@@ -24,7 +30,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private service: AuthenticationService,
     private formBuilder: FormBuilder,
-    public spinnerService: SpinnerService
+    public spinnerService: SpinnerService,
+    private socialAuthService: SocialAuthService
   ) {}
 
   ngOnInit(): void {
@@ -46,6 +53,20 @@ export class LoginComponent implements OnInit {
         )
         .subscribe((res) => this.processLogin(res));
     }
+  }
+
+  public loginGoogle() {
+    this.socialAuthService.authState
+      .pipe(first())
+      .subscribe((user: SocialUser) => {
+        console.log(user);
+        if (user?.idToken) {
+          this.service
+            .idpLogin(GoogleLoginProvider.PROVIDER_ID, user.idToken)
+            .subscribe((res) => this.processLogin(res));
+        }
+      });
+    this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID);
   }
 
   private processLogin(res: any) {

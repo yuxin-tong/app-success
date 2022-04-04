@@ -33,6 +33,13 @@ export class AuthenticationService {
     return this.http.post(environment.apiBaseUrl + 'token', body);
   }
 
+  idpLogin(identityProvider: string, token: string) {
+    return this.http.post(environment.apiBaseUrl + 'idp/login', {
+      identityProvider,
+      token,
+    });
+  }
+
   processLoginSuccess(response: any) {
     const user = response.user;
     this.authRepo.setUser({

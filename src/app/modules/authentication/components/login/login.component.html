@@ -45,10 +45,12 @@
         ></mat-spinner>
       </span>
     </button>
-    <button mat-stroked-button class="primary-button">Login with Google</button>
     <div>
       Do not have a mySATAC account yet?
       <a [routerLink]="registrationPath">Create an account</a>
     </div>
   </div>
 </form>
+<button mat-stroked-button class="primary-button" (click)="loginGoogle()">
+  Continue with Google
+</button>

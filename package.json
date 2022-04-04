@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "data": "node api/generate-data.js > api/db.json", 
+    "data": "node api/generate-data.js > api/db.json",
     "api": "json-server --watch api/db.json --routes api/routes.json --no-cors=true"
   },
   "private": true,
@@ -28,6 +28,7 @@
     "@ngneat/elf": "^1.5.0",
     "@ngneat/elf-entities": "^4.1.0",
     "@ngneat/elf-persist-state": "^1.1.1",
+    "angularx-social-login": "^4.1.0",
     "ng-recaptcha": "^9.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
