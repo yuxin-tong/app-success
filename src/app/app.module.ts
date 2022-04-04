@@ -53,9 +53,14 @@ import { environment } from 'src/environments/environment';
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider(
-              '750766681992-52qoo6tdi3qll1mieanh0eshpql0l3lm.apps.googleusercontent.com'
-            ),
+            provider: new GoogleLoginProvider(environment.googleClientId, {
+              scope: 'profile email',
+              cookiepolicy: 'single_host_origin',
+            }),
+          },
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider(environment.facebookAppId),
           },
         ],
         onError: (err) => {

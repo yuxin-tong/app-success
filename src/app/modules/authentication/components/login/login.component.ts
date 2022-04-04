@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import {
+  FacebookLoginProvider,
   GoogleLoginProvider,
   SocialAuthService,
   SocialUser,
@@ -30,8 +31,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private service: AuthenticationService,
     private formBuilder: FormBuilder,
-    public spinnerService: SpinnerService,
-    private socialAuthService: SocialAuthService
+    public spinnerService: SpinnerService
   ) {}
 
   ngOnInit(): void {
@@ -55,22 +55,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  public loginGoogle() {
-    this.socialAuthService.authState
-      .pipe(first())
-      .subscribe((user: SocialUser) => {
-        this.spinnerService.show();
-
-        if (user?.idToken) {
-          this.service
-            .idpLogin(GoogleLoginProvider.PROVIDER_ID, user.idToken)
-            .subscribe((res) => this.processLogin(res));
-        }
-      });
-    this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID);
-  }
-
-  private processLogin(res: any) {
+  public processLogin(res: any) {
     if (res.statusCode == 200) {
       this.service.processLoginSuccess(res.response);
     } else if (res.statusCode == 213) {

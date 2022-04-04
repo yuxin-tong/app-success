@@ -21,6 +21,7 @@ import { MaterialModule } from './material.module';
 import { PasswordComponent } from './components/password/password.component';
 import { EmailComponent } from './components/email/email.component';
 import { AlertComponent } from './components/alert/alert.component';
+import { SocialLoginComponent } from './components/social-login/social-login.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { AlertComponent } from './components/alert/alert.component';
     PasswordComponent,
     EmailComponent,
     AlertComponent,
+    SocialLoginComponent,
   ],
   imports: [
     CommonModule,
@@ -63,6 +65,7 @@ import { AlertComponent } from './components/alert/alert.component';
     ReactiveFormsModule,
     UserSidebarComponent,
     ServerErrorComponent,
+    SocialLoginComponent,
   ],
 })
 export class SharedModule {}

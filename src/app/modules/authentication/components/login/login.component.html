@@ -37,12 +37,11 @@
     >
       <span fxLayoutAlign="center center"> Login </span>
     </button>
-    <div>
-      Do not have a mySATAC account yet?
-      <a [routerLink]="registrationPath">Create an account</a>
-    </div>
   </div>
 </form>
-<button mat-stroked-button class="primary-button" (click)="loginGoogle()">
-  Continue with Google
-</button>
+
+<app-social-login></app-social-login>
+<div fxLayoutAlign="center center">
+  Do not have a mySATAC account yet?
+  <a [routerLink]="registrationPath">Create an account</a>
+</div>

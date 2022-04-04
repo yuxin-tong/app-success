@@ -155,22 +155,13 @@
       (keyup.enter)="submit()"
       class="primary-button"
     >
-      <span fxLayoutAlign="center center">
-        Create Account
-        <mat-spinner
-          *ngIf="spinnerService.visibility | async"
-          fxFlex="0 0 auto"
-          color="accent"
-          [diameter]="20"
-        ></mat-spinner>
-      </span>
+      <span fxLayoutAlign="center center"> Create Account </span>
     </button>
-    <button mat-stroked-button class="primary-button">
-      Sign up with Google
-    </button>
-    <div>
-      Already have a MySATAC account?
-      <a [routerLink]="loginPath">Login</a>
-    </div>
   </div>
 </form>
+
+<app-social-login></app-social-login>
+<div fxLayoutAlign="center center">
+  Already have a MySATAC account?
+  <a [routerLink]="loginPath">Login</a>
+</div>
