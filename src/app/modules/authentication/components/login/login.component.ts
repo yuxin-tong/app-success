@@ -59,7 +59,8 @@ export class LoginComponent implements OnInit {
     this.socialAuthService.authState
       .pipe(first())
       .subscribe((user: SocialUser) => {
-        console.log(user);
+        this.spinnerService.show();
+
         if (user?.idToken) {
           this.service
             .idpLogin(GoogleLoginProvider.PROVIDER_ID, user.idToken)

@@ -8,7 +8,7 @@ import {
 import { HttpRequest } from '@angular/common/http';
 import { HttpHandler } from '@angular/common/http';
 import { HttpEvent } from '@angular/common/http';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, finalize, map, tap } from 'rxjs/operators';
 import { SpinnerService } from '../services/spinner.service';
 import { environment } from 'src/environments/environment';
 
@@ -27,10 +27,12 @@ export class CustomHttpInterceptor implements HttpInterceptor {
       ),
     });
 
+    console.log('*****************');
+
     return next.handle(clonedReq).pipe(
-      map((res) => {
+      finalize(() => {
+        console.log('---------------');
         this.spinnerService.hide();
-        return res;
       }),
       catchError((error: HttpErrorResponse) => {
         this.spinnerService.hide();

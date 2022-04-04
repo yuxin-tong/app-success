@@ -35,15 +35,7 @@
       (click)="login()"
       class="primary-button"
     >
-      <span fxLayoutAlign="center center">
-        Login
-        <mat-spinner
-          *ngIf="spinnerService.visibility | async"
-          fxFlex="0 0 auto"
-          color="accent"
-          [diameter]="20"
-        ></mat-spinner>
-      </span>
+      <span fxLayoutAlign="center center"> Login </span>
     </button>
     <div>
       Do not have a mySATAC account yet?

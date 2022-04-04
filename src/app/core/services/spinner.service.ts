@@ -14,6 +14,7 @@ export class SpinnerService {
   }
 
   hide() {
+    console.log('##########');
     this.visibility.next(false);
   }
 }
