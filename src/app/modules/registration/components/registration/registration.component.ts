@@ -5,15 +5,18 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AppConstants } from 'src/app/core/constants/app.constants';
 import { RoutingConstants } from 'src/app/core/constants/routing.constants';
+import { PrivacyPolicy } from 'src/app/core/interfaces/privacyPolicy';
 import {
   RegistrationUser,
   RegistrationUserData,
 } from 'src/app/core/interfaces/registrationPostData';
+import { TermsConditions } from 'src/app/core/interfaces/termsCondition';
 import { DialogData } from 'src/app/core/interfaces/ui/dialogData';
 import { ValueDescription } from 'src/app/core/interfaces/valueDescription';
 import { MetadataService } from 'src/app/core/services/metadata.service';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
 import { Utils } from 'src/app/core/utils/utils';
+import { AuthenticationService } from 'src/app/modules/authentication/authentication.service';
 import { AcceptDeclineDialogComponent } from 'src/app/modules/shared/components/accept-decline-dialog/accept-decline-dialog.component';
 import { RegistrationService } from '../../registration.service';
 
@@ -40,8 +43,8 @@ export class RegistrationComponent implements OnInit {
   forgotPasswordPath = `/${RoutingConstants.FORGOT_PASSWORD}`;
   genders = new Observable<ValueDescription[]>();
   citizenships = new Observable<ValueDescription[]>();
-  termsConditions = '';
-  privacyPolicy = '';
+  termsConditions = {} as TermsConditions;
+  privacyPolicy = {} as PrivacyPolicy;
 
   socialUser: any = undefined;
 
@@ -55,7 +58,8 @@ export class RegistrationComponent implements OnInit {
     public dialog: MatDialog,
     private registerService: RegistrationService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private authService: AuthenticationService
   ) {
     this.router.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
@@ -69,10 +73,10 @@ export class RegistrationComponent implements OnInit {
       this.metadataService.getValueDescriptionList('citizenships');
     this.metadataService
       .getTermsConditions()
-      .subscribe((res) => (this.termsConditions = res.text));
+      .subscribe((res) => (this.termsConditions = res));
     this.metadataService
       .getPrivacyPolicy()
-      .subscribe((res) => (this.privacyPolicy = res.text));
+      .subscribe((res) => (this.privacyPolicy = res));
 
     console.log(history?.state);
     if (history?.state.socialUser) {
@@ -118,7 +122,7 @@ export class RegistrationComponent implements OnInit {
       e.preventDefault();
       this.openDialog({
         header: 'Terms and Conditions',
-        body: this.termsConditions,
+        body: this.termsConditions.text,
         formControlName: 'termsConditions',
       });
     }
@@ -129,37 +133,55 @@ export class RegistrationComponent implements OnInit {
       e.preventDefault();
       this.openDialog({
         header: 'Privacy Policy',
-        body: this.privacyPolicy,
+        body: this.privacyPolicy.text,
         formControlName: 'privacyPolicy',
       });
     }
   }
 
   submit() {
+    this.form.controls['termsConditions'].markAsDirty();
+    this.form.controls['privacyPolicy'].markAsDirty();
+
     if (!this.form.valid) {
       return;
     }
     let user = {} as RegistrationUser;
+
+    user.id = this.socialUser?.id;
+
     user.email = user.username = this.form.controls['email'].value;
-    user.password = this.form.controls['password'].value;
+    user.password = user.id ? undefined : this.form.controls['password'].value;
     user.firstName = this.form.controls['firstName'].value;
     user.lastName = this.form.controls['lastName'].value;
     user.birthDate = Utils.getDateStr(this.form.controls['birthDate'].value);
 
     user.data = {} as RegistrationUserData;
     user.data.gender = this.form.controls['gender'].value;
-    user.data.citizenship = this.form.controls['citizenship'].value;
+    user.data.citizenshipStatus = this.form.controls['citizenship'].value;
+    user.data.termsAndConditions = this.termsConditions.version;
+    user.data.privacyPolicy = this.privacyPolicy.version;
     user.data.subscription = this.form.controls['subscription'].value;
 
     this.spinnerService.show();
     this.registerService
-      .register(user, this.socialUser)
+      .register(user, this.socialUser.token)
       .subscribe((res: any) => {
         if (res.statusCode == 200) {
-          this.router.navigate(['./' + RoutingConstants.REGISTRATION_SUCCESS], {
-            relativeTo: this.route,
-            state: { email: user.email },
-          });
+          if (this.socialUser.token) {
+            this.authService.processLoginSuccess({
+              user,
+              token: this.socialUser.token,
+            });
+          } else {
+            this.router.navigate(
+              ['./' + RoutingConstants.REGISTRATION_SUCCESS],
+              {
+                relativeTo: this.route,
+                state: { email: user.email },
+              }
+            );
+          }
         } else if (
           res.statusCode == 400 &&
           res.exception?.fieldErrors['user.email']?.length &&

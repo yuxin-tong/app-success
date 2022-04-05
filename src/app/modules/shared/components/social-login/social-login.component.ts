@@ -27,23 +27,27 @@ export class SocialLoginComponent implements OnInit {
   ngOnInit(): void {}
 
   public loginSocial(socialId: string) {
+    console.log({ socialId });
+
     this.socialAuthService.authState
       .pipe(first())
       .subscribe((user: SocialUser) => {
+        console.warn({ user });
         this.spinnerService.show();
 
-        if (user?.idToken) {
-          this.authService
-            .idpLogin(GoogleLoginProvider.PROVIDER_ID, user.idToken)
-            .subscribe((res) => this.processLogin(res));
-        }
+        this.authService
+          .idpLogin(user.provider, user.idToken ?? user.authToken)
+          .subscribe((res) => this.processLogin(res));
       });
 
-    this.socialAuthService.signIn(socialId);
+    this.socialAuthService
+      .signIn(socialId)
+      .then((d) => {})
+      .catch((err) => {});
   }
   processLogin(res: any): void {
     if (res.statusCode == 200) {
-      this.authService.processLoginSuccess(res.response);
+      this.authService.checkRegistration(res.response);
     } else {
     }
   }

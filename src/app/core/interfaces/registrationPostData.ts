@@ -1,5 +1,5 @@
 export interface RegistrationPostData {
-  registration: RegistrationApplication;
+  registration: RegistrationApplication | undefined;
   user: RegistrationUser;
 }
 
@@ -15,11 +15,15 @@ export interface RegistrationUser {
   firstName: string;
   lastName: string;
   password: string;
+  id: string | undefined;
   data: RegistrationUserData;
 }
 
 export interface RegistrationUserData {
   gender: string;
-  citizenship: string;
+  citizenshipStatus: string;
+  privacyPolicy: string;
+  termsAndConditions: string;
   subscription: boolean;
+  isRegistered: boolean | undefined;
 }

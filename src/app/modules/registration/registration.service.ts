@@ -20,35 +20,42 @@ export class RegistrationService {
     private spinnerService: SpinnerService
   ) {}
 
-  register(user: RegistrationUser, isSocial: false) {
+  register(user: RegistrationUser, token = null) {
     const postData = {} as RegistrationPostData;
-    postData.registration = {} as RegistrationApplication;
-
-    postData.registration.applicationId = environment.registrationApplicationId;
-    postData.registration.roles = [environment.registrationUserRole];
     postData.user = user;
 
-    if (isSocial) {
-      return this.registerSocial(postData);
-    }
+    if (user.id) {
+      // social login - update instead of registration
+      user.data.isRegistered = true;
+      return this.http.put(environment.apiBaseUrl + 'user/update', postData, {
+        headers: { Authorization: 'Bearer ' + token },
+      });
+    } else {
+      postData.registration = {} as RegistrationApplication;
+      postData.registration.applicationId =
+        environment.registrationApplicationId;
+      postData.registration.roles = [environment.registrationUserRole];
 
-    return this.recaptchaV3Service.execute('Register').pipe(
-      switchMap((token) =>
-        this.http.post(environment.apiBaseUrl + 'registration/add', postData, {
-          headers: { token },
+      return this.recaptchaV3Service.execute('Register').pipe(
+        switchMap((token) =>
+          this.http.post(
+            environment.apiBaseUrl + 'registration/add',
+            postData,
+            {
+              headers: { token },
+            }
+          )
+        ),
+
+        catchError((error) => {
+          this.spinnerService.hide();
+          return of({});
         })
-      ),
-
-      catchError((error) => {
-        this.spinnerService.hide();
-        return of({});
-      })
-    );
+      );
+    }
   }
 
-  registerSocial(postData: RegistrationPostData) {
-    return this.http.put(environment.apiBaseUrl + 'user/update', postData);
-  }
+  registerSocial(postData: RegistrationPostData) {}
 
   checkEmailExists(username: string) {
     return this.http.post(environment.apiBaseUrl + 'user/exists', {

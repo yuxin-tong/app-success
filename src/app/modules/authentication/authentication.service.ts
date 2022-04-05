@@ -1,10 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { AuthRepository } from 'src/app/core/repositories/auth.repository';
 import { environment } from '../../../environments/environment';
+import { AcceptDeclineDialogComponent } from '../shared/components/accept-decline-dialog/accept-decline-dialog.component';
 interface Course {
   code: string;
   name: string;
@@ -23,7 +25,8 @@ export class AuthenticationService {
   constructor(
     private http: HttpClient,
     private router: Router,
-    private authRepo: AuthRepository
+    private authRepo: AuthRepository,
+    private dialog: MatDialog
   ) {}
 
   login(loginId: string, password: string) {
@@ -41,6 +44,20 @@ export class AuthenticationService {
     });
   }
 
+  checkRegistration(response: any) {
+    const user = response.user;
+    const decodedToken = this.jwtHelper.decodeToken(response.token);
+
+    if (!decodedToken?.isRegistered) {
+      user.token = response.token;
+      this.router.navigate([RoutingConstants.REGISTRATION], {
+        state: { socialUser: user },
+      });
+    } else {
+      this.processLoginSuccess(response);
+    }
+  }
+
   processLoginSuccess(response: any) {
     const user = response.user;
 
@@ -50,14 +67,7 @@ export class AuthenticationService {
       lastName: user.lastName,
     });
     this.authRepo.setToken(response.token);
-
-    if (!user.data?.isRegistered) {
-      this.router.navigate([RoutingConstants.REGISTRATION], {
-        state: { socialUser: user },
-      });
-    } else {
-      this.router.navigate(['/']);
-    }
+    this.router.navigate(['/']);
   }
 
   forgotPassword(username: string) {
@@ -78,6 +88,7 @@ export class AuthenticationService {
   }
 
   public isAuthenticated(): boolean {
+    console.log(this.authRepo.getToken());
     return !this.jwtHelper.isTokenExpired(this.authRepo.getToken());
   }
 
