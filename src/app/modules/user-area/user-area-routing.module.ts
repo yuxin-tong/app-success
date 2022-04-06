@@ -18,6 +18,7 @@ const routes: Routes = [
         (m) => m.DashboardModule
       ),
     canLoad: [AuthGuard],
+    canActivate: [AuthGuard],
   },
   {
     path: RoutingConstants.PROFILE,
@@ -25,6 +26,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/profile/profile.module').then((m) => m.ProfileModule),
     canLoad: [AuthGuard],
+    canActivate: [AuthGuard],
   },
   {
     path: RoutingConstants.APPLICATION,
@@ -34,6 +36,7 @@ const routes: Routes = [
         (m) => m.ApplicationModule
       ),
     canLoad: [AuthGuard],
+    canActivate: [AuthGuard],
   },
 ];
 

@@ -124,6 +124,7 @@ export class RegistrationComponent implements OnInit {
         header: 'Terms and Conditions',
         body: this.termsConditions.text,
         formControlName: 'termsConditions',
+        declineBtn: true,
       });
     }
   }
@@ -135,6 +136,7 @@ export class RegistrationComponent implements OnInit {
         header: 'Privacy Policy',
         body: this.privacyPolicy.text,
         formControlName: 'privacyPolicy',
+        declineBtn: true,
       });
     }
   }

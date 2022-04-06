@@ -3,7 +3,7 @@
 </mat-dialog-content>
 
 <mat-dialog-actions fxLayoutAlign="end">
-  <button mat-button mat-dialog-close>Decline</button>
+  <button mat-button mat-dialog-close *ngIf="data.declineBtn">Decline</button>
   <button
     mat-raised-button
     color="primary"

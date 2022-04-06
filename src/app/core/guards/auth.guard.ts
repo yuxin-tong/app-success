@@ -1,5 +1,14 @@
 import { Injectable } from '@angular/core';
-import { CanLoad, Route, Router, UrlSegment, UrlTree } from '@angular/router';
+import {
+  ActivatedRouteSnapshot,
+  CanActivate,
+  CanLoad,
+  Route,
+  Router,
+  RouterStateSnapshot,
+  UrlSegment,
+  UrlTree,
+} from '@angular/router';
 import { Observable } from 'rxjs';
 import { AuthenticationService } from 'src/app/modules/authentication/authentication.service';
 import { RoutingConstants } from '../constants/routing.constants';
@@ -7,11 +16,12 @@ import { RoutingConstants } from '../constants/routing.constants';
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuard implements CanLoad {
+export class AuthGuard implements CanLoad, CanActivate {
   constructor(
     private authService: AuthenticationService,
     private router: Router
   ) {}
+
   canLoad(
     route: Route,
     segments: UrlSegment[]
@@ -39,7 +49,6 @@ export class AuthGuard implements CanLoad {
     }
   }
 
-  /*
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
@@ -49,10 +58,10 @@ export class AuthGuard implements CanLoad {
     | boolean
     | UrlTree {
     if (!this.authService.isAuthenticated()) {
-      this.router.navigate(['login']);
+      this.router.navigate([RoutingConstants.LOGIN]);
       return false;
     }
 
     return true;
-  }*/
+  }
 }
