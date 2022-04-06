@@ -1,21 +1,16 @@
 import { Injectable } from '@angular/core';
 import { createStore, select, getStoresSnapshot, withProps } from '@ngneat/elf';
 import { persistState, localStorageStrategy } from '@ngneat/elf-persist-state';
-
-interface User {
-  email: string;
-  firstName: string;
-  lastName: string;
-}
+import { User } from '../interfaces/user';
 
 interface AuthProps {
-  user: User | null;
-  token: string | null;
+  user: User | undefined;
+  token: string | undefined;
 }
 
 const authStore = createStore(
   { name: 'auth' },
-  withProps<AuthProps>({ user: null, token: null })
+  withProps<AuthProps>({ user: undefined, token: undefined })
 );
 
 persistState(authStore, {
@@ -29,6 +24,16 @@ export class AuthRepository {
 
   setUser(user: User) {
     authStore.update((state) => ({ ...state, user }));
+  }
+
+  updateTermsAndConditions(version: string) {
+    authStore.update((state) => ({
+      ...state,
+      user: {
+        ...state.user,
+        data: { ...state.user?.data, termsAndConditions: version },
+      },
+    }));
   }
 
   setToken(token: string) {

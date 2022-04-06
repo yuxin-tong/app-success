@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ReCaptchaV3Service } from 'ng-recaptcha';
-import { catchError, EMPTY, of, switchMap, throwError } from 'rxjs';
+import { catchError, EMPTY, first, of, switchMap, throwError } from 'rxjs';
 import {
   RegistrationApplication,
   RegistrationPostData,
-  RegistrationUser,
 } from 'src/app/core/interfaces/registrationPostData';
+import { User } from 'src/app/core/interfaces/user';
+import { AuthRepository } from 'src/app/core/repositories/auth.repository';
+import { AppService } from 'src/app/core/services/app.service';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
 import { environment } from 'src/environments/environment';
 
@@ -17,10 +19,12 @@ export class RegistrationService {
   constructor(
     private http: HttpClient,
     private recaptchaV3Service: ReCaptchaV3Service,
-    private spinnerService: SpinnerService
+    private spinnerService: SpinnerService,
+    private authRepo: AuthRepository,
+    private appService: AppService
   ) {}
 
-  register(user: RegistrationUser, token = null) {
+  register(user: User, token = null) {
     const postData = {} as RegistrationPostData;
     postData.user = user;
 
@@ -82,5 +86,37 @@ export class RegistrationService {
       },
       { observe: 'response' }
     );
+  }
+
+  updateTermsConditions(version: string) {
+    this.authRepo.user$.pipe(first()).subscribe((user) => {
+      const userUpdated = {
+        ...user,
+        data: { ...user?.data, termsAndConditions: version },
+      };
+
+      console.log('@#################');
+      return this.http
+        .put(
+          environment.apiBaseUrl + 'user/update',
+          { user: userUpdated },
+          { observe: 'response' }
+        )
+        .subscribe((res) => {
+          if (res.status == 200) {
+            this.authRepo.updateTermsAndConditions(version);
+
+            this.appService.showAlert(
+              true,
+              'Updated Terms and Conditions accepted'
+            );
+          } else {
+            this.appService.showAlert(
+              false,
+              'Updated Terms and Conditions accepted'
+            );
+          }
+        });
+    });
   }
 }

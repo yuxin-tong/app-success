@@ -6,12 +6,9 @@ import { Observable } from 'rxjs';
 import { AppConstants } from 'src/app/core/constants/app.constants';
 import { RoutingConstants } from 'src/app/core/constants/routing.constants';
 import { PrivacyPolicy } from 'src/app/core/interfaces/privacyPolicy';
-import {
-  RegistrationUser,
-  RegistrationUserData,
-} from 'src/app/core/interfaces/registrationPostData';
 import { TermsConditions } from 'src/app/core/interfaces/termsCondition';
 import { DialogData } from 'src/app/core/interfaces/ui/dialogData';
+import { User, UserData } from 'src/app/core/interfaces/user';
 import { ValueDescription } from 'src/app/core/interfaces/valueDescription';
 import { MetadataService } from 'src/app/core/services/metadata.service';
 import { SpinnerService } from 'src/app/core/services/spinner.service';
@@ -112,8 +109,9 @@ export class RegistrationComponent implements OnInit {
       panelClass: 'accept-reject-dialog-panel',
     });
 
-    dialogRef.afterClosed().subscribe((accept) => {
-      this.form.controls[data.formControlName].setValue(accept ?? false);
+    dialogRef.componentInstance.btnClicked.subscribe(() => {
+      dialogRef.close();
+      this.form.controls[data.formControlName].setValue(true);
     });
   }
 
@@ -148,7 +146,7 @@ export class RegistrationComponent implements OnInit {
     if (!this.form.valid) {
       return;
     }
-    let user = {} as RegistrationUser;
+    let user = {} as User;
 
     user.id = this.socialUser?.id;
 
@@ -158,7 +156,7 @@ export class RegistrationComponent implements OnInit {
     user.lastName = this.form.controls['lastName'].value;
     user.birthDate = Utils.getDateStr(this.form.controls['birthDate'].value);
 
-    user.data = {} as RegistrationUserData;
+    user.data = {} as UserData;
     user.data.gender = this.form.controls['gender'].value;
     user.data.citizenshipStatus = this.form.controls['citizenship'].value;
     user.data.termsAndConditions = this.termsConditions.version;

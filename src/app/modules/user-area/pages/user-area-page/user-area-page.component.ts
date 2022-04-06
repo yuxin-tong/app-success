@@ -3,7 +3,9 @@ import { MatDialog } from '@angular/material/dialog';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
 import { AppConstants } from 'src/app/core/constants/app.constants';
+import { AppService } from 'src/app/core/services/app.service';
 import { MetadataService } from 'src/app/core/services/metadata.service';
+import { RegistrationService } from 'src/app/modules/registration/registration.service';
 import { AcceptDeclineDialogComponent } from 'src/app/modules/shared/components/accept-decline-dialog/accept-decline-dialog.component';
 
 @Component({
@@ -18,15 +20,19 @@ export class UserAreaPageComponent implements OnInit, OnDestroy {
   constructor(
     private router: Router,
     private metadataService: MetadataService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private registrationService: RegistrationService,
+    private appService: AppService
   ) {
     this.routerSubs = this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
         this.metadataService.getTermsConditions().subscribe((res) => {
+          console.log(Number(res.version.split('_')[1]));
+
           const dialogRef = this.dialog.open(AcceptDeclineDialogComponent, {
             data: {
-              header: 'Terms and Conditions',
+              header: 'Updated Terms and Conditions',
               body: res.text,
               declineBtn: false,
             },
@@ -34,7 +40,9 @@ export class UserAreaPageComponent implements OnInit, OnDestroy {
             disableClose: true,
           });
 
-          dialogRef.afterClosed().subscribe((accept) => {});
+          dialogRef.componentInstance.btnClicked.subscribe(() => {
+            this.registrationService.updateTermsConditions(res.version);
+          });
         });
       });
   }

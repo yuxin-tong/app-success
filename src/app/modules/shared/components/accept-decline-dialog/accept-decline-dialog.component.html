@@ -4,12 +4,7 @@
 
 <mat-dialog-actions fxLayoutAlign="end">
   <button mat-button mat-dialog-close *ngIf="data.declineBtn">Decline</button>
-  <button
-    mat-raised-button
-    color="primary"
-    [mat-dialog-close]="true"
-    cdkFocusInitial
-  >
+  <button mat-raised-button color="primary" cdkFocusInitial (click)="accept()">
     Accept
   </button>
 </mat-dialog-actions>

@@ -26,12 +26,13 @@ export class AppService {
   }
 
   showAlert(success: boolean, message: string, btnText = 'Ok') {
+    console.log('-------');
     this.snackBar.openFromComponent(AlertComponent, {
       data: {
         message,
         btnText,
       },
-      panelClass: success ? 'success-alert' : 'success-alert',
+      panelClass: success ? 'success-alert' : 'error-alert',
       horizontalPosition: 'center',
       verticalPosition: 'top',
     });
